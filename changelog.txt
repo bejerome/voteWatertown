@@ -1,0 +1,13 @@
+Version 1.0
+Release the template
+
+Version 1.1
+Added RTL version
+
+Version 1.2
+Fixed z-index for filter
+Add to the end of css
+
+        .mad-media-element {
+            z-index: 3;
+        }
