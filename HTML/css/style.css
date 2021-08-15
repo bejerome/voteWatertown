@@ -1627,13 +1627,20 @@
             ---------------------------------------- */
 
                 .mad-search-section {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                     padding: 1.5rem 0;
                     background: #fafafb;
+                    
                 }
 
                 .mad-search {
+                    /* padding: 1.5rem; */
                     display: flex;
-                    margin-left: 2px;
+                    align-items: center;
+                    justify-content: center;
+                    width: 50%;
                 }
 
                 .mad-search-section:not(.vr-type) .mad-search .mad-search-item {
@@ -1690,6 +1697,7 @@
 
                 .mad-search .mad-search-item:only-child input {
                     border-radius: 0.5rem!important;
+                    
                 }
 
                 .mad-search .mad-search-item:only-child input {

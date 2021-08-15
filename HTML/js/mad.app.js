@@ -32,6 +32,7 @@ let districtc;
 let districtd;
 let library_trust;
 let school_com;
+let places_options;
 
 var Mad = (function ($) {
     'use strict';
@@ -2668,7 +2669,7 @@ var Mad = (function ($) {
 
             };
 
-            var map = document.getElementById('googleMap');
+            map = document.getElementById('googleMap');
 
             if (map !== null) {
 
@@ -2677,6 +2678,18 @@ var Mad = (function ($) {
             }
 
             setMarkers(map);
+            function createHomeMarker(str_name) {
+                homeMarker = new google.maps.Marker({
+                    map,
+                    anchorPoint: new google.maps.Point(0, -29),
+                    icon: "../img/home_icon.png",
+                    animation: google.maps.Animation.DROP,
+                });
+                google.maps.event.addListener(homeMarker, 'click', function () {
+                    alert('clicked');
+                });
+
+            }
 
             // Construct the polygon.
             // district A
@@ -2706,14 +2719,68 @@ var Mad = (function ($) {
             for (const key in all_precincts) {
                 all_precincts[key].setMap(map);;
             }
+            places_options = {
+                componentRestrictions: { country: "us" },
+                fields: ["formatted_address", "geometry", "name"],
+                origin: map.getCenter(),
+                strictBounds: false,
+                types: ["address"],
+
+            };
+            const input = document.getElementById("pac-input");
+
+            const searchBox = new google.maps.places.SearchBox(input);
+
+            const autocomplete = new google.maps.places.Autocomplete(input, places_options);
+            autocomplete.bindTo("bounds", map);
+            autocomplete.addListener("place_changed", () => {
+                const place = autocomplete.getPlace();
+
+                if (!place.geometry || !place.geometry.location) {
+                    // User entered the name of a Place that was not suggested and
+                    // pressed the Enter key, or the Place Details request failed.
+                    window.alert("No details available for input: '" + place.name + "'");
+                    return;
+                }
+
+                if ((/Watertown, MA/).test(place.formatted_address)) {
+                    isWatertown = true;
+                    createHomeMarker(place.formatted_address);
+                    homeMarker.setVisible(false);
+                    // setMarker(marker)
+                    getInfo(place);
+                } else {
+                    isWatertown = false;
+                    alert("not watertown");
+                    return;
+                }
+                // If the place has a geometry, then present it on a map.
+                if (place.geometry.viewport) {
+                    if (isWatertown) {
+                        map.fitBounds(place.geometry.viewport);
+                        map.setCenter(place.geometry.location);
+                        map.setZoom(15);
+                        homeMarker.setPosition(place.geometry.location);
+                        homeMarker.setVisible(true);
+                        $("#fluidModalInfo").modal('toggle')
+
+                    } else {
+                        map.setCenter(myLatLng);
+                        alert("Please try again with a valid address from Watertown MA");
+                        // map.setZoom(15);
+                        // homeMarker.setPosition(myLatLng);
+                    }
+
+                }
+            });
 
         }
 
         var marks = [
-            ['first', 51.501454, -0.144755],
-            ['second', 51.497454, -0.184755],
-            ['third', 51.511454, -0.104755],
-            ['forth', 51.498454, -0.095755]
+            // ['first', 42.372800571305575, -71.1813901527373],
+            // ['second', 42.371373839174915, -71.19237647985673],
+            // ['third', 42.37479794184094, -71.16885887336669],
+            // ['forth', 42.37083484304676, -71.14594208164098]
         ];
 
         function draw_my_precincts(precincts_coordinates, fill_color, title, color_str = "#FF0000") {
@@ -2784,6 +2851,7 @@ var Mad = (function ($) {
             });
             return poly;
         }
+
         function setMarkers(map) {
 
             for (var i = 0; i < marks.length; i++) {
@@ -2798,20 +2866,21 @@ var Mad = (function ($) {
             }
 
         }
+        function setMarker(marker) {
+            var mark = marker;
+            var marker = new google.maps.Marker({
+                position: { lat: mark[1], lng: mark[2] },
+                map: map,
+                icon: 'images/map_marker.png',
+                title: mark[0],
+                zIndex: mark[3]
+            });
+        }
+
 
         google.maps.event.addDomListener(window, 'load', loadMap);
-        const input = document.getElementById("pac-input");
-        input.innerHTML = "hello";
-        const searchBox = new google.maps.places.SearchBox(input);
-        // const options = {
-        //     componentRestrictions: { country: "us" },
-        //     fields: ["formatted_address", "geometry", "name"],
-        //     origin: map.getCenter(),
-        //     strictBounds: false,
-        //     types: ["address"],
 
-        // };
-        // const autocomplete = new google.maps.places.Autocomplete(input, options);
+
     }
 
 
