@@ -33,7 +33,44 @@ let districtd;
 let library_trust;
 let school_com;
 let places_options;
-
+let map;
+const styles = {
+    default: [{
+        "featureType": "administrative",
+        "stylers": [
+            { "visibility": "off" }
+        ]
+    }, {
+        "elementType": "labels",
+        "stylers": [
+            { "visibility": "on" }
+        ]
+    },
+    {
+        "featureType": "poi",
+        "stylers": [
+            { "color": "#393939" },
+            { "visibility": "off" }
+        ]
+    }, {
+        "featureType": "transit",
+        "elementType": "geometry",
+        "stylers": [
+            { "visibility": "on" }
+        ]
+    }],
+    hide: [
+        {
+            featureType: "poi.business",
+            stylers: [{ visibility: "off" }],
+        },
+        {
+            featureType: "transit",
+            elementType: "labels.icon",
+            stylers: [{ visibility: "off" }],
+        },
+    ],
+};
 var Mad = (function ($) {
     'use strict';
 
@@ -2673,23 +2710,24 @@ var Mad = (function ($) {
 
             if (map !== null) {
 
-                var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+                map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
 
             }
+            map.setOptions({ styles: styles["default"] });
 
             setMarkers(map);
-            function createHomeMarker(str_name) {
-                homeMarker = new google.maps.Marker({
-                    map,
-                    anchorPoint: new google.maps.Point(0, -29),
-                    icon: "../img/home_icon.png",
-                    animation: google.maps.Animation.DROP,
-                });
-                google.maps.event.addListener(homeMarker, 'click', function () {
-                    alert('clicked');
-                });
+            // function createHomeMarker(place) {
+            //     homeMarker = new google.maps.Marker({
+            //         map,
+            //         anchorPoint: new google.maps.Point(place.geometry.location.lng(), place.geometry.location.lat()),
+            //         icon: "../img/home_icon.png",
+            //         animation: google.maps.Animation.DROP,
+            //     });
+            //     google.maps.event.addListener(homeMarker, 'click', function () {
+            //         alert('clicked');
+            //     });
 
-            }
+            // }
 
             // Construct the polygon.
             // district A
@@ -2723,7 +2761,7 @@ var Mad = (function ($) {
                 componentRestrictions: { country: "us" },
                 fields: ["formatted_address", "geometry", "name"],
                 origin: map.getCenter(),
-                strictBounds: false,
+                strictBounds: true,
                 types: ["address"],
 
             };
@@ -2735,7 +2773,7 @@ var Mad = (function ($) {
             autocomplete.bindTo("bounds", map);
             autocomplete.addListener("place_changed", () => {
                 const place = autocomplete.getPlace();
-
+                console.log(place.geometry.location.lat(), place.geometry.location.lng());
                 if (!place.geometry || !place.geometry.location) {
                     // User entered the name of a Place that was not suggested and
                     // pressed the Enter key, or the Place Details request failed.
@@ -2745,10 +2783,10 @@ var Mad = (function ($) {
 
                 if ((/Watertown, MA/).test(place.formatted_address)) {
                     isWatertown = true;
-                    createHomeMarker(place.formatted_address);
-                    homeMarker.setVisible(false);
+                    setMarker(place)
+
                     // setMarker(marker)
-                    getInfo(place);
+                    // getInfo(place);
                 } else {
                     isWatertown = false;
                     alert("not watertown");
@@ -2759,10 +2797,10 @@ var Mad = (function ($) {
                     if (isWatertown) {
                         map.fitBounds(place.geometry.viewport);
                         map.setCenter(place.geometry.location);
-                        map.setZoom(15);
-                        homeMarker.setPosition(place.geometry.location);
-                        homeMarker.setVisible(true);
-                        $("#fluidModalInfo").modal('toggle')
+                        map.setZoom(14);
+                        // homeMarker.setPosition(place.geometry.location);
+                        // homeMarker.setVisible(true);
+                        // $("#fluidModalInfo").modal('toggle')
 
                     } else {
                         map.setCenter(myLatLng);
@@ -2861,20 +2899,21 @@ var Mad = (function ($) {
                     map: map,
                     icon: 'images/map_marker.png',
                     title: mark[0],
-                    zIndex: mark[3]
+                    zIndex: 3
                 });
             }
 
         }
-        function setMarker(marker) {
-            var mark = marker;
+        function setMarker(place) {
             var marker = new google.maps.Marker({
-                position: { lat: mark[1], lng: mark[2] },
+                position: { lat: place.geometry.location.lat(), lng: place.geometry.location.lng() },
                 map: map,
-                icon: 'images/map_marker.png',
-                title: mark[0],
-                zIndex: mark[3]
+                icon: 'images/misc/home_icon.png',
+                title: "test",
+                zIndex: 3,
+                animation: google.maps.Animation.DROP,
             });
+            marker.addListener("click", () => { alert("clicked address loc") })
         }
 
 
