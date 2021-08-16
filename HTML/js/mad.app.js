@@ -2789,7 +2789,13 @@ var Mad = (function ($) {
                     // getInfo(place);
                 } else {
                     isWatertown = false;
-                    alert("not watertown");
+                    alert(
+                        '<div role="alert" class="mad-alert-box mad-alert-box--success">' +
+                        '<div class="mad-alert-box-inner">Well done! You successfully read this important alert message.' +
+                        ' <button type="button" class="mad-alert-box-close">Close</button>' +
+                        '</div>' +
+                        '</div>'
+                    );
                     return;
                 }
                 // If the place has a geometry, then present it on a map.
