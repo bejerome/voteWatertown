@@ -16,7 +16,9 @@
     /* ----------------------------------------
         Reset
      ---------------------------------------- */
-
+     html {
+        scroll-behavior: smooth;
+      }
         * {
             margin: 0;
             padding: 0;
@@ -5228,7 +5230,7 @@
             background: rgb(0,0,0); /* Old browsers */
             background: -moz-linear-gradient(left, rgba(255,255,255,1), rgba(0,0,0,1) 0% 100%); /* FF3.6-15 */
             background: -webkit-linear-gradient(left, rgba(255,255,255,1), rgba(0,0,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
-            background: linear-gradient(to right, rgba(255,255,255,1), rgba(0,0,0,1)) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            background: linear-gradient(to right, rgba(255,255,255,1), rgba(0,0,0,1)) 100%; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
         }
 
         .mad-icon-boxes.style-2 .mad-icon-box .mad-icon-box-title,

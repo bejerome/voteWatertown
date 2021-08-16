@@ -1226,11 +1226,11 @@ var Mad = (function ($) {
                     });
 
                 if ($body.hasClass('mad-body--moving-to-another-page')) {
-                    $circle.appendTo($body);
+                    // $circle.appendTo($body);
 
-                    setTimeout(function () {
-                        $circle.addClass('mad-preloader-circle--appearing');
-                    }, 20);
+                    // setTimeout(function () {
+                    //     $circle.addClass('mad-preloader-circle--appearing');
+                    // }, 20);
                 }
             });
         }
@@ -2821,6 +2821,8 @@ var Mad = (function ($) {
             // ['forth', 42.37083484304676, -71.14594208164098]
         ];
 
+
+
         function draw_my_precincts(precincts_coordinates, fill_color, title, color_str = "#FF0000") {
             var poly = new google.maps.Polygon({
                 paths: precincts_coordinates,
@@ -4178,3 +4180,29 @@ function createAtlargeRep(name, img, phone, email) {
         '</div>'
 
 }
+
+function scrollSection() {
+    // Add smooth scrolling to all links
+    $("a").on('click', function (event) {
+
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+            // Prevent default anchor click behavior
+            event.preventDefault();
+
+            // Store hash
+            var hash = this.hash;
+
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top
+            }, 800, function () {
+
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+            });
+        } // End if
+    });
+};
+
