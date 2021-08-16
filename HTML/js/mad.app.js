@@ -2875,7 +2875,38 @@ var Mad = (function ($) {
                 //     "</div>";
 
                 // $("#fluidModalInfo").modal('toggle')
-                alert("Clicked");
+                var modal = document.getElementById("your-rep");
+                modal.innerHTML =
+                    '<div class="row" style="padding:30px align-items: center;">' +
+                    '<div class="col-md-8">' +
+                    '<nav class="mad-info-block type-2">' +
+                    '<ul>' +
+                    ' <li><i class="mad-info-icon material-icons">room</i>' +
+                    '<div>' +
+                    '<h5 class="mad-info-title">Distric</h5>' +
+                    ' <p>C <br>' +
+                    '<h5 class="mad-info-title">Precint</h5>' +
+                    ' <p>9 <br>' +
+                    '</div>' +
+                    '</li>' +
+                    '<li><i class="mad-info-icon material-icons">phone</i>' +
+                    '<div>' +
+                    '<h5 class="mad-info-title">Phone</h5>' +
+                    '<p>+1 800 559 6580 <br> +1 800 889 9898</p>' +
+                    '</div>' +
+                    '</li>' +
+
+                    ' <li><i class="mad-info-icon material-icons">access_time</i>' +
+                    '<div>' +
+                    '<h5 class="mad-info-title">Opening Hours</h5>' +
+                    '<p>Mon-Fri 8am- 5pm</p>' +
+                    '</div>' +
+                    '</li>' +
+                    '</ul>' +
+                    '</nav>' +
+                    '</div >' +
+                    '</div >';
+
             });
 
 
