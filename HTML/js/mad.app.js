@@ -2812,8 +2812,11 @@ var Mad = (function ($) {
             // ['third', 42.37479794184094, -71.16885887336669],
             // ['forth', 42.37083484304676, -71.14594208164098]
         ];
-
+        // library trustees
         create_rep_groups();
+        // elections candidates
+        var runners = document.getElementById("elections");
+        runners.innerHTML = create_candidate("Council President") + create_candidate("Council At-Large (Four seats)");
 
         function draw_my_precincts(precincts_coordinates, fill_color, title, color_str = "#FF0000") {
             var poly = new google.maps.Polygon({
@@ -4334,5 +4337,43 @@ function create_trustee_member(name, isactive = "") {
         '</div>';
 
     return inner_text;
+}
+
+function create_candidate(title) {
+    var inner = '<div class="rep-title col-xl-6 green-text">' + title + '</div>' +
+
+        '<div class="mad-table-wrap col-xl-8" style="margin-left: 50px; margin-bottom: 50px;">' +
+        '<table class="mad-table--responsive-md">' +
+        '<thead>' +
+        '<tr class="bg">' +
+        '<th class="green-text">Candidates</th>' +
+        '<th class="green-text">Seats</th>' +
+        '</tr>' +
+        '</thead>' +
+        '<tbody>' +
+        '<tr>' +
+        '<td data-cell-title="Heading 1">' +
+        '<section class="col-lg-12" id="section6">' +
+        //<!--================ Accordion ================-->
+        '<dl role="presentation" class="mad-panels mad-panels--accordion">' +
+        '<dt class="mad-panels-title">' +
+        '<button id="panel-2-button" type="button" aria-expanded="false" aria-controls="panel-2" aria-disabled="false"><img src="images/candidates/sara_keary.png" alt="Avatar" class="avatar"></button>' +
+        '</dt>' +
+        '<dd id="panel-2" class="mad-panels-definition" style="display: none;">' +
+        '<img src="images/246x176_img1.jpg" alt="" class="alignleft">' +
+        '<p class="mad-text-small">Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit. Aenean auctor wisi et urna. Aliquam erat volutpat.Duis ac turpis. </p>' +
+        '<p class="mad-text-small">Integer rutrum ante eu lacus. Vestibulum libero nisl, porta vel, scelerisque eget, malesuada at, neque. Vivamus egetnibh.</p>' +
+        '</dd>' +
+        '</dl>' +
+        // <!--================ End of Accordion ================-->
+        '</section>' +
+        '</td>' +
+        '<td data-cell-title="Heading 2">Incumbent</td>' +
+        '</tr> ' +
+        '</tbody>' +
+        '</table>' +
+        //<!--================ End Of Elections ================-->
+        '</div>';
+    return inner;
 }
 
