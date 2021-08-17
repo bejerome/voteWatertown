@@ -13,7 +13,7 @@ precinctData = {
             phone: "(617) 926-2352",
             url: "https://www.facebook.com/angeline.kounelis.7"
         },
-        image: "img/reps/akounelis.jpeg",
+        image: "images/reps/akounelis.jpeg",
         url: "https://www.facebook.com/angeline.kounelis.7"
     },
     2: {
@@ -30,7 +30,7 @@ precinctData = {
             phone: "(617) 926-2352",
             url: "https://www.facebook.com/angeline.kounelis.7"
         },
-        "image": "img/reps/akounelis.jpeg",
+        "image": "images/reps/akounelis.jpeg",
         url: "https://www.facebook.com/angeline.kounelis.7"
     },
     3: {
@@ -47,7 +47,7 @@ precinctData = {
             phone: "(617) 926-2352",
             url: "https://www.facebook.com/angeline.kounelis.7"
         },
-        "image": "img/reps/akounelis.jpeg",
+        "image": "images/reps/akounelis.jpeg",
         url: "https://www.facebook.com/angeline.kounelis.7"
     },
     4: {
@@ -63,7 +63,7 @@ precinctData = {
             email: "lfeltner@watertown-ma.gov",
             phone: "(617) 926-5344"
         },
-        "image": "img/reps/lisa_feltner.jpeg",
+        "image": "images/reps/lisa_feltner.jpeg",
         url: "https://www.facebook.com/lisa.feltnertc/"
     },
     5: {
@@ -79,7 +79,7 @@ precinctData = {
             email: "lfeltner@watertown-ma.gov",
             phone: "(617) 926-5344"
         },
-        "image": "img/reps/lisa_feltner.jpeg",
+        "image": "images/reps/lisa_feltner.jpeg",
         url: "https://www.facebook.com/lisa.feltnertc/"
     },
     6: {
@@ -95,7 +95,7 @@ precinctData = {
             email: "lfeltner@watertown-ma.gov",
             phone: "(617) 926-5344"
         },
-        image: "img/reps/lisa_feltner.jpeg",
+        image: "images/reps/lisa_feltner.jpeg",
         url: "https://www.facebook.com/lisa.feltnertc/"
     },
     7: {
@@ -111,7 +111,7 @@ precinctData = {
             email: "vpiccirilli@watertown-ma.gov",
             phone: "(617) 924-0665"
         },
-        "image": "img/reps/vincent_piccirilli.jpeg",
+        "image": "images/reps/vincent_piccirilli.jpeg",
         url: "https://www.facebook.com/vincent.piccirilli"
 
     },
@@ -128,7 +128,7 @@ precinctData = {
             email: "vpiccirilli@watertown-ma.gov",
             phone: "(617) 924-0665"
         },
-        "image": "img/reps/vincent_piccirilli.jpeg",
+        "image": "images/reps/vincent_piccirilli.jpeg",
         url: "https://www.facebook.com/vincent.piccirilli"
     },
     9: {
@@ -144,7 +144,7 @@ precinctData = {
             email: "vpiccirilli@watertown-ma.gov",
             phone: "(617) 924-0665"
         },
-        "image": "img/reps/vincent_piccirilli.jpeg",
+        "image": "images/reps/vincent_piccirilli.jpeg",
         url: "https://www.facebook.com/vincent.piccirilli"
     },
     10: {
@@ -160,7 +160,7 @@ precinctData = {
             email: "Open Seat",
             phone: "Open Seat"
         },
-        image: "img/reps/rep_avatar.png",
+        image: "images/reps/rep_avatar.png",
         url: ""
     },
     11: {
@@ -176,7 +176,7 @@ precinctData = {
             email: "Open Seat",
             phone: "Open Seat"
         },
-        image: "img/reps/rep_avatar.png",
+        image: "images/reps/rep_avatar.png",
         url: ""
     },
     12: {
@@ -192,7 +192,7 @@ precinctData = {
             email: "Open Seat",
             phone: "Open Seat"
         },
-        image: "img/reps/rep_avatar.png",
+        image: "images/reps/rep_avatar.png",
         url: ""
     },
 }

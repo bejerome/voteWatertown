@@ -9369,3 +9369,31 @@ body.mad-full-page .mad-full-page-wrap .mad-team.style-2 > .mad-col:nth-child(-n
             font-size: 2.25rem;
             line-height: 3.2625rem;
         }
+
+        .avatar {
+            vertical-align: middle;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+          }
+
+          .green-text{
+              color: #38a100 ;
+           
+          }
+          .rep-title{
+              margin-left: 150px;
+              margin-top: 15px;
+              margin-bottom: 20px;
+              align-items: center;
+              text-align: center;
+              font-size: 30px;
+          }
+
+          .center{ align-items: center;}
+
+          .disctrict-info-text{
+            font-size: 1.5rem!important;  
+            color: #38a100 !important; 
+          }
+         

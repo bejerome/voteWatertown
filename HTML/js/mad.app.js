@@ -2841,79 +2841,11 @@ var Mad = (function ($) {
 
 
             google.maps.event.addListener(poly, 'click', function (event) {
-                // document.getElementById("modal-title").innerHTML = "<b>Precinct " + title + "</b>";
-                // my_precint = precinctData[title];
-                // var modal = document.getElementById("modal-info");
 
-                // modal.innerHTML =
-                //     '<div id="content">' +
-                //     '<div id="bodyContent">' +
-                //     createPrecinctDistrict(title, my_precint) +
-                //     createPollingMap(my_precint) +
-                //     "</div>" +
-                //     "</div>" +
-                //     // end-row
-                //     createRepInfo(my_precint, 10) +
+                var my_precint = precinctData[title];
 
-                //     '<h5 id="firstHeading" class="firstHeading mb-3 white-text"><b>Council President</b></h5>' +
-                //     createAtLarge(atLargeData[5], 21) +
-                //     '<h5 id="firstHeading" class="firstHeading mb-3 white-text"><b>At Large Representatives</b></h5>' +
-                //     "</div>" +
-
-                //     //   <!-- At Large Reps -->
-                //     createAtLarge(atLargeData[0], 2) +
-                //     createAtLarge(atLargeData[1], 3) +
-                //     createAtLarge(atLargeData[2], 4) +
-                //     createAtLarge(atLargeData[3], 5) +
-
-                //     '<h5 id="firstHeading" class="firstHeading mb-3 white-text"><b>Town Manager</b></h5>' +
-                //     createAtLarge(atLargeData[4], 20) +
-
-                //     '<h5 id="firstHeading" class="firstHeading mb-3 white-text"><b>School Committee</b></h5>' +
-
-                //     //   <!-- School Committee -->
-                //     createSchoolCom(SchoolComData[0], 13) +
-                //     createSchoolCom(SchoolComData[1], 14) +
-                //     createSchoolCom(SchoolComData[2], 15) +
-                //     createSchoolCom(SchoolComData[3], 16) +
-                //     createSchoolCom(SchoolComData[4], 17) +
-                //     createSchoolCom(SchoolComData[5], 18) +
-                //     createSchoolCom(SchoolComData[6], 19) +
-                //     //   School Committee end
-                //     "</div>";
-
-                // $("#fluidModalInfo").modal('toggle')
                 var modal = document.getElementById("your-rep");
-                modal.innerHTML =
-                    '<div class="row" style="padding:30px align-items: center;">' +
-                    '<div class="col-md-8">' +
-                    '<nav class="mad-info-block type-2">' +
-                    '<ul>' +
-                    ' <li><i class="mad-info-icon material-icons">room</i>' +
-                    '<div>' +
-                    '<h5 class="mad-info-title">Distric</h5>' +
-                    ' <p>C <br>' +
-                    '<h5 class="mad-info-title">Precint</h5>' +
-                    ' <p>9 <br>' +
-                    '</div>' +
-                    '</li>' +
-                    '<li><i class="mad-info-icon material-icons">phone</i>' +
-                    '<div>' +
-                    '<h5 class="mad-info-title">Phone</h5>' +
-                    '<p>+1 800 559 6580 <br> +1 800 889 9898</p>' +
-                    '</div>' +
-                    '</li>' +
-
-                    ' <li><i class="mad-info-icon material-icons">access_time</i>' +
-                    '<div>' +
-                    '<h5 class="mad-info-title">Opening Hours</h5>' +
-                    '<p>Mon-Fri 8am- 5pm</p>' +
-                    '</div>' +
-                    '</li>' +
-                    '</ul>' +
-                    '</nav>' +
-                    '</div >' +
-                    '</div >';
+                modal.innerHTML = show_district_info(title, my_precint);
 
             });
 
@@ -4211,4 +4143,81 @@ function scrollSection() {
         } // End if
     });
 };
+
+function show_district_info(number, precinct) {
+    var inner_html =
+        '<h2 id="section0" class="mad-title center" style="padding-left:3rem; margin-top:10px;">District And Precint Info</h2>' +
+        '<div class="col-md-12" id="precinct-info" style="padding:2rem;">' +
+        '<div class="row mad-section">' +
+        '<div class="col-md-4">' +
+        '<div class="mad-team style-4">' +
+        '<div class="mad-col">' +
+        //   Team Member
+        '<figure class="mad-team-member">' +
+        '<figcaption class="mad-team-member-info">' +
+        '<div class="mad-info-wrap">' +
+        '<div class="container" style=margin:15px;>' +
+        '<h4 class="mad-team-member-name"><a href="#">District</a></h4>' +
+        '<div class="disctrict-info-text">' + precinct["district"] + '</div>' +
+        '</div>' +
+        '<div class="container" style=margin:15px;>' +
+        '<h4 class="mad-team-member-name"><a href="#">Precinct</a></h4>' +
+        '<div class="disctrict-info-text">' + number + '</div>' +
+        '</div>' +
+        '</div>' +
+        '</figcaption>' +
+        '</figure>' +
+        //  End Of Team Member 
+        '</div>' +
+        '</div>' +
+        '</div>' +
+        '<div class="col-md-4">' +
+        '<div class="mad-team style-4">' +
+        '<div class="mad-col">' +
+        //   Team Member
+        '<figure class="mad-team-member">' +
+        '<a href="javascript:void(0)" class="mad-team-member-photo"><img src="' + precinct["image"] + '"' + ' alt="" style=" width="220;" height="250;"></a>' +
+        '<figcaption class="mad-team-member-info">' +
+        '<div class="mad-info-wrap">' +
+        '<h6 class="mad-team-member-name"><a href="#">' + precinct["rep"]["name"] + '</a></h6>' +
+        '<div class="mad-member-stat">Representative</div>' +
+        '<nav class="mad-info-block vr-list mad-links">' +
+        '<ul>' +
+        '<li><i class="mad-info-icon material-icons">phone</i>' + precinct["rep"]["phone"] + '</li>' +
+        '<li><i class="mad-info-icon material-icons">phone_iphone</i>' + precinct["rep"]["email"] + ' </li>' +
+        '</ul>' +
+        '</nav>' +
+        '</div>' +
+        '</figcaption>' +
+        '</figure>' +
+        //  End Of Team Member 
+        '</div>' +
+        '</div>' +
+        '</div>' +
+        '<div class="col-md-4">' +
+        '<div class="mad-team style-4">' +
+        '<div class="mad-col">' +
+        //   Team Member
+        '<figure class="mad-team-member">' +
+        '<div href="javascript:void(0)" class="mad-team-member-photo"><iframe src="' + precinct["votingPlace"]["map"] + 'style="border:0; width=220; height=250; allowfullscreen=""></iframe></div>' +
+        '<figcaption class="mad-team-member-info">' +
+        '<div class="mad-info-wrap">' +
+        '<h6 class="mad-team-member-name"><a href="#">Polling Station</a></h6>' +
+        '<div class="mad-member-stat">' + precinct["votingPlace"]["name"] + '</div>' +
+        '<div class="mad-member-stat">' + precinct["votingPlace"]["streetNumber"] + " " + precinct["votingPlace"]["streetName"] + '</div>' +
+        '<nav class="mad-info-block vr-list mad-links">' +
+        '</nav>' +
+        '</div>' +
+        '</figcaption>' +
+        '</figure>' +
+        //  End Of Team Member 
+        '</div>' +
+        '</div>' +
+        '</div>' +
+        '</div>' +
+        '</div>';
+
+    return inner_html;
+
+}
 
