@@ -28,7 +28,7 @@
   <link rel="stylesheet" href="css/responsive.css">
   <!--================ Vendor JS ================-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script>
+  <!-- <script>
     $(document).ready(function(){
       // Add smooth scrolling to all links
       $("a").on('click', function(event) {
@@ -55,7 +55,7 @@
       });
      
     });
-    </script>
+    </script> -->
 </head>
 
 <body class="mad-body--scheme-brown">
@@ -68,7 +68,7 @@
       <div class="mad-header-section mad-header-section--sticky-xl">
         <!--================ Column ================-->
         <div class="mad-header-col">
-          <a href="index.html"><img src="images/misc/voting_icon.jpeg" alt="" style="height: 80px;"></a>
+          <a href="index.html"><img src="images/vote_img.png" alt="" style="width: 80px;height: 50px;"></a>
         </div>
         <!--================ End of Column ================-->
         <!--================ Column ================-->
@@ -85,6 +85,7 @@
                   <li class="menu-item" style="font-size: 20px;"><a href="#section5">Upcoming Elections</a></li>      
                 </ul>
               </nav>
+            
               <!--================ End of Navigation ================-->
             </div>
           </div>
@@ -92,9 +93,10 @@
         <!--================ End of Column ================-->
       </div>
       <!--================ End of Section ================-->
+      
     </header>
     <!--================ Search panel ================-->
-    <div class="mad-search-section col-md-12">
+    <div class="mad-search-section col-md-12"> 
     
         <!-- <form class="mad-search">
           <div class="mad-search-item">
@@ -107,10 +109,10 @@
         </form> -->
         <form class="mad-newsletter-form mad-contact-form search-item">
           <input type="email" name="email" placeholder="Your home address" id="pac-input" style="width:550px;">
-          <button type="submit"><i class="material-icons">close</i></button>
-        </form>
+          <button type="submit" id="close-btn"><i class="material-icons">close</i></button>
+        </form> 
 
-    </div>
+     </div> 
     <!--================ End of Search panel ================-->
     <!--================ Google Map ================-->
     <div id="googleMap" class="mad-gmap"></div>
@@ -174,8 +176,8 @@
           </div>
           </div>
         </div>
-        </div>
-      </div>
+      </div> 
+    </div>
     <div class="mad-content no-pd" id="section2">
       <div class="container">
         
@@ -230,6 +232,7 @@
             
           </div>
           <!--================ End Of Team Members ================-->
+          
           <!--================ Team Members ================-->
           <div class="mad-team">
             <div class="mad-col">
@@ -447,9 +450,15 @@
                 </div>
               
               <!--================ End Of School Committee Members ================-->
+              
             </div>
+          
             </div>
-
+            <div id="library-trust">
+              
+            </div>
+          
+            
             <div class="mad-title-wrap">
               <h2 class="mad-title" id="section5">Elections</h2>
             </div>

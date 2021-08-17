@@ -2716,18 +2716,6 @@ var Mad = (function ($) {
             map.setOptions({ styles: styles["default"] });
 
             setMarkers(map);
-            // function createHomeMarker(place) {
-            //     homeMarker = new google.maps.Marker({
-            //         map,
-            //         anchorPoint: new google.maps.Point(place.geometry.location.lng(), place.geometry.location.lat()),
-            //         icon: "../img/home_icon.png",
-            //         animation: google.maps.Animation.DROP,
-            //     });
-            //     google.maps.event.addListener(homeMarker, 'click', function () {
-            //         alert('clicked');
-            //     });
-
-            // }
 
             // Construct the polygon.
             // district A
@@ -2753,6 +2741,9 @@ var Mad = (function ($) {
             all_precincts = [
                 draw_precincts_1, draw_precincts_2, draw_precincts_3, draw_precincts_4, draw_precincts_5, draw_precincts_6, draw_precincts_7, draw_precincts_8, draw_precincts_9, draw_precincts_10, draw_precincts_11, draw_precincts_12
             ];
+
+            // var close_btn = document.getElementById("close-btn");
+            // close_btn.addListener("click", () => { alert("clicked address loc") });
             // // set Map
             for (const key in all_precincts) {
                 all_precincts[key].setMap(map);;
@@ -2784,9 +2775,7 @@ var Mad = (function ($) {
                 if ((/Watertown, MA/).test(place.formatted_address)) {
                     isWatertown = true;
                     setMarker(place)
-
-                    // setMarker(marker)
-                    // getInfo(place);
+                    getInfo(place);
                 } else {
                     isWatertown = false;
                     alert(
@@ -2804,15 +2793,12 @@ var Mad = (function ($) {
                         map.fitBounds(place.geometry.viewport);
                         map.setCenter(place.geometry.location);
                         map.setZoom(14);
-                        // homeMarker.setPosition(place.geometry.location);
-                        // homeMarker.setVisible(true);
-                        // $("#fluidModalInfo").modal('toggle')
+
 
                     } else {
                         map.setCenter(myLatLng);
                         alert("Please try again with a valid address from Watertown MA");
-                        // map.setZoom(15);
-                        // homeMarker.setPosition(myLatLng);
+
                     }
 
                 }
@@ -2827,7 +2813,7 @@ var Mad = (function ($) {
             // ['forth', 42.37083484304676, -71.14594208164098]
         ];
 
-
+        create_rep_groups();
 
         function draw_my_precincts(precincts_coordinates, fill_color, title, color_str = "#FF0000") {
             var poly = new google.maps.Polygon({
@@ -2843,9 +2829,7 @@ var Mad = (function ($) {
             google.maps.event.addListener(poly, 'click', function (event) {
 
                 var my_precint = precinctData[title];
-
-                var modal = document.getElementById("your-rep");
-                modal.innerHTML = show_district_info(title, my_precint);
+                show_district_info(title, my_precint);
 
             });
 
@@ -2880,11 +2864,11 @@ var Mad = (function ($) {
                 position: { lat: place.geometry.location.lat(), lng: place.geometry.location.lng() },
                 map: map,
                 icon: 'images/misc/home_icon.png',
-                title: "test",
+                title: place.name,
                 zIndex: 3,
                 animation: google.maps.Animation.DROP,
             });
-            marker.addListener("click", () => { alert("clicked address loc") })
+            // marker.addListener("click", () => { alert("clicked address loc") })
         }
 
 
@@ -4119,36 +4103,37 @@ function createAtlargeRep(name, img, phone, email) {
 
 }
 
-function scrollSection() {
-    // Add smooth scrolling to all links
-    $("a").on('click', function (event) {
+// function scrollSection() {
+//     // Add smooth scrolling to all links
+//     $("a").on('click', function (event) {
 
-        // Make sure this.hash has a value before overriding default behavior
-        if (this.hash !== "") {
-            // Prevent default anchor click behavior
-            event.preventDefault();
+//         // Make sure this.hash has a value before overriding default behavior
+//         if (this.hash !== "") {
+//             // Prevent default anchor click behavior
+//             event.preventDefault();
 
-            // Store hash
-            var hash = this.hash;
+//             // Store hash
+//             var hash = this.hash;
 
-            // Using jQuery's animate() method to add smooth page scroll
-            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-            $('html, body').animate({
-                scrollTop: $(hash).offset().top
-            }, 800, function () {
+//             // Using jQuery's animate() method to add smooth page scroll
+//             // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+//             $('html, body').animate({
+//                 scrollTop: $(hash).offset().top
+//             }, 800, function () {
 
-                // Add hash (#) to URL when done scrolling (default click behavior)
-                window.location.hash = hash;
-            });
-        } // End if
-    });
-};
+//                 // Add hash (#) to URL when done scrolling (default click behavior)
+//                 window.location.hash = hash;
+//             });
+//         } // End if
+//     });
+// };
 
 function show_district_info(number, precinct) {
-    var inner_html =
-        '<h2 id="section0" class="mad-title center" style="padding-left:3rem; margin-top:10px;">District And Precint Info</h2>' +
-        '<div class="col-md-12" id="precinct-info" style="padding:2rem;">' +
-        '<div class="row mad-section">' +
+    var modal = document.getElementById("your-rep");
+    modal.innerHTML =
+        '<h5 id="section0" class="mad-title center" style="padding-left:3rem; margin-top:10px;">District And Precint Info</h5>' +
+        '<div class="mad-content no-pd" id="precinct-info">' +
+        '<div class="row">' +
         '<div class="col-md-4">' +
         '<div class="mad-team style-4">' +
         '<div class="mad-col">' +
@@ -4156,7 +4141,7 @@ function show_district_info(number, precinct) {
         '<figure class="mad-team-member">' +
         '<figcaption class="mad-team-member-info">' +
         '<div class="mad-info-wrap">' +
-        '<div class="container" style=margin:15px;>' +
+        '<div class="container col-md-6" style=margin:15px;>' +
         '<h4 class="mad-team-member-name"><a href="#">District</a></h4>' +
         '<div class="disctrict-info-text">' + precinct["district"] + '</div>' +
         '</div>' +
@@ -4217,7 +4202,137 @@ function show_district_info(number, precinct) {
         '</div>' +
         '</div>';
 
-    return inner_html;
 
+}
+
+
+
+
+function create_marker(latlng, title, icon_str) {
+    const polling = new google.maps.Marker({
+        position: latlng,
+        map,
+        title: title,
+        icon: icon_str,
+        animation: google.maps.Animation.DROP,
+        anchor: new google.maps.Point(latlng)
+    });
+    google.maps.event.addListener(polling, 'click', function () {
+        // infowindow.setContent("Precincts 9");
+        // infowindow.open(map, polling);
+        var modal = document.getElementById("modal-title");
+        modal.innerHTML = title;
+        // $("#exampleModal").modal("show");
+        // $("#fluidModalInfo").modal('toggle')
+    });
+    polling.setPosition(latlng);
+    polling.setVisible(true);
+
+}
+
+
+
+function getInfo(place) {
+    var streetInfo = (place.name).split(" ");
+    if (streetInfo.length == 4) {
+        streetNumber = streetInfo[0];
+        streetName = streetInfo[1] + "_" + streetInfo[2];
+        streetType = streetInfo[3];
+    } else {
+        streetNumber = streetInfo[0];
+        streetName = streetInfo[1];
+        streetType = streetInfo[2];
+    }
+    var selected_precinct;
+    var my_precint_info;
+    var precinct_number;
+    var street_side;
+    var my_precint = StData[streetName + '_' + streetType]
+    if (my_precint["type"] == "all") {
+        my_precint_info = precinctData[my_precint["precinct"]];
+        precinct_number = my_precint["precinct"];
+        selected_precinct = precinctData[my_precint["precinct"]];
+    }
+    else if (my_precint["type"] == "multiple") {
+        var my_precint_data = my_precint["from"];
+        street_side = (parseInt(streetNumber) % 2 == 0) ? "even" : "odd";
+        for (i = 0; i < my_precint_data.length; i++) {
+            if (my_precint_data[i] != null) {
+
+                if ((parseInt(streetNumber) >= my_precint_data[i]["start"] && parseInt(streetNumber) <= my_precint_data[i]["end"]) && (street_side == my_precint_data[i]["side"])) {
+                    selected_precinct = my_precint_data[i];
+                }
+                else if ((parseInt(streetNumber) >= my_precint_data[i]["start"] && parseInt(streetNumber) <= my_precint_data[i]["end"]) && my_precint_data[i]["side"] == "both") {
+                    selected_precinct = my_precint_data[i];
+                }
+                else if ((my_precint_data[i]["start"] == "" && my_precint_data[i]["end"] == "") && (street_side == my_precint_data[i]["side"])) {
+                    selected_precinct = my_precint_data[i];
+                }
+            }
+        }
+        my_precint_info = precinctData[selected_precinct["precinct"]];
+        precinct_number = selected_precinct["precinct"];
+        district = my_precint_info["district"];
+
+    }
+    if (selected_precinct == null) {
+        alert("Address not in Watertown")
+    } else {
+
+        show_district_info(precinct_number, my_precint_info)
+
+
+    }
+}
+
+function create_rep_groups() {
+    var lib = document.getElementById("library-trust");
+    lib.innerHTML =
+        '<div class="mad-content no-pd" id="section4">' +
+        '<div class="container">' +
+        '<div class="mad-section with-bg-element style-3 left-side">' +
+        '<div class="mad-title-wrap">' +
+        '<h2 class="mad-title">Library Trustees</h2>' +
+        '</div>' +
+        '<div class="mad-team" id="trustees">' +
+        create_trustee_member("Kendra Foley", "active") +
+        create_trustee_member("A") +
+        create_trustee_member("B") +
+        '</div>' +
+        '<div class="mad-team" id="trustees">' +
+        create_trustee_member("M") +
+        create_trustee_member("C") +
+        create_trustee_member("D", "active") +
+        '</div>' +
+        '</div>' +
+        '</div>' +
+        '</div>';
+
+}
+
+function create_trustee_member(name, isactive = "") {
+    status = isactive == "active" ? "active" : ""
+    var inner_text =
+
+        '<div class="mad-col ' + status + '"' + '>' +
+        '<figure class="mad-team-member">' +
+        '<a href="javascript:void(0)" class="mad-team-member-photo"><img src="images/reps/KendraFoley.jpeg" alt="" style="height: 23rem;"></a>' +
+        '<figcaption class="mad-team-member-info">' +
+        '<div class="mad-info-wrap">' +
+        '<h4 class="mad-team-member-name"><a href="#">Kendra Foley</a></h4>' +
+        '<div class="mad-member-stat">Vice-Chair</div>' +
+        '<nav class="mad-info-block vr-list mad-links">' +
+        '<ul>' +
+        '<li><i class="mad-info-icon material-icons">phone_iphone</i>617-515-2961</li>' +
+        '<li><i class="mad-info-icon material-icons">mail_outline</i><a href="kendra.foley@watertown.k12.ma.us" class="mad-link link-blue">Emailme</a></li>' +
+        '</ul>' +
+        '</nav>' +
+        '<a href="#" class="mad-read-more">View Profile</a> ' +
+        '</div>' +
+        '</figcaption>' +
+        '</figure>' +
+        '</div>';
+
+    return inner_text;
 }
 
