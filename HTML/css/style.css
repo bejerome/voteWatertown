@@ -9419,9 +9419,9 @@ body.mad-full-page .mad-full-page-wrap .mad-team.style-2 > .mad-col:nth-child(-n
   }
   
   /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-  .active, .accordion:hover {
-    background-color: #ccc;
-  }
+  /* .active, .accordion:hover {
+    background-color: transparent;
+  } */
   
   /* Style the accordion panel. Note: hidden by default */
   .panel {
