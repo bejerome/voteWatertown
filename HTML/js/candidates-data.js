@@ -4,13 +4,14 @@ CandidateData = {
         [
             {
                 post: "Council At-Large",
-                seats: 4
+                seats: 4,
+                id: "atlarge"
             },
             {
                 name: "Caroline Bays",
                 email: "cbays@watertown-ma.gov",
                 phone: "(617) 894-0045",
-                image: "img/reps/cbays.jpeg",
+                image: "images/reps/cbays.jpeg",
                 url: "#!",
                 desc: "incumbent"
             },
@@ -18,7 +19,7 @@ CandidateData = {
                 name: "John Gannon",
                 email: "jgannon@watertown-ma.gov",
                 phone: "(617) 393-9877",
-                image: "img/reps/jgannon.jpeg",
+                image: "images/reps/jgannon.jpeg",
                 url: "#!",
                 desc: "incumbent"
             },
@@ -26,7 +27,7 @@ CandidateData = {
                 name: "Anthony Palomba",
                 email: "apalomba@watertown-ma.gov",
                 phone: "(781) 664-3525",
-                image: "img/reps/palomba.jpeg",
+                image: "images/reps/palomba.jpeg",
                 url: "#!",
                 desc: "incumbent"
             },
@@ -34,7 +35,7 @@ CandidateData = {
                 name: "John Airasian",
                 email: "no data",
                 phone: "no data",
-                image: "img/candidates/John-M.-Airasian-scaled.jpg",
+                image: "images/candidates/John-M.-Airasian-scaled.jpg",
                 url: "#!",
                 desc: ""
 
@@ -43,7 +44,7 @@ CandidateData = {
                 name: "Daniel D’Amico",
                 email: "no data",
                 phone: "no data",
-                image: "img/person_icon.jpeg",
+                image: "images/reps/rep_avatar.png",
                 url: "#!",
                 desc: ""
 
@@ -52,7 +53,7 @@ CandidateData = {
                 name: "James Mello",
                 email: "no data",
                 phone: "no data",
-                image: "img/person_icon.jpeg",
+                image: "images/reps/rep_avatar.png",
                 url: "#!",
                 desc: ""
 
@@ -61,7 +62,7 @@ CandidateData = {
                 name: "Megan O’Halloran",
                 email: "no data",
                 phone: "no data",
-                image: "img/person_icon.jpeg",
+                image: "images/reps/rep_avatar.png",
                 url: "#!",
                 desc: ""
 
@@ -70,24 +71,26 @@ CandidateData = {
         ],
     president: [{
         post: "Town Council President",
-        seats: 1
+        seats: 1,
+        id: "president"
     }, {
         name: "Mark Sideris",
         email: "msideris@watertown-ma.gov",
         phone: "617-827-2996 (cell)",
-        image: "img/reps/mark_sedaris.png",
+        image: "images/reps/mark_sedaris.png",
         url: "#!",
         desc: "incumbent"
 
     },],
     districta: [{
         post: "District A Councilor",
-        seats: 1
+        seats: 1,
+        id: "districta"
     }, {
         name: "Nicole Gardner",
         email: "no data",
         phone: "no data",
-        image: "img/candidates/Nicole-Gardner.jpeg",
+        image: "images/candidates/Nicole-Gardner.jpeg",
         url: "https://nicoleforwatertown.com/",
         desc: ""
 
@@ -95,20 +98,21 @@ CandidateData = {
         name: "Michael Hanlon",
         email: "no data",
         phone: "no data",
-        image: "img/person_icon.jpeg",
+        image: "images/person_icon.jpeg",
         url: "https://mikehanlonforwatertown.com/",
         desc: ""
 
     }],
     districtb: [{
         post: "District B Councilor",
-        seats: 1
+        seats: 1,
+        id: "districtb"
     }, {
         name: "Lisa Feltner",
         name: "Lisa Feltner",
         email: "lfeltner@watertown-ma.gov",
         phone: "(617) 926-5344",
-        image: "img/reps/lisa_feltner.jpeg",
+        image: "images/reps/lisa_feltner.jpeg",
         url: "https://www.facebook.com/lisa.feltnertc/",
         desc: "incumbent"
 
@@ -116,31 +120,33 @@ CandidateData = {
         name: "Tiffany York",
         email: "no data",
         phone: "no data",
-        image: "img/person_icon.jpeg",
+        image: "images/person_icon.jpeg",
         url: "#!",
         desc: ""
 
     }],
     districtc: [{
         post: "District C Councilor",
-        seats: 1
+        seats: 1,
+        id: "districtc"
     }, {
         name: "Vincent Piccirilli",
         email: "vpiccirilli@watertown-ma.gov",
         phone: "(617) 924-0665",
-        image: "img/reps/vincent_piccirilli.jpeg",
+        image: "images/reps/vincent_piccirilli.jpeg",
         url: "https://www.facebook.com/vincent.piccirilli",
         desc: "incumbent"
 
     }],
     districtd: [{
         post: "District D Councilor",
-        seats: 1
+        seats: 1,
+        id: "districtd"
     }, {
         name: "Constance Henry",
         email: "no data",
         phone: "no data",
-        image: "img/candidates/connie.henry.jpg",
+        image: "images/candidates/connie.henry.jpg",
         url: "#!",
         desc: ""
 
@@ -148,20 +154,21 @@ CandidateData = {
         name: "Emily Izzo",
         email: "no data",
         phone: "no data",
-        image: "img/candidates/emily_izzo.jpeg",
+        image: "images/candidates/emily_izzo.jpeg",
         url: "#!",
         desc: ""
 
     }],
     school: [{
         post: "School Committee ",
-        seats: 3
+        seats: 3,
+        id: "school"
     }, {
         name: "Amy Donohue",
         title: "Secretary",
         email: "amy.donohue@watertown.k12.maus",
         phone: "617-908-8319 (cell)",
-        image: "img/reps/Amy_donohue.jpeg",
+        image: "images/reps/Amy_donohue.jpeg",
         url: "#!",
         desc: "incumbent"
 
@@ -170,7 +177,7 @@ CandidateData = {
         title: "no data",
         email: "Schoolcommittee@watertown.k12.ma.us",
         phone: "617-680-9762 (cell)",
-        image: "img/reps/LilyRayman-Read.jpeg",
+        image: "images/reps/LilyRayman-Read.jpeg",
         url: "#!",
         desc: "incumbent"
 
@@ -178,7 +185,7 @@ CandidateData = {
         name: "Colleen Mahoney Faherty",
         email: "no data",
         phone: "no data",
-        image: "img/person_icon.jpeg",
+        image: "images/person_icon.jpeg",
         url: "#!",
         desc: ""
 
@@ -187,7 +194,7 @@ CandidateData = {
         name: "Rachel Kay",
         email: "no data",
         phone: "no data",
-        image: "img/candidates/rachel_kay.jpeg",
+        image: "images/candidates/rachel_kay.jpeg",
         url: "#!",
         desc: ""
 
@@ -195,7 +202,7 @@ CandidateData = {
         name: "Jessica Middlebrook",
         email: "no data",
         phone: "no data",
-        image: "img/person_icon.jpeg",
+        image: "images/person_icon.jpeg",
         url: "#!",
         desc: ""
 
@@ -204,7 +211,7 @@ CandidateData = {
         name: "Jennifer Nicholson",
         email: "no data",
         phone: "no data",
-        image: "img/person_icon.jpeg",
+        image: "images/person_icon.jpeg",
         url: "#!",
         desc: ""
 
@@ -212,12 +219,13 @@ CandidateData = {
     ],
     library: [{
         post: "Library Trustees",
-        seats: 1
+        seats: 1,
+        id: "library"
     }, {
         name: "Leanne Hammonds",
         email: "no data",
         phone: "no data",
-        image: "img/person_icon.jpeg",
+        image: "images/person_icon.jpeg",
         url: "#!",
         desc: "incumbent"
 
@@ -225,7 +233,7 @@ CandidateData = {
         name: "Sara Keary",
         email: "no data",
         phone: "no data",
-        image: "img/candidates/sara_keary.png",
+        image: "images/candidates/sara_keary.png",
         url: "#!",
         desc: ""
 
@@ -233,7 +241,7 @@ CandidateData = {
         name: "Rosemary Su",
         email: "no data",
         phone: "no data",
-        image: "img/person_icon.jpeg",
+        image: "images/person_icon.jpeg",
         url: "#!",
         desc: ""
 
@@ -241,7 +249,7 @@ CandidateData = {
         name: "Maja Young",
         email: "no data",
         phone: "no data",
-        image: "img/person_icon.jpeg",
+        image: "images/person_icon.jpeg",
         url: "#!",
         desc: ""
 

@@ -2816,7 +2816,15 @@ var Mad = (function ($) {
         create_rep_groups();
         // elections candidates
         var runners = document.getElementById("elections");
-        runners.innerHTML = create_candidate("Council President") + create_candidate("Council At-Large (Four seats)");
+        runners.innerHTML =
+            create_candidate("president") +
+            create_candidate("candidatesatlg") +
+            create_candidate("districta") +
+            create_candidate("districtb") +
+            create_candidate("districtc") +
+            create_candidate("districtd") +
+            create_candidate("school") +
+            create_candidate("library");
 
         function draw_my_precincts(precincts_coordinates, fill_color, title, color_str = "#FF0000") {
             var poly = new google.maps.Polygon({
@@ -4340,40 +4348,63 @@ function create_trustee_member(index, isactive = "") {
 }
 
 function create_candidate(title) {
-    var inner = '<div class="rep-title col-xl-6 green-text">' + title + '</div>' +
+    var candidate = CandidateData[title];
+    var inner = '<div class="rep-title col-xl-6 green-text" id="' + candidate[0]['id'] + '"' + '>' + candidate[0]['post'] + '</div>' +
 
         '<div class="mad-table-wrap col-xl-8" style="margin-left: 50px; margin-bottom: 50px;">' +
         '<table class="mad-table--responsive-md">' +
         '<thead>' +
         '<tr class="bg">' +
-        '<th class="green-text">Candidates</th>' +
-        '<th class="green-text">Seats</th>' +
+        '<th>Candidates</th>' +
+        '<th>Seats <span class="green-text">' + ' ' + candidate[0]['seats'] + '</span></th>' +
         '</tr>' +
         '</thead>' +
-        '<tbody>' +
-        '<tr>' +
-        '<td data-cell-title="Heading 1">' +
-        '<section class="col-lg-12" id="section6">' +
-        //<!--================ Accordion ================-->
-        '<dl role="presentation" class="mad-panels mad-panels--accordion">' +
-        '<dt class="mad-panels-title">' +
-        '<button id="panel-2-button" type="button" aria-expanded="false" aria-controls="panel-2" aria-disabled="false"><img src="images/candidates/sara_keary.png" alt="Avatar" class="avatar"></button>' +
-        '</dt>' +
-        '<dd id="panel-2" class="mad-panels-definition" style="display: none;">' +
-        '<img src="images/246x176_img1.jpg" alt="" class="alignleft">' +
-        '<p class="mad-text-small">Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit. Aenean auctor wisi et urna. Aliquam erat volutpat.Duis ac turpis. </p>' +
-        '<p class="mad-text-small">Integer rutrum ante eu lacus. Vestibulum libero nisl, porta vel, scelerisque eget, malesuada at, neque. Vivamus egetnibh.</p>' +
-        '</dd>' +
-        '</dl>' +
-        // <!--================ End of Accordion ================-->
-        '</section>' +
-        '</td>' +
-        '<td data-cell-title="Heading 2">Incumbent</td>' +
-        '</tr> ' +
+        '<tbody>';
+
+
+    for (let i = 1; i <= candidate.length - 1; i++) {
+
+        inner += '<tr>' + '<td data-cell-title="Candidates">' +
+            create_member_candidate(candidate[i]) +
+            '</td>' +
+            '<td data-cell-title="Seats"><p class="green-text" style= margin-top:23px;>' + candidate[i]["desc"] + '</p></td>' + '</tr> ';
+
+    }
+
+    inner +=
+
         '</tbody>' +
         '</table>' +
         //<!--================ End Of Elections ================-->
         '</div>';
     return inner;
+}
+
+function create_member_candidate(member) {
+
+    var inner =
+        '<div class="container" style=padding:10px;">' +
+        '<div class="mad-team style-4">' +
+        '<div class="mad-col">' +
+        '<figure class="mad-team-member">' +
+        '<a href="javascript:void(0)" class="mad-team-member-photo"><img src="' + member["image"] + '"' + 'alt=""></a>' +
+        '<figcaption class="mad-team-member-info">' +
+        '<div class="mad-info-wrap">' +
+        '<h5 class="mad-team-member-name"><a href="#">' + member["name"] + '</a></h5>' +
+        '<nav class="mad-info-block vr-list mad-links">' +
+        '<ul>' +
+        '<li><i class="mad-info-icon material-icons">phone</i>' + member["phone"] + '</li>' +
+        // '<li><i class="mad-info-icon material-icons">phone_iphone</i>+208.654.321</li>' +
+        '<li><i class="mad-info-icon material-icons">mail_outline</i><a href="' + member["email"] + '"' + 'class="mad-link link-blue" style="background-position: 0% 23px;">Email me</a></li>' +
+        '</ul>' +
+        '</nav>' +
+        '</div>' +
+        '</figcaption>' +
+        '</figure>' +
+        '</div>' +
+        '</div>' +
+        '</div>';
+    return inner;
+
 }
 
