@@ -98,7 +98,7 @@ CandidateData = {
         name: "Michael Hanlon",
         email: "no data",
         phone: "no data",
-        image: "images/person_icon.jpeg",
+        image: "images/reps/rep_avatar.png",
         url: "https://mikehanlonforwatertown.com/",
         desc: ""
 
@@ -120,7 +120,7 @@ CandidateData = {
         name: "Tiffany York",
         email: "no data",
         phone: "no data",
-        image: "images/person_icon.jpeg",
+        image: "images/reps/rep_avatar.png",
         url: "#!",
         desc: ""
 
@@ -185,7 +185,7 @@ CandidateData = {
         name: "Colleen Mahoney Faherty",
         email: "no data",
         phone: "no data",
-        image: "images/person_icon.jpeg",
+        image: "images/reps/rep_avatar.png",
         url: "#!",
         desc: ""
 
@@ -202,7 +202,7 @@ CandidateData = {
         name: "Jessica Middlebrook",
         email: "no data",
         phone: "no data",
-        image: "images/person_icon.jpeg",
+        image: "images/reps/rep_avatar.png",
         url: "#!",
         desc: ""
 
@@ -211,7 +211,7 @@ CandidateData = {
         name: "Jennifer Nicholson",
         email: "no data",
         phone: "no data",
-        image: "images/person_icon.jpeg",
+        image: "images/reps/rep_avatar.png",
         url: "#!",
         desc: ""
 
@@ -225,7 +225,7 @@ CandidateData = {
         name: "Leanne Hammonds",
         email: "no data",
         phone: "no data",
-        image: "images/person_icon.jpeg",
+        image: "images/reps/rep_avatar.png",
         url: "#!",
         desc: "incumbent"
 
@@ -241,7 +241,7 @@ CandidateData = {
         name: "Rosemary Su",
         email: "no data",
         phone: "no data",
-        image: "images/person_icon.jpeg",
+        image: "images/reps/rep_avatar.png",
         url: "#!",
         desc: ""
 
@@ -249,7 +249,7 @@ CandidateData = {
         name: "Maja Young",
         email: "no data",
         phone: "no data",
-        image: "images/person_icon.jpeg",
+        image: "images/reps/rep_avatar.png",
         url: "#!",
         desc: ""
 
