@@ -732,9 +732,9 @@
     ---------------------------------------- */
 
         .mad-header {
-            line-height: 1.5rem;
+            line-height: .2rem;
             position: relative;
-            z-index: 25;
+            z-index: 5;
         }
 
         [class*="mad-header-section--sticky"] {

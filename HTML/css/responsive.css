@@ -278,11 +278,11 @@
 
 	.mad-header-items {
 		flex-direction: column;
-		padding-bottom: 2rem;
+		padding-bottom: .5rem;
 	}
 
 	.mad-header-items .mad-header-item:not(:last-child) {
-		margin-bottom: 2rem;
+		margin-bottom: .5rem;
 	}
 
 	.mad-header--transparent.mad-header--transparent-single {

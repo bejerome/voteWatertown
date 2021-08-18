@@ -4298,14 +4298,14 @@ function create_rep_groups() {
         '<h2 class="mad-title">Library Trustees</h2>' +
         '</div>' +
         '<div class="mad-team" id="trustees">' +
-        create_trustee_member("Kendra Foley", "active") +
-        create_trustee_member("A") +
-        create_trustee_member("B") +
+        create_trustee_member(0, "active") +
+        create_trustee_member(1) +
+        create_trustee_member(2) +
         '</div>' +
         '<div class="mad-team" id="trustees">' +
-        create_trustee_member("M") +
-        create_trustee_member("C") +
-        create_trustee_member("D", "active") +
+        create_trustee_member(3) +
+        create_trustee_member(4) +
+        create_trustee_member(5, "active") +
         '</div>' +
         '</div>' +
         '</div>' +
@@ -4313,24 +4313,24 @@ function create_rep_groups() {
 
 }
 
-function create_trustee_member(name, isactive = "") {
+function create_trustee_member(index, isactive = "") {
+    var trustees = LibTrusteesData;
     status = isactive == "active" ? "active" : ""
     var inner_text =
 
         '<div class="mad-col ' + status + '"' + '>' +
         '<figure class="mad-team-member">' +
-        '<a href="javascript:void(0)" class="mad-team-member-photo"><img src="images/reps/KendraFoley.jpeg" alt="" style="height: 23rem;"></a>' +
+        '<a href="javascript:void(0)" class="mad-team-member-photo"><img src="' + trustees[index]["image"] + '"' + 'alt="" style="height: 23rem;"></a>' +
         '<figcaption class="mad-team-member-info">' +
         '<div class="mad-info-wrap">' +
-        '<h4 class="mad-team-member-name"><a href="#">Kendra Foley</a></h4>' +
-        '<div class="mad-member-stat">Vice-Chair</div>' +
+        '<h4 class="mad-team-member-name"><a href="#">' + trustees[index]["name"] + '</a></h4>' +
+        '<div class="mad-member-stat">' + trustees[index]["title"] + '</div>' +
         '<nav class="mad-info-block vr-list mad-links">' +
         '<ul>' +
-        '<li><i class="mad-info-icon material-icons">phone_iphone</i>617-515-2961</li>' +
-        '<li><i class="mad-info-icon material-icons">mail_outline</i><a href="kendra.foley@watertown.k12.ma.us" class="mad-link link-blue">Emailme</a></li>' +
+        '<li><i class="mad-info-icon material-icons">phone_iphone</i>' + trustees[index]["phone"] + '</li>' +
+        '<li><i class="mad-info-icon material-icons">mail_outline</i><a href="' + trustees[index]["email"] + '"' + 'class="mad-link link-blue">Email me</a></li>' +
         '</ul>' +
         '</nav>' +
-        '<a href="#" class="mad-read-more">View Profile</a> ' +
         '</div>' +
         '</figcaption>' +
         '</figure>' +
