@@ -4103,7 +4103,7 @@ function createAtlargeRep(name, img, phone, email) {
         '<ul>' +
         '<li><i class="mad-info-icon material-icons">phone</i>+1 208. 987.654</li>' +
         '<li><i class="mad-info-icon material-icons">phone_iphone</i>+1 208.654.321</li>' +
-        '<li><i class="mad-info-icon material-icons">mail_outline</i><a href="#" class="mad-link link-blue">Email me</a></li>' +
+        '<li><i class="mad-info-icon material-icons">mail_outline</i><a href="#" class="mad-link link-blue">Email</a></li>' +
         '</ul>' +
         '</nav>' +
         '<a href="#" class="mad-read-more">View Profile</a>' +
@@ -4336,7 +4336,7 @@ function create_trustee_member(index, isactive = "") {
         '<nav class="mad-info-block vr-list mad-links">' +
         '<ul>' +
         '<li><i class="mad-info-icon material-icons">phone_iphone</i>' + trustees[index]["phone"] + '</li>' +
-        '<li><i class="mad-info-icon material-icons">mail_outline</i><a href="' + trustees[index]["email"] + '"' + 'class="mad-link link-blue">Email me</a></li>' +
+        '<li><i class="mad-info-icon material-icons">mail_outline</i><a href="' + trustees[index]["email"] + '"' + 'class="mad-link link-blue">Email</a></li>' +
         '</ul>' +
         '</nav>' +
         '</div>' +
@@ -4349,14 +4349,15 @@ function create_trustee_member(index, isactive = "") {
 
 function create_candidate(title) {
     var candidate = CandidateData[title];
-    var inner = '<div class="rep-title col-xl-6 green-text" id="' + candidate[0]['id'] + '"' + '>' + candidate[0]['post'] + '</div>' +
+    var inner = '<div class="rep-title col-xl-8 green-text" id="' +
+        candidate[0]['id'] + '"' + '>' + candidate[0]['post'] + '</div>' +
 
-        '<div class="mad-table-wrap col-xl-8" style="margin-left: 50px; margin-bottom: 50px;">' +
+        '<div class="mad-table-wrap col-xl-8" style="margin-bottom: 50px;">' +
         '<table class="mad-table--responsive-md">' +
         '<thead>' +
         '<tr class="bg">' +
-        '<th>Candidates</th>' +
-        '<th>Seats <span class="green-text">' + ' ' + candidate[0]['seats'] + '</span></th>' +
+        '<th style="text-align:center">Candidates</th>' +
+        '<th style="text-align:center">Seats <span class="green-text">' + ' ' + candidate[0]['seats'] + '</span></th>' +
         '</tr>' +
         '</thead>' +
         '<tbody>';
@@ -4395,7 +4396,7 @@ function create_member_candidate(member) {
         '<ul>' +
         '<li><i class="mad-info-icon material-icons">phone</i>' + member["phone"] + '</li>' +
         // '<li><i class="mad-info-icon material-icons">phone_iphone</i>+208.654.321</li>' +
-        '<li><i class="mad-info-icon material-icons">mail_outline</i><a href="' + member["email"] + '"' + 'class="mad-link link-blue" style="background-position: 0% 23px;">Email me</a></li>' +
+        '<li><i class="mad-info-icon material-icons">mail_outline</i><a href="' + member["email"] + '"' + 'class="mad-link link-blue" style="background-position: 0% 23px;">Email</a></li>' +
         '</ul>' +
         '</nav>' +
         '</div>' +

@@ -13,7 +13,7 @@ CandidateData = {
                 phone: "(617) 894-0045",
                 image: "images/reps/cbays.jpeg",
                 url: "#!",
-                desc: "incumbent"
+                desc: "Incumbent"
             },
             {
                 name: "John Gannon",
@@ -21,7 +21,7 @@ CandidateData = {
                 phone: "(617) 393-9877",
                 image: "images/reps/jgannon.jpeg",
                 url: "#!",
-                desc: "incumbent"
+                desc: "Incumbent"
             },
             {
                 name: "Anthony Palomba",
@@ -29,7 +29,7 @@ CandidateData = {
                 phone: "(781) 664-3525",
                 image: "images/reps/palomba.jpeg",
                 url: "#!",
-                desc: "incumbent"
+                desc: "Incumbent"
             },
             {
                 name: "John Airasian",
@@ -37,7 +37,7 @@ CandidateData = {
                 phone: "no data",
                 image: "images/candidates/John-M.-Airasian-scaled.jpg",
                 url: "#!",
-                desc: ""
+                desc: "Challenger"
 
             },
             {
@@ -46,7 +46,7 @@ CandidateData = {
                 phone: "no data",
                 image: "images/reps/rep_avatar.png",
                 url: "#!",
-                desc: ""
+                desc: "Challenger"
 
             },
             {
@@ -55,7 +55,7 @@ CandidateData = {
                 phone: "no data",
                 image: "images/reps/rep_avatar.png",
                 url: "#!",
-                desc: ""
+                desc: "Challenger"
 
             },
             {
@@ -64,7 +64,7 @@ CandidateData = {
                 phone: "no data",
                 image: "images/reps/rep_avatar.png",
                 url: "#!",
-                desc: ""
+                desc: "Challenger"
 
             },
 
@@ -76,10 +76,10 @@ CandidateData = {
     }, {
         name: "Mark Sideris",
         email: "msideris@watertown-ma.gov",
-        phone: "617-827-2996 (cell)",
+        phone: "617-827-2996",
         image: "images/reps/mark_sedaris.png",
         url: "#!",
-        desc: "incumbent"
+        desc: "Incumbent"
 
     },],
     districta: [{
@@ -92,7 +92,7 @@ CandidateData = {
         phone: "no data",
         image: "images/candidates/Nicole-Gardner.jpeg",
         url: "https://nicoleforwatertown.com/",
-        desc: ""
+        desc: "Challenger"
 
     }, {
         name: "Michael Hanlon",
@@ -100,7 +100,7 @@ CandidateData = {
         phone: "no data",
         image: "images/reps/rep_avatar.png",
         url: "https://mikehanlonforwatertown.com/",
-        desc: ""
+        desc: "Challenger"
 
     }],
     districtb: [{
@@ -114,7 +114,7 @@ CandidateData = {
         phone: "(617) 926-5344",
         image: "images/reps/lisa_feltner.jpeg",
         url: "https://www.facebook.com/lisa.feltnertc/",
-        desc: "incumbent"
+        desc: "Incumbent"
 
     }, {
         name: "Tiffany York",
@@ -122,7 +122,7 @@ CandidateData = {
         phone: "no data",
         image: "images/reps/rep_avatar.png",
         url: "#!",
-        desc: ""
+        desc: "Challenger"
 
     }],
     districtc: [{
@@ -135,7 +135,7 @@ CandidateData = {
         phone: "(617) 924-0665",
         image: "images/reps/vincent_piccirilli.jpeg",
         url: "https://www.facebook.com/vincent.piccirilli",
-        desc: "incumbent"
+        desc: "Incumbent"
 
     }],
     districtd: [{
@@ -148,7 +148,7 @@ CandidateData = {
         phone: "no data",
         image: "images/candidates/connie.henry.jpg",
         url: "#!",
-        desc: ""
+        desc: "Challenger"
 
     }, {
         name: "Emily Izzo",
@@ -156,7 +156,7 @@ CandidateData = {
         phone: "no data",
         image: "images/candidates/emily_izzo.jpeg",
         url: "#!",
-        desc: ""
+        desc: "Challenger"
 
     }],
     school: [{
@@ -167,19 +167,19 @@ CandidateData = {
         name: "Amy Donohue",
         title: "Secretary",
         email: "amy.donohue@watertown.k12.maus",
-        phone: "617-908-8319 (cell)",
+        phone: "617-908-8319",
         image: "images/reps/Amy_donohue.jpeg",
         url: "#!",
-        desc: "incumbent"
+        desc: "Incumbent"
 
     }, {
         name: "Lily Rayman-Read",
         title: "no data",
         email: "Schoolcommittee@watertown.k12.ma.us",
-        phone: "617-680-9762 (cell)",
+        phone: "617-680-9762",
         image: "images/reps/LilyRayman-Read.jpeg",
         url: "#!",
-        desc: "incumbent"
+        desc: "Incumbent"
 
     }, {
         name: "Colleen Mahoney Faherty",
@@ -187,7 +187,7 @@ CandidateData = {
         phone: "no data",
         image: "images/reps/rep_avatar.png",
         url: "#!",
-        desc: ""
+        desc: "Challenger"
 
     },
     {
@@ -196,7 +196,7 @@ CandidateData = {
         phone: "no data",
         image: "images/candidates/rachel_kay.jpeg",
         url: "#!",
-        desc: ""
+        desc: "Challenger"
 
     }, {
         name: "Jessica Middlebrook",
@@ -204,7 +204,7 @@ CandidateData = {
         phone: "no data",
         image: "images/reps/rep_avatar.png",
         url: "#!",
-        desc: ""
+        desc: "Challenger"
 
     },
     {
@@ -213,7 +213,7 @@ CandidateData = {
         phone: "no data",
         image: "images/reps/rep_avatar.png",
         url: "#!",
-        desc: ""
+        desc: "Challenger"
 
     },
     ],
@@ -227,7 +227,7 @@ CandidateData = {
         phone: "no data",
         image: "images/reps/rep_avatar.png",
         url: "#!",
-        desc: "incumbent"
+        desc: "Incumbent"
 
     }, {
         name: "Sara Keary",
@@ -235,7 +235,7 @@ CandidateData = {
         phone: "no data",
         image: "images/candidates/sara_keary.png",
         url: "#!",
-        desc: ""
+        desc: "Challenger"
 
     }, {
         name: "Rosemary Su",
@@ -243,7 +243,7 @@ CandidateData = {
         phone: "no data",
         image: "images/reps/rep_avatar.png",
         url: "#!",
-        desc: ""
+        desc: "Challenger"
 
     }, {
         name: "Maja Young",
@@ -251,7 +251,7 @@ CandidateData = {
         phone: "no data",
         image: "images/reps/rep_avatar.png",
         url: "#!",
-        desc: ""
+        desc: "Challenger"
 
     },]
 };

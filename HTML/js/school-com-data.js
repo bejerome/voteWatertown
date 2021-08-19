@@ -53,7 +53,7 @@ SchoolComData = [
         email: "msideris@watertown-ma.gov",
         phone: "617-827-2996 (cell)",
         image: "img/reps/mark_sedaris.png",
-        desc: ""
+        desc: "Challenger"
     },
     {
         name: "Eileen Hsu-Balzer",
@@ -62,7 +62,7 @@ SchoolComData = [
         email: "Schoolcommittee@watertown.k12.ma.us",
         phone: "617-926-7700 (cell)",
         image: "img/person_icon.jpeg",
-        desc: ""
+        desc: "Challenger"
     }
 ]
 
