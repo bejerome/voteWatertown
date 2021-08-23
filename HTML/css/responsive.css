@@ -666,7 +666,7 @@
 		position: absolute;
 		left: 50%;
 		top: 0;
-		height: 100%;
+		height: 50%;
 		border-width: 0 1px 0 0;
 		border-style: inherit;
 		border-color: inherit;
@@ -930,8 +930,8 @@
 		margin: 0;
 	}
 	.mad-navigation--vertical-sm > li > a {
-		padding-top: 1rem;
-		padding-bottom: 1rem;
+		padding-top: 0.5rem;
+		padding-bottom: 0.5rem;
 		padding-left: 0.9375rem;
 		padding-right: 0.9375rem;
 	}

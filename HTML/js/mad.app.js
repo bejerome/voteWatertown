@@ -2776,6 +2776,7 @@ var Mad = (function ($) {
                     isWatertown = true;
                     setMarker(place)
                     getInfo(place);
+                    scrollSection("#your-rep");
                 } else {
                     isWatertown = false;
                     alert(
@@ -2842,6 +2843,8 @@ var Mad = (function ($) {
                 var my_precint = precinctData[title];
                 show_district_info(title, my_precint);
 
+                scrollSection("#your-rep");
+
             });
 
 
@@ -2879,7 +2882,7 @@ var Mad = (function ($) {
                 zIndex: 3,
                 animation: google.maps.Animation.DROP,
             });
-            // marker.addListener("click", () => { alert("clicked address loc") })
+            marker.addListener("click", () => { scrollSection("#your-rep"); })
         }
 
 
@@ -3690,6 +3693,12 @@ var Mad = (function ($) {
         })
     };
 
+    if ($('.mad-canditates-section').length) {
+        $('.mad-col').on('mouseenter', function () {
+            $(this).siblings().removeClass('active');
+            $(this).addClass('active');
+        })
+    };
     /* ---------------------------------------------------- */
     /*	Team Section										*/
     /* ---------------------------------------------------- */
@@ -4092,7 +4101,7 @@ $(function () {
 function createAtlargeRep(name, img, phone, email) {
 
     '<div class="mad-team mad-team-section">' +
-        '<div class="mad-col active">' +
+        '<div class="mad-col">' +
         '<figure class="mad-team-member">' +
         '<a href="javascript:void(0)" class="mad-team-member-photo"><img src="images/reps/akounelis.jpeg" alt=""></a>' +
         '<figcaption class="mad-team-member-info">' +
@@ -4114,30 +4123,17 @@ function createAtlargeRep(name, img, phone, email) {
 
 }
 
-// function scrollSection() {
-//     // Add smooth scrolling to all links
-//     $("a").on('click', function (event) {
+function scrollSection(id) {
+    // Using jQuery's animate() method to add smooth page scroll
+    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+    $('html, body').animate({
+        scrollTop: $(id).offset().top - 200
+    }, 800, function () {
 
-//         // Make sure this.hash has a value before overriding default behavior
-//         if (this.hash !== "") {
-//             // Prevent default anchor click behavior
-//             event.preventDefault();
-
-//             // Store hash
-//             var hash = this.hash;
-
-//             // Using jQuery's animate() method to add smooth page scroll
-//             // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-//             $('html, body').animate({
-//                 scrollTop: $(hash).offset().top
-//             }, 800, function () {
-
-//                 // Add hash (#) to URL when done scrolling (default click behavior)
-//                 window.location.hash = hash;
-//             });
-//         } // End if
-//     });
-// };
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        // window.location.hash = hash;
+    });
+};
 
 function show_district_info(number, precinct) {
     var modal = document.getElementById("your-rep");
@@ -4356,8 +4352,8 @@ function create_candidate(title) {
         '<table class="mad-table--responsive-md">' +
         '<thead>' +
         '<tr class="bg">' +
-        '<th style="text-align:center">Candidates</th>' +
-        '<th style="text-align:center">Seats <span class="green-text">' + ' ' + candidate[0]['seats'] + '</span></th>' +
+        '<th  class="col-xl-6" >Candidates</th>' +
+        '<th class="col-xl-2" >Seats <span class="green-text">' + ' ' + candidate[0]['seats'] + '</span></th>' +
         '</tr>' +
         '</thead>' +
         '<tbody>';
@@ -4368,7 +4364,7 @@ function create_candidate(title) {
         inner += '<tr>' + '<td data-cell-title="Candidates">' +
             create_member_candidate(candidate[i]) +
             '</td>' +
-            '<td data-cell-title="Seats"><p class="green-text" style= margin-top:23px;>' + candidate[i]["desc"] + '</p></td>' + '</tr> ';
+            '<td data-cell-title="Seats"><p class="green-text" style= "margin-top:23px">' + candidate[i]["desc"] + '</p></td>' + '</tr> ';
 
     }
 
@@ -4384,7 +4380,7 @@ function create_candidate(title) {
 function create_member_candidate(member) {
 
     var inner =
-        '<div class="container" style=padding:10px;">' +
+        '<div class="mad-canditates-section">' +
         '<div class="mad-team style-4">' +
         '<div class="mad-col">' +
         '<figure class="mad-team-member">' +

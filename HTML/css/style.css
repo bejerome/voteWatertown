@@ -818,7 +818,7 @@
 
         .mad-header .mad-top-header .mad-header-col {
             padding: 1rem 0.5rem 0;
-            width: 33.3333%;
+            width: 100%;
             display: flex;
             flex-wrap: wrap;
             align-items: center;
@@ -939,6 +939,7 @@
                 padding: 0 3rem;
                 z-index: 1;
                 background: #fff;
+                
             }
 
             .mad-header-section:after {
@@ -950,6 +951,7 @@
                 height: 1px;
                 background: #d8dbe1;
                 z-index: -1;
+                margin: 0 auto 0 auto;
             }
 
             .mad-header-section .mad-header-col:first-child {
@@ -971,11 +973,12 @@
                 display: -o-flex;
                 display: flex;
                 align-items: center;
-                justify-content: space-between;
+                justify-content: center;
+               
             }
 
             .mad-header-item .mad-navigation-container {
-                padding: 0 5rem;
+                padding: 0 3rem;
             }
 
             .mad-header-buttons {
@@ -4726,7 +4729,7 @@
             display: flex;
             overflow: hidden;
             border-radius: 0.5rem;
-            background: #fff;
+            background: transparent;
             width: 100%;
         }
 
@@ -4744,10 +4747,10 @@
             bottom: 0;
             left: 0;
             width: 0;
-            height: 3px;
-            background: #3d4356;
-            transition: all .5s ease;
-            z-index: 5;
+            height: 5px;
+            /* background: #3d4356;
+            transition: all .5s ease; */
+            z-index: 0;
             border-bottom-right-radius: 8px;
             border-bottom-left-radius: 8px;
         }
@@ -4780,6 +4783,7 @@
 
         #main .mad-team.style-4 .mad-team-member-photo {
             max-width: 320px;
+            min-width: 50px;
             width: 100%;
         }
 
@@ -4829,7 +4833,8 @@
         }
 
         table tr:hover {
-            background-color: #f5f6f7;
+            /* background-color: #f5f6f7; */
+            background-color: transparent;
         }
 
         table td,
@@ -4843,6 +4848,7 @@
         table tr td {
             border-top: 1px solid #d8dbe1;
             color: #5e6270;
+            
         } 
 
         table th,
