@@ -53,16 +53,16 @@ SchoolComData = [
         email: "msideris@watertown-ma.gov",
         phone: "617-827-2996 (cell)",
         image: "img/reps/mark_sedaris.png",
-        desc: "Challenger"
+        desc: ""
     },
     {
-        name: "Eileen Hsu-Balzer",
+        name: "David Stokes",
         url: "#!",
         title: "",
         email: "Schoolcommittee@watertown.k12.ma.us",
-        phone: "617-926-7700 (cell)",
+        phone: "",
         image: "img/person_icon.jpeg",
-        desc: "Challenger"
+        desc: "David Stokes was elected to the School Committee in 2019.  He has worked to improve Watertown schools since 2007 by being a member of the Lowell School Site Council, the Middle School Site Council, and the High School Site Council.  He served on the Goals Measurement Advisory Committee.  Although he was certified as a secondary school English teacher, David has primarily taught outside the public school classroom – for the American Red Cross, the City of Cambridge, the Boston University Questrom School of Business, and the Massachusetts Water Resources Authority (MWRA).  He has worked in the IT Department at MWRA since 1995, mostly in information security.  David and his wife, both educated in public schools, have lived in Watertown since 1996.  Their only child, of whom they are so proud, has attended Watertown Public Schools continuously from Kindergarten through 12th Grade.  David has also previously served on the Watertown Stormwater Advisory Committee, working to improve the health of the Charles River."
     }
 ]
 

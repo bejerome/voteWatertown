@@ -77,7 +77,7 @@ CandidateData = {
         name: "Mark Sideris",
         email: "msideris@watertown-ma.gov",
         phone: "617-827-2996",
-        image: "images/reps/mark_sedaris.png",
+        image: "images/reps/sidaris_pic.jpeg",
         url: "#!",
         desc: "Incumbent"
 
@@ -219,7 +219,7 @@ CandidateData = {
     ],
     library: [{
         post: "Library Trustees",
-        seats: 1,
+        seats: 3,
         id: "library"
     }, {
         name: "Leanne Hammonds",
