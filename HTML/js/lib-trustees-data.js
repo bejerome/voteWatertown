@@ -37,7 +37,7 @@ LibTrusteesData =
         },
         {
             name: "Daniel Pritchard",
-            title: "",
+            title: "Library Trustee",
             email: "dpritchard@watertown-ma.gov",
             phone: "617-653-6645",
             image: "images/reps/rep_avatar.png",
@@ -45,7 +45,7 @@ LibTrusteesData =
         },
         {
             name: "Emily Izzo",
-            title: "",
+            title: "Library Trustee",
             email: "eizzo@watertown-ma.gov",
             phone: "617-894-6042",
             image: "images/candidates/emily_izzo.jpeg",

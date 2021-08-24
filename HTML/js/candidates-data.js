@@ -44,7 +44,7 @@ CandidateData = {
                 name: "Daniel D’Amico",
                 email: "no data",
                 phone: "no data",
-                image: "images/reps/rep_avatar.png",
+                image: "images/candidates/D'Amico.jpg",
                 url: "#!",
                 desc: "Challenger"
 
@@ -168,7 +168,7 @@ CandidateData = {
         title: "Secretary",
         email: "amy.donohue@watertown.k12.maus",
         phone: "617-908-8319",
-        image: "images/reps/Amy_donohue.jpeg",
+        image: "images/reps/Amy_donohue.200x200.jpeg",
         url: "#!",
         desc: "Incumbent"
 
@@ -192,17 +192,17 @@ CandidateData = {
     },
     {
         name: "Rachel Kay",
-        email: "no data",
-        phone: "no data",
+        email: "rachelekay@gmail.com",
+        phone: "617-744-9264",
         image: "images/candidates/rachel_kay.jpeg",
-        url: "#!",
+        url: "www.rachelekay.com",
         desc: "Challenger"
 
     }, {
         name: "Jessica Middlebrook",
         email: "no data",
         phone: "no data",
-        image: "images/reps/rep_avatar.png",
+        image: "images/candidates/Middlebrook.jpg",
         url: "#!",
         desc: "Challenger"
 
@@ -211,7 +211,7 @@ CandidateData = {
         name: "Jennifer Nicholson",
         email: "no data",
         phone: "no data",
-        image: "images/reps/rep_avatar.png",
+        image: "images/candidates/Nicholson.jpg",
         url: "#!",
         desc: "Challenger"
 
@@ -233,7 +233,7 @@ CandidateData = {
         name: "Sara Keary",
         email: "no data",
         phone: "no data",
-        image: "images/candidates/sara_keary.png",
+        image: "images/candidates/Keary.jpg",
         url: "#!",
         desc: "Challenger"
 

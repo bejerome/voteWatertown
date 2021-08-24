@@ -2813,8 +2813,14 @@ var Mad = (function ($) {
             // ['third', 42.37479794184094, -71.16885887336669],
             // ['forth', 42.37083484304676, -71.14594208164098]
         ];
-        // library trustees
-        create_rep_groups();
+
+        //create page sections
+        create_town_management("Town Manager", "section1");
+        createALargemembers("Representatives At Large", "section2", atLargeData);
+        createschoolmembers("School Committee Members", "section3", SchoolComData);
+        create_trustee_member("Library Trustees", "library-trust", LibTrusteesData);
+
+
         // elections candidates
         var runners = document.getElementById("elections");
         runners.innerHTML =
@@ -4098,28 +4104,82 @@ $(function () {
     });
 });
 
-function createAtlargeRep(name, img, phone, email) {
 
-    '<div class="mad-team mad-team-section">' +
-        '<div class="mad-col">' +
+function create_town_management(title, id) {
+
+    var rep = document.getElementById(id);
+    rep.innerHTML =
+        '<div class="content-element-6">' +
+        '<h3 class="green-text">' + title + '</h3>' +
+        '<div class="mad-team style-2 item-col-4">' +
+        // ================ Team Members ================
+
+        create_team_members(townManagement[0]) +
+        create_team_members(townManagement[1]) +
+        '</div>' +
+        '</div>';
+
+}
+
+
+function createALargemembers(title, id, data) {
+    var rep = document.getElementById(id);
+    html =
+        '<div class="content-element-6">' +
+        '<h3 class="green-text">' + title + '</h3>' +
+        '<div class="mad-team style-2 item-col-4">';
+    // ================ Team Members ================
+    for (let index = 0; index < data.length; index++) {
+        html += create_team_members(data[index]);
+
+    }
+    html += '</div>' +
+        '</div>';
+    rep.innerHTML = html;
+
+}
+
+function createschoolmembers(title, id, data) {
+    var rep = document.getElementById(id);
+    html =
+        '<div class="content-element-6">' +
+        '<h3 class="green-text">' + title + '</h3>' +
+        '<div class="mad-team style-2 item-col-4">';
+    // ================ Team Members ================
+    for (let index = 0; index < data.length; index++) {
+        html += create_team_members(data[index]);
+
+    }
+    html += '</div>' +
+        '</div>';
+    rep.innerHTML = html;
+
+}
+
+function create_team_members(data) {
+    var inner_html =
+        '<div class="mad-col" style="padding:30px;">' +
+        //================ Team Member ================
         '<figure class="mad-team-member">' +
-        '<a href="javascript:void(0)" class="mad-team-member-photo"><img src="images/reps/akounelis.jpeg" alt=""></a>' +
+        '<a href="javascript:void(0)" class="mad-team-member-photo"><img src="' + data['image'] + '"' + 'alt="" style="height:250px;"></a>' +
         '<figcaption class="mad-team-member-info">' +
         '<div class="mad-info-wrap">' +
-        '<h4 class="mad-team-member-name"><a href="#">Edna Barton</a></h4>' +
-        '<div class="mad-member-stat">Alliance Bay Realty</div>' +
+        '<h4 class="mad-team-member-name"><a href="#">' + data['name'] + '</a></h4>' +
+        '<div class="mad-member-stat">' + data['title'] + '</div>' +
         '<nav class="mad-info-block vr-list mad-links">' +
         '<ul>' +
-        '<li><i class="mad-info-icon material-icons">phone</i>+1 208. 987.654</li>' +
+        '<li><i class="mad-info-icon material-icons">phone</i>' + data['phone'] + '</li>' +
         '<li><i class="mad-info-icon material-icons">phone_iphone</i>+1 208.654.321</li>' +
-        '<li><i class="mad-info-icon material-icons">mail_outline</i><a href="#" class="mad-link link-blue">Email</a></li>' +
+        '<li><i class="mad-info-icon material-icons">mail_outline</i><a href="' + data['email'] + '"' + 'class="mad-link link-blue" style = "background-position: 0% 31px;" > Email</a ></li > ' +
         '</ul>' +
         '</nav>' +
-        '<a href="#" class="mad-read-more">View Profile</a>' +
         '</div>' +
-        '</figcaption>' +
+        '</figcaption> ' +
         '</figure>' +
-        '</div>'
+        //================ End Of Team Member ================-->
+        '</div>';
+
+    return inner_html;
 
 }
 
@@ -4159,7 +4219,7 @@ function show_district_info(number, precinct) {
         '</div>' +
         '</figcaption>' +
         '</figure>' +
-        //  End Of Team Member 
+        //  End Of Team Member
         '</div>' +
         '</div>' +
         '</div>' +
@@ -4168,7 +4228,7 @@ function show_district_info(number, precinct) {
         '<div class="mad-col">' +
         //   Team Member
         '<figure class="mad-team-member">' +
-        '<a href="javascript:void(0)" class="mad-team-member-photo"><img src="' + precinct["image"] + '"' + ' alt="" style=" width="220;" height="250;"></a>' +
+        '<a href="javascript:void(0)" class="mad-team-member-photo"><img src="' + precinct[" image"] + '"' + ' alt="" style=" width="220;" height="250;"></a>' +
         '<figcaption class="mad-team-member-info">' +
         '<div class="mad-info-wrap">' +
         '<h6 class="mad-team-member-name"><a href="#">' + precinct["rep"]["name"] + '</a></h6>' +
@@ -4182,7 +4242,7 @@ function show_district_info(number, precinct) {
         '</div>' +
         '</figcaption>' +
         '</figure>' +
-        //  End Of Team Member 
+        //  End Of Team Member
         '</div>' +
         '</div>' +
         '</div>' +
@@ -4191,7 +4251,7 @@ function show_district_info(number, precinct) {
         '<div class="mad-col">' +
         //   Team Member
         '<figure class="mad-team-member">' +
-        '<div href="javascript:void(0)" class="mad-team-member-photo"><iframe src="' + precinct["votingPlace"]["map"] + 'style="border:0; width=220; height=250; allowfullscreen=""></iframe></div>' +
+        '<div href="javascript:void(0)" class="mad-team-member-photo"><iframe src="' + precinct[" votingPlace"]["map"] + 'style="border:0; width=220; height=250; allowfullscreen=""></iframe></div>' +
         '<figcaption class="mad-team-member-info">' +
         '<div class="mad-info-wrap">' +
         '<h6 class="mad-team-member-name"><a href="#">Polling Station</a></h6>' +
@@ -4202,7 +4262,7 @@ function show_district_info(number, precinct) {
         '</div>' +
         '</figcaption>' +
         '</figure>' +
-        //  End Of Team Member 
+        //  End Of Team Member
         '</div>' +
         '</div>' +
         '</div>' +
@@ -4292,55 +4352,45 @@ function getInfo(place) {
     }
 }
 
-function create_rep_groups() {
-    var lib = document.getElementById("library-trust");
-    lib.innerHTML =
-        '<div class="mad-content no-pd" id="section4">' +
-        '<div class="container">' +
-        '<div class="mad-section with-bg-element style-3 left-side">' +
-        '<div class="mad-title-wrap">' +
-        '<h2 class="mad-title">Library Trustees</h2>' +
-        '</div>' +
-        '<div class="mad-team" id="trustees">' +
-        create_trustee_member(0, "active") +
-        create_trustee_member(1) +
-        create_trustee_member(2) +
-        '</div>' +
-        '<div class="mad-team" id="trustees">' +
-        create_trustee_member(3) +
-        create_trustee_member(4) +
-        create_trustee_member(5, "active") +
-        '</div>' +
-        '</div>' +
-        '</div>' +
+// function create_rep_groups() {
+//     var lib = document.getElementById("library-trust");
+//     lib.innerHTML =
+//         '<div class="mad-content no-pd" id="section4">' +
+//         '<div class="container">' +
+//         '<div class="mad-section with-bg-element style-3 left-side">' +
+//         '<div class="mad-title-wrap">' +
+//         '<h2 class="mad-title">Library Trustees</h2>' +
+//         '</div>' +
+//         '<div class="mad-team" id="trustees">' +
+//         create_trustee_member(0, "active") +
+//         create_trustee_member(1) +
+//         create_trustee_member(2) +
+//         '</div>' +
+//         '<div class="mad-team" id="trustees">' +
+//         create_trustee_member(3) +
+//         create_trustee_member(4) +
+//         create_trustee_member(5, "active") +
+//         '</div>' +
+//         '</div>' +
+//         '</div>' +
+//         '</div>';
+
+// }
+
+function create_trustee_member(title, id, data) {
+    var rep = document.getElementById(id);
+    html =
+        '<div class="content-element-6">' +
+        '<h3 class="green-text">' + title + '</h3>' +
+        '<div class="mad-team style-2 item-col-4">';
+    // ================ Team Members ================
+    for (let index = 0; index < data.length; index++) {
+        html += create_team_members(data[index]);
+
+    }
+    html += '</div>' +
         '</div>';
-
-}
-
-function create_trustee_member(index, isactive = "") {
-    var trustees = LibTrusteesData;
-    status = isactive == "active" ? "active" : ""
-    var inner_text =
-
-        '<div class="mad-col ' + status + '"' + '>' +
-        '<figure class="mad-team-member">' +
-        '<a href="javascript:void(0)" class="mad-team-member-photo"><img src="' + trustees[index]["image"] + '"' + 'alt="" style="height: 23rem;"></a>' +
-        '<figcaption class="mad-team-member-info">' +
-        '<div class="mad-info-wrap">' +
-        '<h4 class="mad-team-member-name"><a href="#">' + trustees[index]["name"] + '</a></h4>' +
-        '<div class="mad-member-stat">' + trustees[index]["title"] + '</div>' +
-        '<nav class="mad-info-block vr-list mad-links">' +
-        '<ul>' +
-        '<li><i class="mad-info-icon material-icons">phone_iphone</i>' + trustees[index]["phone"] + '</li>' +
-        '<li><i class="mad-info-icon material-icons">mail_outline</i><a href="' + trustees[index]["email"] + '"' + 'class="mad-link link-blue">Email</a></li>' +
-        '</ul>' +
-        '</nav>' +
-        '</div>' +
-        '</figcaption>' +
-        '</figure>' +
-        '</div>';
-
-    return inner_text;
+    rep.innerHTML = html;
 }
 
 function create_candidate(title) {
@@ -4404,4 +4454,7 @@ function create_member_candidate(member) {
     return inner;
 
 }
+
+
+
 
