@@ -4169,12 +4169,18 @@ function create_team_members(data) {
         '<nav class="mad-info-block vr-list mad-links">' +
         '<ul>' +
         '<li><i class="mad-info-icon material-icons">phone</i>' + data['phone'] + '</li>' +
-        '<li><i class="mad-info-icon material-icons">phone_iphone</i>+1 208.654.321</li>' +
-        '<li><i class="mad-info-icon material-icons">mail_outline</i><a href="' + data['email'] + '"' + 'class="mad-link link-blue" style = "background-position: 0% 31px;" > Email</a ></li > ' +
+        '<li><i class="mad-info-icon material-icons">mail_outline</i><a href="#" style="background-position: 100% 31px;">' + data['email'] + '</a></li>' +
+        '<li>' +
+        '<a href="www.yahoo.com" style="background-position: 100% 30px;"><i class="fab fa-facebook-square rep-social-icons green-text"></a>' + '</i>' +
+        '<a href="www.yahoo.com" style="background-position: 100% 30px; padding-right: 10px;"><i class="fab fa-twitter green-text rep-social-icons"></a>' + '</i>' +
+        '<a href="www.yahoo.com" style="background-position: 100% 30px; padding-right: 10px;"><i class="fab fa-instagram green-text rep-social-icons"></a>' + '</i>' +
+        '<a href="www.yahoo.com" style="background-position: 100% 30px; padding-right: 10px;"><i class="fab fa-linkedin-in green-text rep-social-icons"></a>' + '</i>' +
+        '</li > ' +
         '</ul>' +
         '</nav>' +
         '</div>' +
         '</figcaption> ' +
+
         '</figure>' +
         //================ End Of Team Member ================-->
         '</div>';

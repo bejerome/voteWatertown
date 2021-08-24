@@ -13,7 +13,8 @@ CandidateData = {
                 phone: "(617) 894-0045",
                 image: "images/reps/cbays.jpeg",
                 url: "#!",
-                desc: "Incumbent"
+                desc: "Incumbent",
+                facebook: "#!"
             },
             {
                 name: "John Gannon",
@@ -21,7 +22,8 @@ CandidateData = {
                 phone: "(617) 393-9877",
                 image: "images/reps/jgannon.jpeg",
                 url: "#!",
-                desc: "Incumbent"
+                desc: "Incumbent",
+                facebook: "#!"
             },
             {
                 name: "Anthony Palomba",
@@ -29,7 +31,8 @@ CandidateData = {
                 phone: "(781) 664-3525",
                 image: "images/reps/palomba.jpeg",
                 url: "#!",
-                desc: "Incumbent"
+                desc: "Incumbent",
+                facebook: "#!"
             },
             {
                 name: "John Airasian",
@@ -37,16 +40,18 @@ CandidateData = {
                 phone: "no data",
                 image: "images/candidates/John-M.-Airasian-scaled.jpg",
                 url: "#!",
-                desc: "Challenger"
+                desc: "Challenger",
+                facebook: "https://www.facebook.com/John-M-Airasian-For-Watertown-Councilor-At-Large-106532528357945"
 
             },
             {
                 name: "Daniel D’Amico",
-                email: "no data",
+                email: "dandamico4council@gmail.com",
                 phone: "no data",
                 image: "images/candidates/D'Amico.jpg",
                 url: "#!",
-                desc: "Challenger"
+                desc: "Challenger",
+                facebook: "https://www.facebook.com/CoachDan4Council"
 
             },
             {
@@ -55,7 +60,8 @@ CandidateData = {
                 phone: "no data",
                 image: "images/reps/rep_avatar.png",
                 url: "#!",
-                desc: "Challenger"
+                desc: "Challenger",
+                facebook: "#!"
 
             },
             {
@@ -64,7 +70,8 @@ CandidateData = {
                 phone: "no data",
                 image: "images/reps/rep_avatar.png",
                 url: "#!",
-                desc: "Challenger"
+                desc: "Challenger",
+                facebook: "#!"
 
             },
 
@@ -79,7 +86,8 @@ CandidateData = {
         phone: "617-827-2996",
         image: "images/reps/sidaris_pic.jpeg",
         url: "#!",
-        desc: "Incumbent"
+        desc: "Incumbent",
+        facebook: "#!"
 
     },],
     districta: [{
@@ -88,11 +96,12 @@ CandidateData = {
         id: "districta"
     }, {
         name: "Nicole Gardner",
-        email: "no data",
+        email: "nicoleforwatertown@gmail.com",
         phone: "no data",
         image: "images/candidates/Nicole-Gardner.jpeg",
         url: "https://nicoleforwatertown.com/",
-        desc: "Challenger"
+        desc: "Challenger",
+        facebook: "https://www.facebook.com/nicoleforwatertown"
 
     }, {
         name: "Michael Hanlon",
@@ -100,7 +109,8 @@ CandidateData = {
         phone: "no data",
         image: "images/reps/rep_avatar.png",
         url: "https://mikehanlonforwatertown.com/",
-        desc: "Challenger"
+        desc: "Challenger",
+        facebook: "#!"
 
     }],
     districtb: [{
@@ -114,28 +124,32 @@ CandidateData = {
         phone: "(617) 926-5344",
         image: "images/reps/lisa_feltner.jpeg",
         url: "https://www.facebook.com/lisa.feltnertc/",
-        desc: "Incumbent"
+        desc: "Incumbent",
+        facebook: "#!"
 
     }, {
         name: "Tiffany York",
-        email: "no data",
+        email: "tiffanyy4districtb@gmail.com",
         phone: "no data",
         image: "images/reps/rep_avatar.png",
         url: "#!",
-        desc: "Challenger"
+        desc: "Challenger",
+        facebook: "https://www.facebook.com/TiffanyY4DistrictB"
 
     }],
     districtc: [{
         post: "District C Councilor",
         seats: 1,
-        id: "districtc"
+        id: "districtc",
+        facebook: "#!"
     }, {
         name: "Vincent Piccirilli",
         email: "vpiccirilli@watertown-ma.gov",
         phone: "(617) 924-0665",
         image: "images/reps/vincent_piccirilli.jpeg",
         url: "https://www.facebook.com/vincent.piccirilli",
-        desc: "Incumbent"
+        desc: "Incumbent",
+        facebook: "#!"
 
     }],
     districtd: [{
@@ -144,19 +158,21 @@ CandidateData = {
         id: "districtd"
     }, {
         name: "Constance Henry",
-        email: "no data",
+        email: "csherbill.henry@gmail.com",
         phone: "no data",
         image: "images/candidates/connie.henry.jpg",
-        url: "#!",
-        desc: "Challenger"
+        url: "https://www.conniehenry.com/",
+        desc: "Challenger",
+        facebook: "https://www.facebook.com/groups/504881630712456"
 
     }, {
         name: "Emily Izzo",
-        email: "no data",
+        email: "eizzo19@gmail.com",
         phone: "no data",
         image: "images/candidates/emily_izzo.jpeg",
         url: "#!",
-        desc: "Challenger"
+        desc: "Challenger",
+        facebook: "https://www.facebook.com/EmilyIzzoforDistrictD"
 
     }],
     school: [{
@@ -170,7 +186,8 @@ CandidateData = {
         phone: "617-908-8319",
         image: "images/reps/Amy_donohue.200x200.jpeg",
         url: "#!",
-        desc: "Incumbent"
+        desc: "Incumbent",
+        facebook: "https://www.facebook.com/amyforschoolcommittee"
 
     }, {
         name: "Lily Rayman-Read",
@@ -179,7 +196,8 @@ CandidateData = {
         phone: "617-680-9762",
         image: "images/reps/LilyRayman-Read.jpeg",
         url: "#!",
-        desc: "Incumbent"
+        desc: "Incumbent",
+        facebook: "#!"
 
     }, {
         name: "Colleen Mahoney Faherty",
@@ -187,7 +205,8 @@ CandidateData = {
         phone: "no data",
         image: "images/reps/rep_avatar.png",
         url: "#!",
-        desc: "Challenger"
+        desc: "Challenger",
+        facebook: "https://www.facebook.com/LilyRaymanRead"
 
     },
     {
@@ -196,24 +215,27 @@ CandidateData = {
         phone: "617-744-9264",
         image: "images/candidates/rachel_kay.jpeg",
         url: "www.rachelekay.com",
-        desc: "Challenger"
+        desc: "Challenger",
+        facebook: "#!"
 
     }, {
         name: "Jessica Middlebrook",
-        email: "no data",
+        email: "jessica4wps@gmail.com",
         phone: "no data",
         image: "images/candidates/Middlebrook.jpg",
-        url: "#!",
-        desc: "Challenger"
+        url: "https://www.jessicamiddlebrook.com/",
+        desc: "Challenger",
+        facebook: "https://www.facebook.com/Jessica4WPS"
 
     },
     {
         name: "Jennifer Nicholson",
-        email: "no data",
+        email: "nicholsonforwatertown@gmail.com",
         phone: "no data",
         image: "images/candidates/Nicholson.jpg",
-        url: "#!",
-        desc: "Challenger"
+        url: "https://www.alwaysaraider.com/",
+        desc: "Challenger",
+        facebook: "https://www.facebook.com/nicholsonforwatertown/"
 
     },
     ],
@@ -227,15 +249,17 @@ CandidateData = {
         phone: "no data",
         image: "images/reps/rep_avatar.png",
         url: "#!",
-        desc: "Incumbent"
+        desc: "Incumbent",
+        facebook: "#!"
 
     }, {
         name: "Sara Keary",
-        email: "no data",
+        email: "kearyfortrustee@gmail.com",
         phone: "no data",
         image: "images/candidates/Keary.jpg",
         url: "#!",
-        desc: "Challenger"
+        desc: "Challenger",
+        facebook: "https://www.facebook.com/KearyforTrustee"
 
     }, {
         name: "Rosemary Su",
@@ -243,7 +267,8 @@ CandidateData = {
         phone: "no data",
         image: "images/reps/rep_avatar.png",
         url: "#!",
-        desc: "Challenger"
+        desc: "Challenger",
+        facebook: "https://www.facebook.com/RMSuForWatertown"
 
     }, {
         name: "Maja Young",
@@ -251,7 +276,8 @@ CandidateData = {
         phone: "no data",
         image: "images/reps/rep_avatar.png",
         url: "#!",
-        desc: "Challenger"
+        desc: "Challenger",
+        facebook: "#!"
 
     },]
 };

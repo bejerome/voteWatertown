@@ -9438,4 +9438,12 @@ body.mad-full-page .mad-full-page-wrap .mad-team.style-2 > .mad-col:nth-child(-n
   .black-text{
       color: black;
   }
+
+  .rep-social-icons{
+    font-size:20px !important; 
+    padding-top: 5px!important; 
+    padding-right: 20px!important; 
+   
+  }
+      
          
