@@ -13,7 +13,7 @@ CandidateData = {
                 phone: "(617) 894-0045",
                 image: "images/reps/cbays.jpeg",
                 url: "#!",
-                desc: "Incumbent",
+                title: "Incumbent",
                 facebook: "#!"
             },
             {
@@ -22,7 +22,7 @@ CandidateData = {
                 phone: "(617) 393-9877",
                 image: "images/reps/jgannon.jpeg",
                 url: "#!",
-                desc: "Incumbent",
+                title: "Incumbent",
                 facebook: "#!"
             },
             {
@@ -31,7 +31,7 @@ CandidateData = {
                 phone: "(781) 664-3525",
                 image: "images/reps/palomba.jpeg",
                 url: "#!",
-                desc: "Incumbent",
+                title: "Incumbent",
                 facebook: "#!"
             },
             {
@@ -40,7 +40,7 @@ CandidateData = {
                 phone: "no data",
                 image: "images/candidates/John-M.-Airasian-scaled.jpg",
                 url: "#!",
-                desc: "Challenger",
+                title: "Challenger",
                 facebook: "https://www.facebook.com/John-M-Airasian-For-Watertown-Councilor-At-Large-106532528357945"
 
             },
@@ -50,7 +50,7 @@ CandidateData = {
                 phone: "no data",
                 image: "images/candidates/D'Amico.jpg",
                 url: "#!",
-                desc: "Challenger",
+                title: "Challenger",
                 facebook: "https://www.facebook.com/CoachDan4Council"
 
             },
@@ -60,7 +60,7 @@ CandidateData = {
                 phone: "no data",
                 image: "images/reps/rep_avatar.png",
                 url: "#!",
-                desc: "Challenger",
+                title: "Challenger",
                 facebook: "#!"
 
             },
@@ -70,7 +70,7 @@ CandidateData = {
                 phone: "no data",
                 image: "images/reps/rep_avatar.png",
                 url: "#!",
-                desc: "Challenger",
+                title: "Challenger",
                 facebook: "#!"
 
             },
@@ -86,8 +86,9 @@ CandidateData = {
         phone: "617-827-2996",
         image: "images/reps/sidaris_pic.jpeg",
         url: "#!",
-        desc: "Incumbent",
-        facebook: "#!"
+        title: "Incumbent",
+        facebook: "#!",
+
 
     },],
     districta: [{
@@ -100,7 +101,7 @@ CandidateData = {
         phone: "no data",
         image: "images/candidates/Nicole-Gardner.jpeg",
         url: "https://nicoleforwatertown.com/",
-        desc: "Challenger",
+        title: "Challenger",
         facebook: "https://www.facebook.com/nicoleforwatertown"
 
     }, {
@@ -109,7 +110,7 @@ CandidateData = {
         phone: "no data",
         image: "images/reps/rep_avatar.png",
         url: "https://mikehanlonforwatertown.com/",
-        desc: "Challenger",
+        title: "Challenger",
         facebook: "#!"
 
     }],
@@ -124,7 +125,7 @@ CandidateData = {
         phone: "(617) 926-5344",
         image: "images/reps/lisa_feltner.jpeg",
         url: "https://www.facebook.com/lisa.feltnertc/",
-        desc: "Incumbent",
+        title: "Incumbent",
         facebook: "#!"
 
     }, {
@@ -133,7 +134,7 @@ CandidateData = {
         phone: "no data",
         image: "images/reps/rep_avatar.png",
         url: "#!",
-        desc: "Challenger",
+        title: "Challenger",
         facebook: "https://www.facebook.com/TiffanyY4DistrictB"
 
     }],
@@ -148,7 +149,7 @@ CandidateData = {
         phone: "(617) 924-0665",
         image: "images/reps/vincent_piccirilli.jpeg",
         url: "https://www.facebook.com/vincent.piccirilli",
-        desc: "Incumbent",
+        title: "Incumbent",
         facebook: "#!"
 
     }],
@@ -162,7 +163,7 @@ CandidateData = {
         phone: "no data",
         image: "images/candidates/connie.henry.jpg",
         url: "https://www.conniehenry.com/",
-        desc: "Challenger",
+        title: "Challenger",
         facebook: "https://www.facebook.com/groups/504881630712456"
 
     }, {
@@ -171,7 +172,7 @@ CandidateData = {
         phone: "no data",
         image: "images/candidates/emily_izzo.jpeg",
         url: "#!",
-        desc: "Challenger",
+        title: "Challenger",
         facebook: "https://www.facebook.com/EmilyIzzoforDistrictD"
 
     }],
@@ -186,7 +187,7 @@ CandidateData = {
         phone: "617-908-8319",
         image: "images/reps/Amy_donohue.200x200.jpeg",
         url: "#!",
-        desc: "Incumbent",
+        title: "Incumbent",
         facebook: "https://www.facebook.com/amyforschoolcommittee"
 
     }, {
@@ -196,7 +197,7 @@ CandidateData = {
         phone: "617-680-9762",
         image: "images/reps/LilyRayman-Read.jpeg",
         url: "#!",
-        desc: "Incumbent",
+        title: "Incumbent",
         facebook: "#!"
 
     }, {
@@ -205,7 +206,7 @@ CandidateData = {
         phone: "no data",
         image: "images/reps/rep_avatar.png",
         url: "#!",
-        desc: "Challenger",
+        title: "Challenger",
         facebook: "https://www.facebook.com/LilyRaymanRead"
 
     },
@@ -215,7 +216,7 @@ CandidateData = {
         phone: "617-744-9264",
         image: "images/candidates/rachel_kay.jpeg",
         url: "www.rachelekay.com",
-        desc: "Challenger",
+        title: "Challenger",
         facebook: "#!"
 
     }, {
@@ -224,7 +225,7 @@ CandidateData = {
         phone: "no data",
         image: "images/candidates/Middlebrook.jpg",
         url: "https://www.jessicamiddlebrook.com/",
-        desc: "Challenger",
+        title: "Challenger",
         facebook: "https://www.facebook.com/Jessica4WPS"
 
     },
@@ -234,7 +235,7 @@ CandidateData = {
         phone: "no data",
         image: "images/candidates/Nicholson.jpg",
         url: "https://www.alwaysaraider.com/",
-        desc: "Challenger",
+        title: "Challenger",
         facebook: "https://www.facebook.com/nicholsonforwatertown/"
 
     },
@@ -249,7 +250,7 @@ CandidateData = {
         phone: "no data",
         image: "images/reps/rep_avatar.png",
         url: "#!",
-        desc: "Incumbent",
+        title: "Incumbent",
         facebook: "#!"
 
     }, {
@@ -258,7 +259,7 @@ CandidateData = {
         phone: "no data",
         image: "images/candidates/Keary.jpg",
         url: "#!",
-        desc: "Challenger",
+        title: "Challenger",
         facebook: "https://www.facebook.com/KearyforTrustee"
 
     }, {
@@ -267,7 +268,7 @@ CandidateData = {
         phone: "no data",
         image: "images/reps/rep_avatar.png",
         url: "#!",
-        desc: "Challenger",
+        title: "Challenger",
         facebook: "https://www.facebook.com/RMSuForWatertown"
 
     }, {
@@ -276,7 +277,7 @@ CandidateData = {
         phone: "no data",
         image: "images/reps/rep_avatar.png",
         url: "#!",
-        desc: "Challenger",
+        title: "Challenger",
         facebook: "#!"
 
     },]

@@ -14,7 +14,7 @@ LibTrusteesData =
         {
             name: "Sheppard Ferguson",
             title: "Vice Chair",
-            email: "images/reps/rep_avatar.png",
+            email: "sferguson@watertown-ma.gov",
             phone: "617-901-4074",
             image: "images/reps/rep_avatar.png",
             url: "#!",

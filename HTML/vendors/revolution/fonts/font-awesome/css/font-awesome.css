@@ -791,7 +791,7 @@
   content: "\f0dc";
 }
 .fa-icon-sort-down:before,
-.fa-icon-sort-desc:before {
+.fa-icon-sort-title:before {
   content: "\f0dd";
 }
 .fa-icon-sort-up:before,
@@ -1173,19 +1173,19 @@
 .fa-icon-sort-alpha-asc:before {
   content: "\f15d";
 }
-.fa-icon-sort-alpha-desc:before {
+.fa-icon-sort-alpha-title:before {
   content: "\f15e";
 }
 .fa-icon-sort-amount-asc:before {
   content: "\f160";
 }
-.fa-icon-sort-amount-desc:before {
+.fa-icon-sort-amount-title:before {
   content: "\f161";
 }
 .fa-icon-sort-numeric-asc:before {
   content: "\f162";
 }
-.fa-icon-sort-numeric-desc:before {
+.fa-icon-sort-numeric-title:before {
   content: "\f163";
 }
 .fa-icon-thumbs-up:before {

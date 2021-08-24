@@ -2822,16 +2822,17 @@ var Mad = (function ($) {
 
 
         // elections candidates
-        var runners = document.getElementById("elections");
-        runners.innerHTML =
-            create_candidate("president") +
-            create_candidate("candidatesatlg") +
-            create_candidate("districta") +
-            create_candidate("districtb") +
-            create_candidate("districtc") +
-            create_candidate("districtd") +
-            create_candidate("school") +
-            create_candidate("library");
+        // var runners = document.getElementById("elections");
+        // runners.innerHTML =
+        create_new_candidates("Town Council President", "c-president", CandidateData["president"]);
+        create_new_candidates("Council At-Large", "at-large", CandidateData["candidatesatlg"]);
+        create_new_candidates("District A Councilor", "district-a", CandidateData["districta"]);
+        create_new_candidates("District B Councilor", "district-b", CandidateData["districtb"]);
+        create_new_candidates("District C Councilor", "district-c", CandidateData["districtc"]);
+        create_new_candidates("District D Councilor", "district-d", CandidateData["districtd"]);
+        create_new_candidates("School Committee", "school-com", CandidateData["school"]);
+        create_new_candidates("Library Trustees", "lib-trustees", CandidateData["library"]);
+
 
         function draw_my_precincts(precincts_coordinates, fill_color, title, color_str = "#FF0000") {
             var poly = new google.maps.Polygon({
@@ -4171,10 +4172,43 @@ function create_team_members(data) {
         '<li><i class="mad-info-icon material-icons">phone</i>' + data['phone'] + '</li>' +
         '<li><i class="mad-info-icon material-icons">mail_outline</i><a href="#" style="background-position: 100% 31px;">' + data['email'] + '</a></li>' +
         '<li>' +
-        '<a href="www.yahoo.com" style="background-position: 100% 30px;"><i class="fab fa-facebook-square rep-social-icons green-text"></a>' + '</i>' +
-        '<a href="www.yahoo.com" style="background-position: 100% 30px; padding-right: 10px;"><i class="fab fa-twitter green-text rep-social-icons"></a>' + '</i>' +
-        '<a href="www.yahoo.com" style="background-position: 100% 30px; padding-right: 10px;"><i class="fab fa-instagram green-text rep-social-icons"></a>' + '</i>' +
-        '<a href="www.yahoo.com" style="background-position: 100% 30px; padding-right: 10px;"><i class="fab fa-linkedin-in green-text rep-social-icons"></a>' + '</i>' +
+        '<a href="' + data['facebook'] + '"' + 'style="background-position: 100% 30px;"><i class="fab fa-facebook-square rep-social-icons green-text"></a>' + '</i>' +
+        '<a href="#!" style="background-position: 100% 30px; padding-right: 10px;"><i class="fab fa-twitter green-text rep-social-icons"></a>' + '</i>' +
+        '<a href="#!" style="background-position: 100% 30px; padding-right: 10px;"><i class="fab fa-instagram green-text rep-social-icons"></a>' + '</i>' +
+        '<a href="#!" style="background-position: 100% 30px; padding-right: 10px;"><i class="fab fa-linkedin-in green-text rep-social-icons"></a>' + '</i>' +
+        '</li > ' +
+        '</ul>' +
+        '</nav>' +
+        '</div>' +
+        '</figcaption> ' +
+
+        '</figure>' +
+        //================ End Of Team Member ================-->
+        '</div>';
+
+    return inner_html;
+
+}
+
+function create_candidates_members(data) {
+    var inner_html =
+        '<div class="mad-col" style="padding:30px;">' +
+        //================ Team Member ================
+        '<figure class="mad-team-member">' +
+        '<a href="javascript:void(0)" class="mad-team-member-photo"><img src="' + data['image'] + '"' + 'alt="" style="height:250px;"></a>' +
+        '<figcaption class="mad-team-member-info">' +
+        '<div class="mad-info-wrap">' +
+        '<h4 class="mad-team-member-name"><a href="#">' + data['name'] + '</a></h4>' +
+        '<div class="mad-member-stat green-text">' + data['title'] + '</div>' +
+        '<nav class="mad-info-block vr-list mad-links">' +
+        '<ul>' +
+        '<li><i class="mad-info-icon material-icons">phone</i>' + data['phone'] + '</li>' +
+        '<li><i class="mad-info-icon material-icons">mail_outline</i><a href="#" style="background-position: 100% 31px;">' + data['email'] + '</a></li>' +
+        '<li>' +
+        '<a href="' + data['facebook'] + '"' + 'style="background-position: 100% 30px;"><i class="fab fa-facebook-square rep-social-icons green-text"></a>' + '</i>' +
+        '<a href="#!" style="background-position: 100% 30px; padding-right: 10px;"><i class="fab fa-twitter green-text rep-social-icons"></a>' + '</i>' +
+        '<a href="#!" style="background-position: 100% 30px; padding-right: 10px;"><i class="fab fa-instagram green-text rep-social-icons"></a>' + '</i>' +
+        '<a href="#!" style="background-position: 100% 30px; padding-right: 10px;"><i class="fab fa-linkedin-in green-text rep-social-icons"></a>' + '</i>' +
         '</li > ' +
         '</ul>' +
         '</nav>' +
@@ -4358,30 +4392,6 @@ function getInfo(place) {
     }
 }
 
-// function create_rep_groups() {
-//     var lib = document.getElementById("library-trust");
-//     lib.innerHTML =
-//         '<div class="mad-content no-pd" id="section4">' +
-//         '<div class="container">' +
-//         '<div class="mad-section with-bg-element style-3 left-side">' +
-//         '<div class="mad-title-wrap">' +
-//         '<h2 class="mad-title">Library Trustees</h2>' +
-//         '</div>' +
-//         '<div class="mad-team" id="trustees">' +
-//         create_trustee_member(0, "active") +
-//         create_trustee_member(1) +
-//         create_trustee_member(2) +
-//         '</div>' +
-//         '<div class="mad-team" id="trustees">' +
-//         create_trustee_member(3) +
-//         create_trustee_member(4) +
-//         create_trustee_member(5, "active") +
-//         '</div>' +
-//         '</div>' +
-//         '</div>' +
-//         '</div>';
-
-// }
 
 function create_trustee_member(title, id, data) {
     var rep = document.getElementById(id);
@@ -4392,6 +4402,22 @@ function create_trustee_member(title, id, data) {
     // ================ Team Members ================
     for (let index = 0; index < data.length; index++) {
         html += create_team_members(data[index]);
+
+    }
+    html += '</div>' +
+        '</div>';
+    rep.innerHTML = html;
+}
+
+function create_new_candidates(title, id, data) {
+    var rep = document.getElementById(id);
+    html =
+        '<div class="content-element-6">' +
+        '<h3 class="green-text"><strong>' + title + '</strong></h3>' +
+        '<div class="mad-team style-2 item-col-4">';
+    // ================ Team Members ================
+    for (let index = 1; index <= data.length - 1; index++) {
+        html += create_candidates_members(data[index]);
 
     }
     html += '</div>' +
