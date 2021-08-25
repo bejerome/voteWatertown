@@ -36,8 +36,8 @@ CandidateData = {
             },
             {
                 name: "John Airasian",
-                email: "no data",
-                phone: "no data",
+                email: "",
+                phone: "",
                 image: "images/candidates/John-M.-Airasian-scaled.jpg",
                 url: "#!",
                 title: "Challenger",
@@ -47,7 +47,7 @@ CandidateData = {
             {
                 name: "Daniel D’Amico",
                 email: "dandamico4council@gmail.com",
-                phone: "no data",
+                phone: "",
                 image: "images/candidates/D'Amico.jpg",
                 url: "#!",
                 title: "Challenger",
@@ -56,8 +56,8 @@ CandidateData = {
             },
             {
                 name: "James Mello",
-                email: "no data",
-                phone: "no data",
+                email: "",
+                phone: "",
                 image: "images/reps/rep_avatar.png",
                 url: "#!",
                 title: "Challenger",
@@ -66,8 +66,8 @@ CandidateData = {
             },
             {
                 name: "Megan O’Halloran",
-                email: "no data",
-                phone: "no data",
+                email: "",
+                phone: "",
                 image: "images/reps/rep_avatar.png",
                 url: "#!",
                 title: "Challenger",
@@ -98,7 +98,7 @@ CandidateData = {
     }, {
         name: "Nicole Gardner",
         email: "nicoleforwatertown@gmail.com",
-        phone: "no data",
+        phone: "",
         image: "images/candidates/Nicole-Gardner.jpeg",
         url: "https://nicoleforwatertown.com/",
         title: "Challenger",
@@ -106,8 +106,8 @@ CandidateData = {
 
     }, {
         name: "Michael Hanlon",
-        email: "no data",
-        phone: "no data",
+        email: "",
+        phone: "",
         image: "images/reps/rep_avatar.png",
         url: "https://mikehanlonforwatertown.com/",
         title: "Challenger",
@@ -131,7 +131,7 @@ CandidateData = {
     }, {
         name: "Tiffany York",
         email: "tiffanyy4districtb@gmail.com",
-        phone: "no data",
+        phone: "",
         image: "images/reps/rep_avatar.png",
         url: "#!",
         title: "Challenger",
@@ -160,7 +160,7 @@ CandidateData = {
     }, {
         name: "Constance Henry",
         email: "csherbill.henry@gmail.com",
-        phone: "no data",
+        phone: "",
         image: "images/candidates/connie.henry.jpg",
         url: "https://www.conniehenry.com/",
         title: "Challenger",
@@ -169,7 +169,7 @@ CandidateData = {
     }, {
         name: "Emily Izzo",
         email: "eizzo19@gmail.com",
-        phone: "no data",
+        phone: "",
         image: "images/candidates/emily_izzo.jpeg",
         url: "#!",
         title: "Challenger",
@@ -192,7 +192,7 @@ CandidateData = {
 
     }, {
         name: "Lily Rayman-Read",
-        title: "no data",
+        title: "",
         email: "Schoolcommittee@watertown.k12.ma.us",
         phone: "617-680-9762",
         image: "images/reps/LilyRayman-Read.jpeg",
@@ -202,8 +202,8 @@ CandidateData = {
 
     }, {
         name: "Colleen Mahoney Faherty",
-        email: "no data",
-        phone: "no data",
+        email: "",
+        phone: "",
         image: "images/reps/rep_avatar.png",
         url: "#!",
         title: "Challenger",
@@ -222,7 +222,7 @@ CandidateData = {
     }, {
         name: "Jessica Middlebrook",
         email: "jessica4wps@gmail.com",
-        phone: "no data",
+        phone: "",
         image: "images/candidates/Middlebrook.jpg",
         url: "https://www.jessicamiddlebrook.com/",
         title: "Challenger",
@@ -232,7 +232,7 @@ CandidateData = {
     {
         name: "Jennifer Nicholson",
         email: "nicholsonforwatertown@gmail.com",
-        phone: "no data",
+        phone: "",
         image: "images/candidates/Nicholson.jpg",
         url: "https://www.alwaysaraider.com/",
         title: "Challenger",
@@ -246,8 +246,8 @@ CandidateData = {
         id: "library"
     }, {
         name: "Leanne Hammonds",
-        email: "no data",
-        phone: "no data",
+        email: "",
+        phone: "",
         image: "images/reps/rep_avatar.png",
         url: "#!",
         title: "Incumbent",
@@ -256,7 +256,7 @@ CandidateData = {
     }, {
         name: "Sara Keary",
         email: "kearyfortrustee@gmail.com",
-        phone: "no data",
+        phone: "",
         image: "images/candidates/Keary.jpg",
         url: "#!",
         title: "Challenger",
@@ -264,8 +264,8 @@ CandidateData = {
 
     }, {
         name: "Rosemary Su",
-        email: "no data",
-        phone: "no data",
+        email: "",
+        phone: "",
         image: "images/reps/rep_avatar.png",
         url: "#!",
         title: "Challenger",
@@ -273,8 +273,8 @@ CandidateData = {
 
     }, {
         name: "Maja Young",
-        email: "no data",
-        phone: "no data",
+        email: "",
+        phone: "",
         image: "images/reps/rep_avatar.png",
         url: "#!",
         title: "Challenger",

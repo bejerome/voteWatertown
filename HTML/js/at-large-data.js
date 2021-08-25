@@ -38,7 +38,7 @@ atLargeData = [
         facebook: "#!",
     }
 
-]
+];
 
 townManagement = [{
     name: "Michael J. Driscoll",
@@ -59,6 +59,6 @@ townManagement = [{
     facebook: "#!",
 
 },
-]
+];
 
 
