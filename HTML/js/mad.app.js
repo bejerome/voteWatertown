@@ -4268,7 +4268,7 @@ function show_district_info(number, precinct) {
         '<div class="mad-col">' +
         //   Team Member
         '<figure class="mad-team-member">' +
-        '<a href="javascript:void(0)" class="mad-team-member-photo"><img src="' + precinct[" image"] + '"' + ' alt="" style=" width="220;" height="250;"></a>' +
+        '<a href="javascript:void(0)" class="mad-team-member-photo"><img src="' + precinct["image"] + '"' + ' alt="" style=" width="220;" height="250;"></a>' +
         '<figcaption class="mad-team-member-info">' +
         '<div class="mad-info-wrap">' +
         '<h6 class="mad-team-member-name"><a href="#">' + precinct["rep"]["name"] + '</a></h6>' +
@@ -4291,7 +4291,7 @@ function show_district_info(number, precinct) {
         '<div class="mad-col">' +
         //   Team Member
         '<figure class="mad-team-member">' +
-        '<div href="javascript:void(0)" class="mad-team-member-photo"><iframe src="' + precinct[" votingPlace"]["map"] + 'style="border:0; width=220; height=250; allowfullscreen=""></iframe></div>' +
+        '<div href="javascript:void(0)" class="mad-team-member-photo"><iframe src="' + precinct["votingPlace"]["map"] + 'style="border:0; width=220; height=250; allowfullscreen=""></iframe></div>' +
         '<figcaption class="mad-team-member-info">' +
         '<div class="mad-info-wrap">' +
         '<h6 class="mad-team-member-name"><a href="#">Polling Station</a></h6>' +
