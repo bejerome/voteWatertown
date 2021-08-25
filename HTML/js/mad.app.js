@@ -2815,7 +2815,7 @@ var Mad = (function ($) {
         ];
 
         //create page sections
-        create_town_management("Town Manager", "section1");
+        create_town_management("Town Management", "section1");
         createALargemembers("Representatives At Large", "section2", atLargeData);
         createschoolmembers("School Committee Members", "section3", SchoolComData);
         create_trustee_member("Library Trustees", "library-trust", LibTrusteesData);
@@ -2830,8 +2830,8 @@ var Mad = (function ($) {
         create_new_candidates("District B Councilor", "district-b", CandidateData["districtb"]);
         create_new_candidates("District C Councilor", "district-c", CandidateData["districtc"]);
         create_new_candidates("District D Councilor", "district-d", CandidateData["districtd"]);
-        create_new_candidates("School Committee", "school-com", CandidateData["school"]);
-        create_new_candidates("Library Trustees", "lib-trustees", CandidateData["library"]);
+        create_new_candidates("School Committee ", "school-com", CandidateData["school"]);
+        create_new_candidates("Library Trustee ", "lib-trustees", CandidateData["library"]);
 
 
         function draw_my_precincts(precincts_coordinates, fill_color, title, color_str = "#FF0000") {
@@ -4397,7 +4397,7 @@ function create_trustee_member(title, id, data) {
     var rep = document.getElementById(id);
     html =
         '<div class="content-element-6">' +
-        '<h3 class="green-text">' + title + '</h3>' +
+        '<h3 class="green-text" padding-left:20px;>' + title + '</h3>' +
         '<div class="mad-team style-2 item-col-4">';
     // ================ Team Members ================
     for (let index = 0; index < data.length; index++) {
@@ -4413,7 +4413,7 @@ function create_new_candidates(title, id, data) {
     var rep = document.getElementById(id);
     html =
         '<div class="content-element-6">' +
-        '<h3 class="green-text"><strong>' + title + '</strong></h3>' +
+        '<h3 class="green-text mad-info-title" style="padding-left:20px;">' + title + '  ' + '<span style="font-size:20px;" class="black-text">' + ((data.length - 1) > 1 ? " ( " + (data.length - 1) + " Candidates )" : " ( " + (data.length - 1) + " Candidate ) ") + '</span></h3>' +
         '<div class="mad-team style-2 item-col-4">';
     // ================ Team Members ================
     for (let index = 1; index <= data.length - 1; index++) {
@@ -4425,64 +4425,32 @@ function create_new_candidates(title, id, data) {
     rep.innerHTML = html;
 }
 
-function create_candidate(title) {
-    var candidate = CandidateData[title];
-    var inner = '<div class="rep-title col-xl-8 green-text" id="' +
-        candidate[0]['id'] + '"' + '>' + candidate[0]['post'] + '</div>' +
 
-        '<div class="mad-table-wrap col-xl-8" style="margin-bottom: 50px;">' +
-        '<table class="mad-table--responsive-md">' +
-        '<thead>' +
-        '<tr class="bg">' +
-        '<th  class="col-xl-6" >Candidates</th>' +
-        '<th class="col-xl-2" >Seats <span class="green-text">' + ' ' + candidate[0]['seats'] + '</span></th>' +
-        '</tr>' +
-        '</thead>' +
-        '<tbody>';
-
-
-    for (let i = 1; i <= candidate.length - 1; i++) {
-
-        inner += '<tr>' + '<td data-cell-title="Candidates">' +
-            create_member_candidate(candidate[i]) +
-            '</td>' +
-            '<td data-cell-title="Seats"><p class="green-text" style= "margin-top:23px">' + candidate[i]["desc"] + '</p></td>' + '</tr> ';
-
-    }
-
-    inner +=
-
-        '</tbody>' +
-        '</table>' +
-        //<!--================ End Of Elections ================-->
-        '</div>';
-    return inner;
-}
 
 function create_member_candidate(member) {
 
     var inner =
         '<div class="mad-canditates-section">' +
-        '<div class="mad-team style-4">' +
-        '<div class="mad-col">' +
-        '<figure class="mad-team-member">' +
-        '<a href="javascript:void(0)" class="mad-team-member-photo"><img src="' + member["image"] + '"' + 'alt=""></a>' +
-        '<figcaption class="mad-team-member-info">' +
-        '<div class="mad-info-wrap">' +
-        '<h5 class="mad-team-member-name"><a href="#">' + member["name"] + '</a></h5>' +
-        '<nav class="mad-info-block vr-list mad-links">' +
-        '<ul>' +
-        '<li><i class="mad-info-icon material-icons">phone</i>' + member["phone"] + '</li>' +
-        // '<li><i class="mad-info-icon material-icons">phone_iphone</i>+208.654.321</li>' +
-        '<li><i class="mad-info-icon material-icons">mail_outline</i><a href="' + member["email"] + '"' + 'class="mad-link link-blue" style="background-position: 0% 23px;">Email</a></li>' +
-        '</ul>' +
-        '</nav>' +
-        '</div>' +
-        '</figcaption>' +
-        '</figure>' +
-        '</div>' +
-        '</div>' +
-        '</div>';
+            '<div class="mad-team style-4">' +
+            '<div class="mad-col">' +
+            '<figure class="mad-team-member">' +
+            '<a href="javascript:void(0)" class="mad-team-member-photo"><img src="' + member["image"] + '"' + 'alt=""></a>' +
+            '<figcaption class="mad-team-member-info">' +
+            '<div class="mad-info-wrap">' +
+            '<h5 class="mad-team-member-name"><a href="#">' + member["name"] + '</a></h5>' +
+            '<nav class="mad-info-block vr-list mad-links">' +
+            '<ul>' +
+            '<li>' + (member["phone"]) == "no data" ? "" : '<i class="mad-info-icon material-icons">phone</i>' + member["phone"] + '</li>' +
+            // '<li><i class="mad-info-icon material-icons">phone_iphone</i>+208.654.321</li>' +
+            '<li><i class="mad-info-icon material-icons">mail_outline</i><a href="' + member["email"] + '"' + 'class="mad-link link-blue" style="background-position: 0% 23px;">Email</a></li>' +
+            '</ul>' +
+            '</nav>' +
+            '</div>' +
+            '</figcaption>' +
+            '</figure>' +
+            '</div>' +
+            '</div>' +
+            '</div>';
     return inner;
 
 }

@@ -7,7 +7,8 @@ atLargeData = [
         phone: "(617) 894-0045",
         image: "images/reps/cbays.jpeg",
         url: "#!",
-        title: "Representative"
+        title: "Representative",
+        facebook: "#!",
     },
     {
         name: "Anthony Donato",
@@ -15,7 +16,8 @@ atLargeData = [
         phone: "(617) 755-3699",
         image: "images/reps/donato.png",
         url: "#!",
-        title: "Representative"
+        title: "Representative",
+        facebook: "#!",
     },
     {
         name: "John Gannon",
@@ -23,7 +25,8 @@ atLargeData = [
         phone: "(617) 393-9877",
         image: "images/reps/jgannon.jpeg",
         url: "#!",
-        title: "Representative"
+        title: "Representative",
+        facebook: "#!",
     },
     {
         name: "Anthony Palomba",
@@ -31,7 +34,8 @@ atLargeData = [
         phone: "(781) 664-3525",
         image: "images/reps/palomba.jpeg",
         url: "#!",
-        title: "Representative"
+        title: "Representative",
+        facebook: "#!",
     }
 
 ]
@@ -42,16 +46,17 @@ townManagement = [{
     phone: "(617) 972-6465",
     image: "images/reps/mdriscoll.jpeg",
     url: "#!",
-    title: "Town Manager"
+    title: "Town Manager",
+    facebook: "#!",
 },
 {
     name: "Mark Sideris",
     email: "msideris@watertown-ma.gov",
     phone: "617-827-2996 (cell)",
     image: "images/reps/sidaris_pic_208x208.jpeg",
-    // image: "images/reps/sidaris_pic.jpeg",
     url: "#!",
-    title: "Council President"
+    title: "Council President",
+    facebook: "#!",
 
 },
 ]
