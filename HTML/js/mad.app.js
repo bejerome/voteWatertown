@@ -4203,7 +4203,7 @@ function create_candidates_members(data) {
         '<nav class="mad-info-block vr-list mad-links">' +
         '<ul>' +
         // '<li><a href="' + data['email'] + '"' + 'style="background-position: 100% 31px;"></a></li>' +
-        '<li style="padding-top:10px;"><i class="mad-info-icon material-icons">public</i><a href="https://' + data['url'] + '"' + 'target="_blank" rel="noopener noreferrer"' + '>' + data['url'] + '</a></li>' +
+        '<li style="padding-top:10px;"><i class="mad-info-icon material-icons">public</i><a href="' + data["url_prefix"] + '://' + data['url'] + '"' + 'target="_blank" rel="noopener noreferrer"' + '>' + data['url'] + '</a></li>' +
         '<li><i class="mad-info-icon material-icons">mail_outline</i><a href="mailto:' + data['email'] + '"' + 'style = "background-position: 100% 31px;" > ' + data['email'] + '</a ></li > ' +
         '<li>' +
         '<a href="' + data['facebook'] + '"' + 'target="_blank" rel="noopener noreferrer"' + 'style="background-position: 100% 30px;"><i class="fab fa-facebook-square rep-social-icons green-text"></a>' + '</i>' +

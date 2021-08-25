@@ -13,6 +13,7 @@ CandidateData = {
                 phone: "(617) 894-0045",
                 image: "images/reps/cbays.jpeg",
                 url: "www.carolinebays.com",
+                url_prefix: "http",
                 title: "Incumbent",
                 facebook: "https://m.facebook.com/CarolineBaysforWatertown/"
             },
@@ -22,6 +23,7 @@ CandidateData = {
                 phone: "(617) 393-9877",
                 image: "images/reps/jgannon.jpeg",
                 url: "www.gannonforwatertown.wordpress.com",
+                url_prefix: "http",
                 title: "Incumbent",
                 facebook: "https://www.facebook.com/john.gannon.1806"
             },
@@ -31,6 +33,7 @@ CandidateData = {
                 phone: "(781) 664-3525",
                 image: "images/reps/palomba.jpeg",
                 url: "www.councilorpalomba.com",
+                url_prefix: "https",
                 title: "Incumbent",
                 facebook: "https://www.facebook.com/councilorpalomba"
             },
@@ -40,6 +43,7 @@ CandidateData = {
                 phone: "",
                 image: "images/candidates/John-M.-Airasian-scaled.jpg",
                 url: "",
+                url_prefix: "https",
                 title: "Challenger",
                 facebook: "https://www.facebook.com/John-M-Airasian-For-Watertown-Councilor-At-Large-106532528357945"
 
@@ -50,6 +54,7 @@ CandidateData = {
                 phone: "",
                 image: "images/candidates/D'Amico.jpg",
                 url: "",
+                url_prefix: "https",
                 title: "Challenger",
                 facebook: "https://www.facebook.com/CoachDan4Council"
 
@@ -60,6 +65,7 @@ CandidateData = {
                 phone: "",
                 image: "images/candidates/jimmy_mello.jpeg",
                 url: "",
+                url_prefix: "https",
                 title: "Challenger",
                 facebook: "https://www.facebook.com/jimmy.mello.1"
 
@@ -70,6 +76,7 @@ CandidateData = {
                 phone: "",
                 image: "images/reps/rep_avatar.png",
                 url: "",
+                url_prefix: "https",
                 title: "Challenger",
                 facebook: "#!"
 
@@ -86,6 +93,7 @@ CandidateData = {
         phone: "617-827-2996",
         image: "images/reps/sidaris_pic.jpeg",
         url: "",
+        url_prefix: "https",
         title: "Incumbent",
         facebook: "https://m.facebook.com/MarkSiderisMA/",
 
@@ -101,6 +109,7 @@ CandidateData = {
         phone: "",
         image: "images/candidates/Nicole-Gardner.jpeg",
         url: "www.nicoleforwatertown.com",
+        url_prefix: "https",
         title: "Challenger",
         facebook: "https://www.facebook.com/nicoleforwatertown"
 
@@ -110,6 +119,7 @@ CandidateData = {
         phone: "",
         image: "images/candidates/Michael-hanlon.jpeg",
         url: "www.mikehanlonforwatertown.com",
+        url_prefix: "https",
         title: "Challenger",
         facebook: "#!"
 
@@ -125,6 +135,7 @@ CandidateData = {
         phone: "(617) 926-5344",
         image: "images/reps/lisa_feltner.jpeg",
         url: "",
+        url_prefix: "https",
         title: "Incumbent",
         facebook: "https://www.facebook.com/lisa.feltnertc/"
 
@@ -149,6 +160,7 @@ CandidateData = {
         phone: "(617) 924-0665",
         image: "images/reps/vincent_piccirilli.jpeg",
         url: "",
+        url_prefix: "https",
         title: "Incumbent",
         facebook: "https://www.facebook.com/vincent.piccirilli"
 
@@ -163,6 +175,7 @@ CandidateData = {
         phone: "",
         image: "images/candidates/connie_henry.webp",
         url: "www.conniehenry.com",
+        url_prefix: "https",
         title: "Challenger",
         facebook: "https://www.facebook.com/groups/504881630712456"
 
@@ -172,6 +185,7 @@ CandidateData = {
         phone: "",
         image: "images/candidates/emily_izzo.jpeg",
         url: "",
+        url_prefix: "https",
         title: "Challenger",
         facebook: "https://www.facebook.com/EmilyIzzoforDistrictD"
 
@@ -187,6 +201,7 @@ CandidateData = {
         phone: "617-908-8319",
         image: "images/reps/Amy_donohue.200x200.jpeg",
         url: "",
+        url_prefix: "https",
         title: "Incumbent",
         facebook: "https://www.facebook.com/amyforschoolcommittee"
 
@@ -197,6 +212,7 @@ CandidateData = {
         phone: "617-680-9762",
         image: "images/reps/LilyRayman-Read.jpeg",
         url: "",
+        url_prefix: "https",
         title: "Incumbent",
         facebook: "#!"
 
@@ -206,6 +222,7 @@ CandidateData = {
         phone: "",
         image: "images/reps/rep_avatar.png",
         url: "",
+        url_prefix: "https",
         title: "Challenger",
         facebook: "https://www.facebook.com/LilyRaymanRead"
 
@@ -216,6 +233,7 @@ CandidateData = {
         phone: "617-744-9264",
         image: "images/candidates/rachel_kay.jpeg",
         url: "www.rachelekay.com",
+        url_prefix: "https",
         title: "Challenger",
         facebook: "#!"
 
@@ -225,6 +243,7 @@ CandidateData = {
         phone: "",
         image: "images/candidates/Middlebrook.jpg",
         url: "www.jessicamiddlebrook.com",
+        url_prefix: "https",
         title: "Challenger",
         facebook: "https://www.facebook.com/Jessica4WPS"
 
@@ -235,6 +254,7 @@ CandidateData = {
         phone: "",
         image: "images/candidates/Nicholson.jpg",
         url: "www.alwaysaraider.com",
+        url_prefix: "https",
         title: "Challenger",
         facebook: "https://www.facebook.com/nicholsonforwatertown/"
 
@@ -250,6 +270,7 @@ CandidateData = {
         phone: "",
         image: "images/reps/rep_avatar.png",
         url: "",
+        url_prefix: "https",
         title: "Incumbent",
         facebook: "#!"
 
@@ -259,6 +280,7 @@ CandidateData = {
         phone: "",
         image: "images/candidates/Keary.jpg",
         url: "",
+        url_prefix: "https",
         title: "Challenger",
         facebook: "https://www.facebook.com/KearyforTrustee"
 
@@ -268,6 +290,7 @@ CandidateData = {
         phone: "",
         image: "images/candidates/Rose-Mary-Su-Web-bio-1600x1000.jpeg",
         url: "",
+        url_prefix: "https",
         title: "Challenger",
         facebook: "https://www.facebook.com/RMSuForWatertown"
 
@@ -277,6 +300,7 @@ CandidateData = {
         phone: "",
         image: "images/reps/rep_avatar.png",
         url: "",
+        url_prefix: "https",
         title: "Challenger",
         facebook: "#!"
 
