@@ -24,7 +24,7 @@ LibTrusteesData =
             title: "Treasurer",
             email: "mhanlon@watertown-ma.gov",
             phone: "617-924-7613",
-            image: "images/reps/rep_avatar.png",
+            image: "images/candidates/Michael-hanlon.jpeg",
             url: "#!",
         },
         {

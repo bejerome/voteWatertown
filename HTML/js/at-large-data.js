@@ -6,9 +6,9 @@ atLargeData = [
         email: "cbays@watertown-ma.gov",
         phone: "(617) 894-0045",
         image: "images/reps/cbays.jpeg",
-        url: "#!",
-        title: "Representative",
-        facebook: "#!",
+        url: "www.carolinebays.com",
+        title: "Incumbent",
+        facebook: "https://m.facebook.com/CarolineBaysforWatertown/"
     },
     {
         name: "Anthony Donato",
@@ -16,7 +16,7 @@ atLargeData = [
         phone: "(617) 755-3699",
         image: "images/reps/donato.png",
         url: "#!",
-        title: "Representative",
+        title: "Incumbent",
         facebook: "#!",
     },
     {
@@ -24,19 +24,19 @@ atLargeData = [
         email: "jgannon@watertown-ma.gov",
         phone: "(617) 393-9877",
         image: "images/reps/jgannon.jpeg",
-        url: "#!",
-        title: "Representative",
-        facebook: "#!",
+        url: "www.gannonforwatertown.wordpress.com",
+        title: "Incumbent",
+        facebook: "https://www.facebook.com/john.gannon.1806"
     },
     {
         name: "Anthony Palomba",
         email: "apalomba@watertown-ma.gov",
         phone: "(781) 664-3525",
         image: "images/reps/palomba.jpeg",
-        url: "#!",
-        title: "Representative",
-        facebook: "#!",
-    }
+        url: "www.councilorpalomba.com",
+        title: "Incumbent",
+        facebook: "https://www.facebook.com/councilorpalomba"
+    },
 
 ];
 

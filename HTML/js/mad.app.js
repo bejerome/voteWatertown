@@ -4162,7 +4162,7 @@ function create_team_members(data) {
         '<div class="mad-col" style="padding:30px;">' +
         //================ Team Member ================
         '<figure class="mad-team-member">' +
-        '<a href="javascript:void(0)" class="mad-team-member-photo"><img src="' + data['image'] + '"' + 'alt="" style="height:250px;"></a>' +
+        '<a href="javascript:void(0)" class="mad-team-member-photo"><img src="' + data['image'] + '"' + 'alt="" style="height:20rem;"></a>' +
         '<figcaption class="mad-team-member-info">' +
         '<div class="mad-info-wrap">' +
         '<h4 class="mad-team-member-name"><a href="#">' + data['name'] + '</a></h4>' +
@@ -4170,7 +4170,7 @@ function create_team_members(data) {
         '<nav class="mad-info-block vr-list mad-links">' +
         '<ul>' +
         '<li><i class="mad-info-icon material-icons">phone</i>' + data['phone'] + '</li>' +
-        '<li><i class="mad-info-icon material-icons">mail_outline</i><a href="#" style="background-position: 100% 31px;">' + data['email'] + '</a></li>' +
+        '<li><i class="mad-info-icon material-icons">mail_outline</i><a href="mailto:' + data['email'] + '"' + 'style="background-position: 100% 31px;">' + data['email'] + '</a></li>' +
         '<li>' +
         '<a href="' + data['facebook'] + '"' + 'style="background-position: 100% 30px;"><i class="fab fa-facebook-square rep-social-icons green-text"></a>' + '</i>' +
         '<a href="#!" style="background-position: 100% 30px; padding-right: 10px;"><i class="fab fa-twitter green-text rep-social-icons"></a>' + '</i>' +
@@ -4195,17 +4195,18 @@ function create_candidates_members(data) {
         '<div class="mad-col" style="padding:30px;">' +
         //================ Team Member ================
         '<figure class="mad-team-member">' +
-        '<a href="javascript:void(0)" class="mad-team-member-photo"><img src="' + data['image'] + '"' + 'alt="" style="height:250px;"></a>' +
+        '<a href="javascript:void(0)" class="mad-team-member-photo"><img src="' + data['image'] + '"' + 'alt="" style="height:20rem;"></a>' +
         '<figcaption class="mad-team-member-info">' +
         '<div class="mad-info-wrap">' +
         '<h4 class="mad-team-member-name"><a href="#">' + data['name'] + '</a></h4>' +
         '<div class="mad-member-stat green-text">' + data['title'] + '</div>' +
         '<nav class="mad-info-block vr-list mad-links">' +
         '<ul>' +
-        '<li><i class="mad-info-icon material-icons">phone</i>' + data['phone'] + '</li>' +
-        '<li><i class="mad-info-icon material-icons">mail_outline</i><a href="#" style="background-position: 100% 31px;">' + data['email'] + '</a></li>' +
+        // '<li><a href="' + data['email'] + '"' + 'style="background-position: 100% 31px;"></a></li>' +
+        '<li style="padding-top:10px;"><i class="mad-info-icon material-icons">public</i><a href="https://' + data['url'] + '"' + 'target="_blank" rel="noopener noreferrer"' + '>' + data['url'] + '</a></li>' +
+        '<li><i class="mad-info-icon material-icons">mail_outline</i><a href="mailto:' + data['email'] + '"' + 'style = "background-position: 100% 31px;" > ' + data['email'] + '</a ></li > ' +
         '<li>' +
-        '<a href="' + data['facebook'] + '"' + 'style="background-position: 100% 30px;"><i class="fab fa-facebook-square rep-social-icons green-text"></a>' + '</i>' +
+        '<a href="' + data['facebook'] + '"' + 'target="_blank" rel="noopener noreferrer"' + 'style="background-position: 100% 30px;"><i class="fab fa-facebook-square rep-social-icons green-text"></a>' + '</i>' +
         '<a href="#!" style="background-position: 100% 30px; padding-right: 10px;"><i class="fab fa-twitter green-text rep-social-icons"></a>' + '</i>' +
         '<a href="#!" style="background-position: 100% 30px; padding-right: 10px;"><i class="fab fa-instagram green-text rep-social-icons"></a>' + '</i>' +
         '<a href="#!" style="background-position: 100% 30px; padding-right: 10px;"><i class="fab fa-linkedin-in green-text rep-social-icons"></a>' + '</i>' +
@@ -4427,33 +4428,33 @@ function create_new_candidates(title, id, data) {
 
 
 
-function create_member_candidate(member) {
+// function create_member_candidate(member) {
 
-    var inner =
-        '<div class="mad-canditates-section">' +
-            '<div class="mad-team style-4">' +
-            '<div class="mad-col">' +
-            '<figure class="mad-team-member">' +
-            '<a href="javascript:void(0)" class="mad-team-member-photo"><img src="' + member["image"] + '"' + 'alt=""></a>' +
-            '<figcaption class="mad-team-member-info">' +
-            '<div class="mad-info-wrap">' +
-            '<h5 class="mad-team-member-name"><a href="#">' + member["name"] + '</a></h5>' +
-            '<nav class="mad-info-block vr-list mad-links">' +
-            '<ul>' +
-            '<li>' + (member["phone"]) == "no data" ? "" : '<i class="mad-info-icon material-icons">phone</i>' + member["phone"] + '</li>' +
-            // '<li><i class="mad-info-icon material-icons">phone_iphone</i>+208.654.321</li>' +
-            '<li><i class="mad-info-icon material-icons">mail_outline</i><a href="' + member["email"] + '"' + 'class="mad-link link-blue" style="background-position: 0% 23px;">Email</a></li>' +
-            '</ul>' +
-            '</nav>' +
-            '</div>' +
-            '</figcaption>' +
-            '</figure>' +
-            '</div>' +
-            '</div>' +
-            '</div>';
-    return inner;
+//     var inner =
+//         '<div class="mad-canditates-section">' +
+//             '<div class="mad-team style-4">' +
+//             '<div class="mad-col">' +
+//             '<figure class="mad-team-member">' +
+//             '<a href="javascript:void(0)" class="mad-team-member-photo"><img src="' + member["image"] + '"' + 'alt=""></a>' +
+//             '<figcaption class="mad-team-member-info">' +
+//             '<div class="mad-info-wrap">' +
+//             '<h5 class="mad-team-member-name"><a href="#">' + member["name"] + '</a></h5>' +
+//             '<nav class="mad-info-block vr-list mad-links">' +
+//             '<ul>' +
+//             '<li>' + (member["phone"]) == "no data" ? "" : '<i class="mad-info-icon material-icons">phone</i>' + member["phone"] + '</li>' +
+//             '<li><i class="mad-info-icon material-icons">phone_iphone</i>+208.654.321</li>' +
+//             '<li><i class="mad-info-icon material-icons">mail_outline</i><a href="' + member["email"] + '"' + 'class="mad-link link-blue" style="background-position: 0% 23px;">Email</a></li>' +
+//             '</ul>' +
+//             '</nav>' +
+//             '</div>' +
+//             '</figcaption>' +
+//             '</figure>' +
+//             '</div>' +
+//             '</div>' +
+//             '</div>';
+//     return inner;
 
-}
+// }
 
 
 
