@@ -2813,19 +2813,26 @@ var Mad = (function ($) {
             // ['third', 42.37479794184094, -71.16885887336669],
             // ['forth', 42.37083484304676, -71.14594208164098]
         ];
-        // library trustees
-        create_rep_groups();
+
+        //create page sections
+        create_town_management("Town Management", "section1");
+        createALargemembers("Representatives At Large", "section2", atLargeData);
+        createschoolmembers("School Committee Members", "section3", SchoolComData);
+        create_trustee_member("Library Trustees", "library-trust", LibTrusteesData);
+
+
         // elections candidates
-        var runners = document.getElementById("elections");
-        runners.innerHTML =
-            create_candidate("president") +
-            create_candidate("candidatesatlg") +
-            create_candidate("districta") +
-            create_candidate("districtb") +
-            create_candidate("districtc") +
-            create_candidate("districtd") +
-            create_candidate("school") +
-            create_candidate("library");
+        // var runners = document.getElementById("elections");
+        // runners.innerHTML =
+        create_new_candidates("Town Council President", "c-president", CandidateData["president"]);
+        create_new_candidates("Council At-Large", "at-large", CandidateData["candidatesatlg"]);
+        create_new_candidates("District A Councilor", "district-a", CandidateData["districta"]);
+        create_new_candidates("District B Councilor", "district-b", CandidateData["districtb"]);
+        create_new_candidates("District C Councilor", "district-c", CandidateData["districtc"]);
+        create_new_candidates("District D Councilor", "district-d", CandidateData["districtd"]);
+        create_new_candidates("School Committee ", "school-com", CandidateData["school"]);
+        create_new_candidates("Library Trustee ", "lib-trustees", CandidateData["library"]);
+
 
         function draw_my_precincts(precincts_coordinates, fill_color, title, color_str = "#FF0000") {
             var poly = new google.maps.Polygon({
@@ -4098,28 +4105,122 @@ $(function () {
     });
 });
 
-function createAtlargeRep(name, img, phone, email) {
 
-    '<div class="mad-team mad-team-section">' +
-        '<div class="mad-col">' +
+function create_town_management(title, id) {
+
+    var rep = document.getElementById(id);
+    rep.innerHTML =
+        '<div class="content-element-6">' +
+        '<h3 class="green-text">' + title + '</h3>' +
+        '<div class="mad-team style-2 item-col-4">' +
+        // ================ Team Members ================
+
+        create_team_members(townManagement[0]) +
+        create_team_members(townManagement[1]) +
+        '</div>' +
+        '</div>';
+
+}
+
+
+function createALargemembers(title, id, data) {
+    var rep = document.getElementById(id);
+    html =
+        '<div class="content-element-6">' +
+        '<h3 class="green-text">' + title + '</h3>' +
+        '<div class="mad-team style-2 item-col-4">';
+    // ================ Team Members ================
+    for (let index = 0; index < data.length; index++) {
+        html += create_team_members(data[index]);
+
+    }
+    html += '</div>' +
+        '</div>';
+    rep.innerHTML = html;
+
+}
+
+function createschoolmembers(title, id, data) {
+    var rep = document.getElementById(id);
+    html =
+        '<div class="content-element-6">' +
+        '<h3 class="green-text">' + title + '</h3>' +
+        '<div class="mad-team style-2 item-col-4">';
+    // ================ Team Members ================
+    for (let index = 0; index < data.length; index++) {
+        html += create_team_members(data[index]);
+
+    }
+    html += '</div>' +
+        '</div>';
+    rep.innerHTML = html;
+
+}
+
+function create_team_members(data) {
+    var inner_html =
+        '<div class="mad-col" style="padding:30px;">' +
+        //================ Team Member ================
         '<figure class="mad-team-member">' +
-        '<a href="javascript:void(0)" class="mad-team-member-photo"><img src="images/reps/akounelis.jpeg" alt=""></a>' +
+        '<a href="javascript:void(0)" class="mad-team-member-photo"><img src="' + data['image'] + '"' + 'alt="" style="height:20rem;"></a>' +
         '<figcaption class="mad-team-member-info">' +
         '<div class="mad-info-wrap">' +
-        '<h4 class="mad-team-member-name"><a href="#">Edna Barton</a></h4>' +
-        '<div class="mad-member-stat">Alliance Bay Realty</div>' +
+        '<h4 class="mad-team-member-name"><a href="#">' + data['name'] + '</a></h4>' +
+        '<div class="mad-member-stat">' + data['title'] + '</div>' +
         '<nav class="mad-info-block vr-list mad-links">' +
         '<ul>' +
-        '<li><i class="mad-info-icon material-icons">phone</i>+1 208. 987.654</li>' +
-        '<li><i class="mad-info-icon material-icons">phone_iphone</i>+1 208.654.321</li>' +
-        '<li><i class="mad-info-icon material-icons">mail_outline</i><a href="#" class="mad-link link-blue">Email</a></li>' +
+        '<li><i class="mad-info-icon material-icons">phone</i>' + data['phone'] + '</li>' +
+        '<li><i class="mad-info-icon material-icons">mail_outline</i><a href="mailto:' + data['email'] + '"' + 'style="background-position: 100% 31px;">' + data['email'] + '</a></li>' +
+        '<li>' +
+        '<a href="' + data['facebook'] + '"' + 'style="background-position: 100% 30px;"><i class="fab fa-facebook-square rep-social-icons green-text"></a>' + '</i>' +
+        '<a href="#!" style="background-position: 100% 30px; padding-right: 10px;"><i class="fab fa-twitter green-text rep-social-icons"></a>' + '</i>' +
+        '<a href="#!" style="background-position: 100% 30px; padding-right: 10px;"><i class="fab fa-instagram green-text rep-social-icons"></a>' + '</i>' +
+        '<a href="#!" style="background-position: 100% 30px; padding-right: 10px;"><i class="fab fa-linkedin-in green-text rep-social-icons"></a>' + '</i>' +
+        '</li > ' +
         '</ul>' +
         '</nav>' +
-        '<a href="#" class="mad-read-more">View Profile</a>' +
         '</div>' +
-        '</figcaption>' +
+        '</figcaption> ' +
+
         '</figure>' +
-        '</div>'
+        //================ End Of Team Member ================-->
+        '</div>';
+
+    return inner_html;
+
+}
+
+function create_candidates_members(data) {
+    var inner_html =
+        '<div class="mad-col" style="padding:30px;">' +
+        //================ Team Member ================
+        '<figure class="mad-team-member">' +
+        '<a href="javascript:void(0)" class="mad-team-member-photo"><img src="' + data['image'] + '"' + 'alt="" style="height:20rem;"></a>' +
+        '<figcaption class="mad-team-member-info">' +
+        '<div class="mad-info-wrap">' +
+        '<h4 class="mad-team-member-name"><a href="#">' + data['name'] + '</a></h4>' +
+        '<div class="mad-member-stat green-text">' + data['title'] + '</div>' +
+        '<nav class="mad-info-block vr-list mad-links">' +
+        '<ul>' +
+        // '<li><a href="' + data['email'] + '"' + 'style="background-position: 100% 31px;"></a></li>' +
+        '<li style="padding-top:10px;"><i class="mad-info-icon material-icons">public</i><a href="' + data["url_prefix"] + '://' + data['url'] + '"' + 'target="_blank" rel="noopener noreferrer"' + '>' + data['url'] + '</a></li>' +
+        '<li><i class="mad-info-icon material-icons">mail_outline</i><a href="mailto:' + data['email'] + '"' + 'style = "background-position: 100% 31px;" > ' + data['email'] + '</a ></li > ' +
+        '<li>' +
+        '<a href="' + data['facebook'] + '"' + 'target="_blank" rel="noopener noreferrer"' + 'style="background-position: 100% 30px;"><i class="fab fa-facebook-square rep-social-icons green-text"></a>' + '</i>' +
+        '<a href="#!" style="background-position: 100% 30px; padding-right: 10px;"><i class="fab fa-twitter green-text rep-social-icons"></a>' + '</i>' +
+        '<a href="#!" style="background-position: 100% 30px; padding-right: 10px;"><i class="fab fa-instagram green-text rep-social-icons"></a>' + '</i>' +
+        '<a href="#!" style="background-position: 100% 30px; padding-right: 10px;"><i class="fab fa-linkedin-in green-text rep-social-icons"></a>' + '</i>' +
+        '</li > ' +
+        '</ul>' +
+        '</nav>' +
+        '</div>' +
+        '</figcaption> ' +
+
+        '</figure>' +
+        //================ End Of Team Member ================-->
+        '</div>';
+
+    return inner_html;
 
 }
 
@@ -4159,7 +4260,7 @@ function show_district_info(number, precinct) {
         '</div>' +
         '</figcaption>' +
         '</figure>' +
-        //  End Of Team Member 
+        //  End Of Team Member
         '</div>' +
         '</div>' +
         '</div>' +
@@ -4182,7 +4283,7 @@ function show_district_info(number, precinct) {
         '</div>' +
         '</figcaption>' +
         '</figure>' +
-        //  End Of Team Member 
+        //  End Of Team Member
         '</div>' +
         '</div>' +
         '</div>' +
@@ -4202,7 +4303,7 @@ function show_district_info(number, precinct) {
         '</div>' +
         '</figcaption>' +
         '</figure>' +
-        //  End Of Team Member 
+        //  End Of Team Member
         '</div>' +
         '</div>' +
         '</div>' +
@@ -4292,116 +4393,69 @@ function getInfo(place) {
     }
 }
 
-function create_rep_groups() {
-    var lib = document.getElementById("library-trust");
-    lib.innerHTML =
-        '<div class="mad-content no-pd" id="section4">' +
-        '<div class="container">' +
-        '<div class="mad-section with-bg-element style-3 left-side">' +
-        '<div class="mad-title-wrap">' +
-        '<h2 class="mad-title">Library Trustees</h2>' +
-        '</div>' +
-        '<div class="mad-team" id="trustees">' +
-        create_trustee_member(0, "active") +
-        create_trustee_member(1) +
-        create_trustee_member(2) +
-        '</div>' +
-        '<div class="mad-team" id="trustees">' +
-        create_trustee_member(3) +
-        create_trustee_member(4) +
-        create_trustee_member(5, "active") +
-        '</div>' +
-        '</div>' +
-        '</div>' +
-        '</div>';
 
-}
-
-function create_trustee_member(index, isactive = "") {
-    var trustees = LibTrusteesData;
-    status = isactive == "active" ? "active" : ""
-    var inner_text =
-
-        '<div class="mad-col ' + status + '"' + '>' +
-        '<figure class="mad-team-member">' +
-        '<a href="javascript:void(0)" class="mad-team-member-photo"><img src="' + trustees[index]["image"] + '"' + 'alt="" style="height: 23rem;"></a>' +
-        '<figcaption class="mad-team-member-info">' +
-        '<div class="mad-info-wrap">' +
-        '<h4 class="mad-team-member-name"><a href="#">' + trustees[index]["name"] + '</a></h4>' +
-        '<div class="mad-member-stat">' + trustees[index]["title"] + '</div>' +
-        '<nav class="mad-info-block vr-list mad-links">' +
-        '<ul>' +
-        '<li><i class="mad-info-icon material-icons">phone_iphone</i>' + trustees[index]["phone"] + '</li>' +
-        '<li><i class="mad-info-icon material-icons">mail_outline</i><a href="' + trustees[index]["email"] + '"' + 'class="mad-link link-blue">Email</a></li>' +
-        '</ul>' +
-        '</nav>' +
-        '</div>' +
-        '</figcaption>' +
-        '</figure>' +
-        '</div>';
-
-    return inner_text;
-}
-
-function create_candidate(title) {
-    var candidate = CandidateData[title];
-    var inner = '<div class="rep-title col-xl-8 green-text" id="' +
-        candidate[0]['id'] + '"' + '>' + candidate[0]['post'] + '</div>' +
-
-        '<div class="mad-table-wrap col-xl-8" style="margin-bottom: 50px;">' +
-        '<table class="mad-table--responsive-md">' +
-        '<thead>' +
-        '<tr class="bg">' +
-        '<th  class="col-xl-6" >Candidates</th>' +
-        '<th class="col-xl-2" >Seats <span class="green-text">' + ' ' + candidate[0]['seats'] + '</span></th>' +
-        '</tr>' +
-        '</thead>' +
-        '<tbody>';
-
-
-    for (let i = 1; i <= candidate.length - 1; i++) {
-
-        inner += '<tr>' + '<td data-cell-title="Candidates">' +
-            create_member_candidate(candidate[i]) +
-            '</td>' +
-            '<td data-cell-title="Seats"><p class="green-text" style= "margin-top:23px">' + candidate[i]["desc"] + '</p></td>' + '</tr> ';
+function create_trustee_member(title, id, data) {
+    var rep = document.getElementById(id);
+    html =
+        '<div class="content-element-6">' +
+        '<h3 class="green-text" padding-left:20px;>' + title + '</h3>' +
+        '<div class="mad-team style-2 item-col-4">';
+    // ================ Team Members ================
+    for (let index = 0; index < data.length; index++) {
+        html += create_team_members(data[index]);
 
     }
-
-    inner +=
-
-        '</tbody>' +
-        '</table>' +
-        //<!--================ End Of Elections ================-->
+    html += '</div>' +
         '</div>';
-    return inner;
+    rep.innerHTML = html;
 }
 
-function create_member_candidate(member) {
+function create_new_candidates(title, id, data) {
+    var rep = document.getElementById(id);
+    html =
+        '<div class="content-element-4">' +
+        '<h3 class="green-text mad-info-title" style="padding-left:20px;">' + title + '</h3>' +
+        '<div class="mad-team style-2 item-col-4">';
+    // ================ Team Members ================
+    for (let index = 1; index <= data.length - 1; index++) {
+        html += create_candidates_members(data[index]);
 
-    var inner =
-        '<div class="mad-canditates-section">' +
-        '<div class="mad-team style-4">' +
-        '<div class="mad-col">' +
-        '<figure class="mad-team-member">' +
-        '<a href="javascript:void(0)" class="mad-team-member-photo"><img src="' + member["image"] + '"' + 'alt=""></a>' +
-        '<figcaption class="mad-team-member-info">' +
-        '<div class="mad-info-wrap">' +
-        '<h5 class="mad-team-member-name"><a href="#">' + member["name"] + '</a></h5>' +
-        '<nav class="mad-info-block vr-list mad-links">' +
-        '<ul>' +
-        '<li><i class="mad-info-icon material-icons">phone</i>' + member["phone"] + '</li>' +
-        // '<li><i class="mad-info-icon material-icons">phone_iphone</i>+208.654.321</li>' +
-        '<li><i class="mad-info-icon material-icons">mail_outline</i><a href="' + member["email"] + '"' + 'class="mad-link link-blue" style="background-position: 0% 23px;">Email</a></li>' +
-        '</ul>' +
-        '</nav>' +
-        '</div>' +
-        '</figcaption>' +
-        '</figure>' +
-        '</div>' +
-        '</div>' +
+    }
+    html += '</div>' +
         '</div>';
-    return inner;
-
+    rep.innerHTML = html;
 }
+
+
+
+// function create_member_candidate(member) {
+
+//     var inner =
+//         '<div class="mad-canditates-section">' +
+//             '<div class="mad-team style-4">' +
+//             '<div class="mad-col">' +
+//             '<figure class="mad-team-member">' +
+//             '<a href="javascript:void(0)" class="mad-team-member-photo"><img src="' + member["image"] + '"' + 'alt=""></a>' +
+//             '<figcaption class="mad-team-member-info">' +
+//             '<div class="mad-info-wrap">' +
+//             '<h5 class="mad-team-member-name"><a href="#">' + member["name"] + '</a></h5>' +
+//             '<nav class="mad-info-block vr-list mad-links">' +
+//             '<ul>' +
+//             '<li>' + (member["phone"]) == "no data" ? "" : '<i class="mad-info-icon material-icons">phone</i>' + member["phone"] + '</li>' +
+//             '<li><i class="mad-info-icon material-icons">phone_iphone</i>+208.654.321</li>' +
+//             '<li><i class="mad-info-icon material-icons">mail_outline</i><a href="' + member["email"] + '"' + 'class="mad-link link-blue" style="background-position: 0% 23px;">Email</a></li>' +
+//             '</ul>' +
+//             '</nav>' +
+//             '</div>' +
+//             '</figcaption>' +
+//             '</figure>' +
+//             '</div>' +
+//             '</div>' +
+//             '</div>';
+//     return inner;
+
+// }
+
+
+
 

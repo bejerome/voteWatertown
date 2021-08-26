@@ -2875,25 +2875,25 @@
 .licon-sort-alpha-asc:before {
 	content: "\e9b5";
 }
-.licon-sort-alpha-desc:before {
+.licon-sort-alpha-title:before {
 	content: "\e9b6";
 }
 .licon-sort-numeric-asc:before {
 	content: "\e9b7";
 }
-.licon-sort-numeric-desc:before {
+.licon-sort-numeric-title:before {
 	content: "\e9b8";
 }
 .licon-sort-amount-asc:before {
 	content: "\e9b9";
 }
-.licon-sort-amount-desc:before {
+.licon-sort-amount-title:before {
 	content: "\e9ba";
 }
 .licon-sort-time-asc:before {
 	content: "\e9bb";
 }
-.licon-sort-time-desc:before {
+.licon-sort-time-title:before {
 	content: "\e9bc";
 }
 .licon-sigma:before {

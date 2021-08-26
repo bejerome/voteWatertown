@@ -12,59 +12,73 @@ CandidateData = {
                 email: "cbays@watertown-ma.gov",
                 phone: "(617) 894-0045",
                 image: "images/reps/cbays.jpeg",
-                url: "#!",
-                desc: "Incumbent"
+                url: "www.carolinebays.com",
+                url_prefix: "http",
+                title: "Incumbent",
+                facebook: "https://m.facebook.com/CarolineBaysforWatertown/"
             },
             {
                 name: "John Gannon",
                 email: "jgannon@watertown-ma.gov",
                 phone: "(617) 393-9877",
                 image: "images/reps/jgannon.jpeg",
-                url: "#!",
-                desc: "Incumbent"
+                url: "www.gannonforwatertown.wordpress.com",
+                url_prefix: "http",
+                title: "Incumbent",
+                facebook: "https://www.facebook.com/john.gannon.1806"
             },
             {
                 name: "Anthony Palomba",
                 email: "apalomba@watertown-ma.gov",
                 phone: "(781) 664-3525",
                 image: "images/reps/palomba.jpeg",
-                url: "#!",
-                desc: "Incumbent"
+                url: "www.councilorpalomba.com",
+                url_prefix: "https",
+                title: "Incumbent",
+                facebook: "https://www.facebook.com/councilorpalomba"
             },
             {
                 name: "John Airasian",
-                email: "no data",
-                phone: "no data",
+                email: "",
+                phone: "",
                 image: "images/candidates/John-M.-Airasian-scaled.jpg",
-                url: "#!",
-                desc: "Challenger"
+                url: "",
+                url_prefix: "https",
+                title: "Challenger",
+                facebook: "https://www.facebook.com/John-M-Airasian-For-Watertown-Councilor-At-Large-106532528357945"
 
             },
             {
                 name: "Daniel D’Amico",
-                email: "no data",
-                phone: "no data",
-                image: "images/reps/rep_avatar.png",
-                url: "#!",
-                desc: "Challenger"
+                email: "dandamico4council@gmail.com",
+                phone: "",
+                image: "images/candidates/D'Amico.jpg",
+                url: "",
+                url_prefix: "https",
+                title: "Challenger",
+                facebook: "https://www.facebook.com/CoachDan4Council"
 
             },
             {
-                name: "James Mello",
-                email: "no data",
-                phone: "no data",
-                image: "images/reps/rep_avatar.png",
-                url: "#!",
-                desc: "Challenger"
+                name: "James (Jimmy) Mello",
+                email: "",
+                phone: "",
+                image: "images/candidates/jimmy_mello.jpeg",
+                url: "",
+                url_prefix: "https",
+                title: "Challenger",
+                facebook: "https://www.facebook.com/jimmy.mello.1"
 
             },
             {
                 name: "Megan O’Halloran",
-                email: "no data",
-                phone: "no data",
+                email: "",
+                phone: "",
                 image: "images/reps/rep_avatar.png",
-                url: "#!",
-                desc: "Challenger"
+                url: "",
+                url_prefix: "https",
+                title: "Challenger",
+                facebook: "#!"
 
             },
 
@@ -77,9 +91,12 @@ CandidateData = {
         name: "Mark Sideris",
         email: "msideris@watertown-ma.gov",
         phone: "617-827-2996",
-        image: "images/reps/mark_sedaris.png",
-        url: "#!",
-        desc: "Incumbent"
+        image: "images/reps/sidaris_pic.jpeg",
+        url: "",
+        url_prefix: "https",
+        title: "Incumbent",
+        facebook: "https://m.facebook.com/MarkSiderisMA/",
+
 
     },],
     districta: [{
@@ -88,19 +105,23 @@ CandidateData = {
         id: "districta"
     }, {
         name: "Nicole Gardner",
-        email: "no data",
-        phone: "no data",
+        email: "nicoleforwatertown@gmail.com",
+        phone: "",
         image: "images/candidates/Nicole-Gardner.jpeg",
-        url: "https://nicoleforwatertown.com/",
-        desc: "Challenger"
+        url: "www.nicoleforwatertown.com",
+        url_prefix: "https",
+        title: "Challenger",
+        facebook: "https://www.facebook.com/nicoleforwatertown"
 
     }, {
         name: "Michael Hanlon",
-        email: "no data",
-        phone: "no data",
-        image: "images/reps/rep_avatar.png",
-        url: "https://mikehanlonforwatertown.com/",
-        desc: "Challenger"
+        email: "",
+        phone: "",
+        image: "images/candidates/Michael-hanlon.jpeg",
+        url: "www.mikehanlonforwatertown.com",
+        url_prefix: "https",
+        title: "Challenger",
+        facebook: "#!"
 
     }],
     districtb: [{
@@ -113,29 +134,35 @@ CandidateData = {
         email: "lfeltner@watertown-ma.gov",
         phone: "(617) 926-5344",
         image: "images/reps/lisa_feltner.jpeg",
-        url: "https://www.facebook.com/lisa.feltnertc/",
-        desc: "Incumbent"
+        url: "",
+        url_prefix: "https",
+        title: "Incumbent",
+        facebook: "https://www.facebook.com/lisa.feltnertc/"
 
     }, {
         name: "Tiffany York",
-        email: "no data",
-        phone: "no data",
-        image: "images/reps/rep_avatar.png",
-        url: "#!",
-        desc: "Challenger"
+        email: "tiffanyy4districtb@gmail.com",
+        phone: "",
+        image: "images/candidates/tiff_york.jpeg",
+        url: "",
+        title: "Challenger",
+        facebook: "https://www.facebook.com/TiffanyY4DistrictB"
 
     }],
     districtc: [{
         post: "District C Councilor",
         seats: 1,
-        id: "districtc"
+        id: "districtc",
+        facebook: "#!"
     }, {
         name: "Vincent Piccirilli",
         email: "vpiccirilli@watertown-ma.gov",
         phone: "(617) 924-0665",
         image: "images/reps/vincent_piccirilli.jpeg",
-        url: "https://www.facebook.com/vincent.piccirilli",
-        desc: "Incumbent"
+        url: "",
+        url_prefix: "https",
+        title: "Incumbent",
+        facebook: "https://www.facebook.com/vincent.piccirilli"
 
     }],
     districtd: [{
@@ -144,19 +171,23 @@ CandidateData = {
         id: "districtd"
     }, {
         name: "Constance Henry",
-        email: "no data",
-        phone: "no data",
-        image: "images/candidates/connie.henry.jpg",
-        url: "#!",
-        desc: "Challenger"
+        email: "csherbill.henry@gmail.com",
+        phone: "",
+        image: "images/candidates/connie_henry.webp",
+        url: "www.conniehenry.com",
+        url_prefix: "https",
+        title: "Challenger",
+        facebook: "https://www.facebook.com/groups/504881630712456"
 
     }, {
         name: "Emily Izzo",
-        email: "no data",
-        phone: "no data",
+        email: "eizzo19@gmail.com",
+        phone: "",
         image: "images/candidates/emily_izzo.jpeg",
-        url: "#!",
-        desc: "Challenger"
+        url: "",
+        url_prefix: "https",
+        title: "Challenger",
+        facebook: "https://www.facebook.com/EmilyIzzoforDistrictD"
 
     }],
     school: [{
@@ -168,90 +199,110 @@ CandidateData = {
         title: "Secretary",
         email: "amy.donohue@watertown.k12.maus",
         phone: "617-908-8319",
-        image: "images/reps/Amy_donohue.jpeg",
-        url: "#!",
-        desc: "Incumbent"
+        image: "images/reps/Amy_donohue.200x200.jpeg",
+        url: "",
+        url_prefix: "https",
+        title: "Incumbent",
+        facebook: "https://www.facebook.com/amyforschoolcommittee"
 
     }, {
         name: "Lily Rayman-Read",
-        title: "no data",
+        title: "",
         email: "Schoolcommittee@watertown.k12.ma.us",
         phone: "617-680-9762",
         image: "images/reps/LilyRayman-Read.jpeg",
-        url: "#!",
-        desc: "Incumbent"
+        url: "",
+        url_prefix: "https",
+        title: "Incumbent",
+        facebook: "#!"
 
     }, {
         name: "Colleen Mahoney Faherty",
-        email: "no data",
-        phone: "no data",
+        email: "",
+        phone: "",
         image: "images/reps/rep_avatar.png",
-        url: "#!",
-        desc: "Challenger"
+        url: "",
+        url_prefix: "https",
+        title: "Challenger",
+        facebook: "https://www.facebook.com/LilyRaymanRead"
 
     },
     {
         name: "Rachel Kay",
-        email: "no data",
-        phone: "no data",
+        email: "rachelekay@gmail.com",
+        phone: "617-744-9264",
         image: "images/candidates/rachel_kay.jpeg",
-        url: "#!",
-        desc: "Challenger"
+        url: "www.rachelekay.com",
+        url_prefix: "https",
+        title: "Challenger",
+        facebook: "#!"
 
     }, {
         name: "Jessica Middlebrook",
-        email: "no data",
-        phone: "no data",
-        image: "images/reps/rep_avatar.png",
-        url: "#!",
-        desc: "Challenger"
+        email: "jessica4wps@gmail.com",
+        phone: "",
+        image: "images/candidates/Middlebrook.jpg",
+        url: "www.jessicamiddlebrook.com",
+        url_prefix: "https",
+        title: "Challenger",
+        facebook: "https://www.facebook.com/Jessica4WPS"
 
     },
     {
         name: "Jennifer Nicholson",
-        email: "no data",
-        phone: "no data",
-        image: "images/reps/rep_avatar.png",
-        url: "#!",
-        desc: "Challenger"
+        email: "nicholsonforwatertown@gmail.com",
+        phone: "",
+        image: "images/candidates/Nicholson.jpg",
+        url: "www.alwaysaraider.com",
+        url_prefix: "https",
+        title: "Challenger",
+        facebook: "https://www.facebook.com/nicholsonforwatertown/"
 
     },
     ],
     library: [{
         post: "Library Trustees",
-        seats: 1,
+        seats: 3,
         id: "library"
     }, {
         name: "Leanne Hammonds",
-        email: "no data",
-        phone: "no data",
+        email: "",
+        phone: "",
         image: "images/reps/rep_avatar.png",
-        url: "#!",
-        desc: "Incumbent"
+        url: "",
+        url_prefix: "https",
+        title: "Incumbent",
+        facebook: "#!"
 
     }, {
         name: "Sara Keary",
-        email: "no data",
-        phone: "no data",
-        image: "images/candidates/sara_keary.png",
-        url: "#!",
-        desc: "Challenger"
+        email: "kearyfortrustee@gmail.com",
+        phone: "",
+        image: "images/candidates/Keary.jpg",
+        url: "",
+        url_prefix: "https",
+        title: "Challenger",
+        facebook: "https://www.facebook.com/KearyforTrustee"
 
     }, {
         name: "Rosemary Su",
-        email: "no data",
-        phone: "no data",
-        image: "images/reps/rep_avatar.png",
-        url: "#!",
-        desc: "Challenger"
+        email: "",
+        phone: "",
+        image: "images/candidates/Rose-Mary-Su-Web-bio-1600x1000.jpeg",
+        url: "",
+        url_prefix: "https",
+        title: "Challenger",
+        facebook: "https://www.facebook.com/RMSuForWatertown"
 
     }, {
         name: "Maja Young",
-        email: "no data",
-        phone: "no data",
+        email: "",
+        phone: "",
         image: "images/reps/rep_avatar.png",
-        url: "#!",
-        desc: "Challenger"
+        url: "",
+        url_prefix: "https",
+        title: "Challenger",
+        facebook: "#!"
 
     },]
 };
