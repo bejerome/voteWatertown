@@ -2824,14 +2824,14 @@ var Mad = (function ($) {
         // elections candidates
         // var runners = document.getElementById("elections");
         // runners.innerHTML =
-        create_new_candidates("Town Council President", "c-president", CandidateData["president"]);
-        create_new_candidates("Council At-Large", "at-large", CandidateData["candidatesatlg"]);
-        create_new_candidates("District A Councilor", "district-a", CandidateData["districta"]);
-        create_new_candidates("District B Councilor", "district-b", CandidateData["districtb"]);
-        create_new_candidates("District C Councilor", "district-c", CandidateData["districtc"]);
-        create_new_candidates("District D Councilor", "district-d", CandidateData["districtd"]);
-        create_new_candidates("School Committee ", "school-com", CandidateData["school"]);
-        create_new_candidates("Library Trustee ", "lib-trustees", CandidateData["library"]);
+        create_new_candidates("Town Council President", "c-president", CandidateData["president"],1);
+        create_new_candidates("Council At-Large", "at-large", CandidateData["candidatesatlg"],4);
+        create_new_candidates("District A Councilor", "district-a", CandidateData["districta"],1);
+        create_new_candidates("District B Councilor", "district-b", CandidateData["districtb"],1);
+        create_new_candidates("District C Councilor", "district-c", CandidateData["districtc"],1);
+        create_new_candidates("District D Councilor", "district-d", CandidateData["districtd"],1);
+        create_new_candidates("School Committee ", "school-com", CandidateData["school"],3);
+        create_new_candidates("Library Trustee ", "lib-trustees", CandidateData["library"],3);
 
 
         function draw_my_precincts(precincts_coordinates, fill_color, title, color_str = "#FF0000") {
@@ -4410,11 +4410,14 @@ function create_trustee_member(title, id, data) {
     rep.innerHTML = html;
 }
 
-function create_new_candidates(title, id, data) {
+function create_new_candidates(title, id, data, seats) {
     var rep = document.getElementById(id);
     html =
         '<div class="content-element-4">' +
         '<h3 class="green-text mad-info-title" style="padding-left:20px;">' + title + '</h3>' +
+        '<h3 style="padding-left:20px;"><span style="font-size:20px;" class="black-text">' + ((data.length - 1) > 1 ?  'Candidates <span class="green-text">' + (data.length - 1) + '</span>': 'Candidate <span class="green-text">' + (data.length - 1) + '</span>' ) + '</span>'+
+        '<span style="font-size:20px;" class="black-text"> | Open Seats:  <span class="green-text">' + seats + '</span>'+'</span>'+
+        '</h3>'+
         '<div class="mad-team style-2 item-col-4">';
     // ================ Team Members ================
     for (let index = 1; index <= data.length - 1; index++) {
