@@ -4416,7 +4416,7 @@ function create_new_candidates(title, id, data, seats) {
         '<div class="content-element-4">' +
         '<h3 class="green-text mad-info-title" style="padding-left:20px;">' + title + '</h3>' +
         '<h3 style="padding-left:20px;"><span style="font-size:20px;" class="black-text">' + ((data.length - 1) > 1 ?  'Candidates <span class="green-text">' + (data.length - 1) + '</span>': 'Candidate <span class="green-text">' + (data.length - 1) + '</span>' ) + '</span>'+
-        '<span style="font-size:20px;" class="black-text"> | Open Seats:  <span class="green-text">' + seats + '</span>'+'</span>'+
+        '<span style="font-size:20px;" class="black-text">  | Open Seats: <span class="green-text">' + seats + '</span>'+'</span>'+
         '</h3>'+
         '<div class="mad-team style-2 item-col-4">';
     // ================ Team Members ================
