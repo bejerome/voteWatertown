@@ -4413,8 +4413,8 @@ function create_trustee_member(title, id, data) {
 function create_new_candidates(title, id, data) {
     var rep = document.getElementById(id);
     html =
-        '<div class="content-element-6">' +
-        '<h3 class="green-text mad-info-title" style="padding-left:20px;">' + title + '  ' + '<span style="font-size:20px;" class="black-text">' + ((data.length - 1) > 1 ? " ( " + (data.length - 1) + " Candidates )" : " ( " + (data.length - 1) + " Candidate ) ") + '</span></h3>' +
+        '<div class="content-element-4">' +
+        '<h3 class="green-text mad-info-title" style="padding-left:20px;">' + title + '</h3>' +
         '<div class="mad-team style-2 item-col-4">';
     // ================ Team Members ================
     for (let index = 1; index <= data.length - 1; index++) {

@@ -10,6 +10,7 @@ LibTrusteesData =
             phone: "617-744-1784",
             image: "images/reps/rep_avatar.png",
             url: "#!",
+            facebook: "#!",
         },
         {
             name: "Sheppard Ferguson",
@@ -18,6 +19,7 @@ LibTrusteesData =
             phone: "617-901-4074",
             image: "images/reps/rep_avatar.png",
             url: "#!",
+            facebook: "#!",
         },
         {
             name: "Michael Hanlon",
@@ -26,6 +28,7 @@ LibTrusteesData =
             phone: "617-924-7613",
             image: "images/candidates/Michael-hanlon.jpeg",
             url: "#!",
+            facebook: "#!",
         },
         {
             name: "Teddy Kokoros",
@@ -34,6 +37,7 @@ LibTrusteesData =
             phone: "617-510-8458",
             image: "images/reps/rep_avatar.png",
             url: "#!",
+            facebook: "#!",
         },
         {
             name: "Daniel Pritchard",
@@ -42,6 +46,7 @@ LibTrusteesData =
             phone: "617-653-6645",
             image: "images/reps/rep_avatar.png",
             url: "#!",
+            facebook: "#!",
         },
         {
             name: "Emily Izzo",
@@ -50,6 +55,7 @@ LibTrusteesData =
             phone: "617-894-6042",
             image: "images/candidates/emily_izzo.jpeg",
             url: "#!",
+            facebook: "#!",
         },
 
     ]
