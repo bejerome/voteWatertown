@@ -231,7 +231,7 @@ CandidateData = {
         url: "",
         url_prefix: "https",
         title: "Incumbent",
-        facebook: "#!",
+        facebook: "https://www.facebook.com/LilyRaymanRead",
         link: "#!"
 
     }, {
@@ -242,7 +242,7 @@ CandidateData = {
         url: "",
         url_prefix: "https",
         title: "Challenger",
-        facebook: "https://www.facebook.com/LilyRaymanRead",
+        facebook: "#!",
         link: "#!"
 
     },

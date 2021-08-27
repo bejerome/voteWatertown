@@ -4412,14 +4412,14 @@ function create_new_candidates(title, id, data, seats) {
     html =
         '<div class="content-element-4">' +
         '<h3 class="green-text mad-info-title" style="padding-left:20px;">' + title + '</h3>' +
-        '<div class="row">'+
+        '<div class="row" style="padding:0">'+
         '<div class="col-md-2 right-border-solid">' +
-            '<div class="green-text" style="font-size:20px;">' + (data.length - 1) + '</div>'+
-            '<h3 style="font-size:18px;" class="black-text">Candidates</h3>'+
+            '<div class="black-text" style="font-size:20px;">' + (data.length - 1) + '</div>'+
+            '<h3 style="font-size:18px;" class="gray-text">Candidates</h3>'+
         '</div>'+
         '<div class="col-md-2 right-border-solid">' +
-            '<div class="green-text" style="font-size:20px;">' + seats + '</div>'+
-            '<h3 style="font-size:18px;" class="black-text">Open Seats</h3>'+
+            '<div class="black-text" style="font-size:20px;">' + seats + '</div>'+
+            '<h3 style="font-size:18px; font-family:Hind;" class="gray-text">Open Seats</h3>'+
         '</div>'+
         '</div>'+
         
