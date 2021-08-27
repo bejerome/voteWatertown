@@ -4162,7 +4162,7 @@ function create_team_members(data) {
         '<figcaption class="mad-team-member-info">' +
         '<div class="mad-info-wrap">' +
         '<h4 class="mad-team-member-name"><a href="#">' + data['name'] + '</a></h4>' +
-        '<div class="mad-member-stat">' + data['title'] + '</div>' +
+        '<div class="mad-member-stat green-text">' + data['title'] + '</div>' +
         '<nav class="mad-info-block vr-list mad-links">' +
         '<ul>' +
         '<li><i class="mad-info-icon material-icons">phone</i>' + data['phone'] + '</li>' +
