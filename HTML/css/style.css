@@ -2065,7 +2065,7 @@ aside .mad-widget .mad-widget-title:not(:last-child) {
 }
 
 .mad-widget .mad-team.style-4 .mad-team-member .mad-team-member-photo {
-    max-width: 120px;
+    max-width: 100%;
 }
 
 .mad-widget .mad-team.style-4 .mad-team-member .mad-team-member-info {

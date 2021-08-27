@@ -111,7 +111,7 @@ precinctData = {
             email: "vpiccirilli@watertown-ma.gov",
             phone: "(617) 924-0665"
         },
-        "image": "images/reps/vincent_piccirilli.jpeg",
+        "image": "images/reps/vincent_picirrilli_enhanced.jpeg",
         url: "https://www.facebook.com/vincent.piccirilli"
 
     },
@@ -128,7 +128,7 @@ precinctData = {
             email: "vpiccirilli@watertown-ma.gov",
             phone: "(617) 924-0665"
         },
-        "image": "images/reps/vincent_piccirilli.jpeg",
+        "image": "images/reps/vincent_picirrilli_enhanced.jpeg",
         url: "https://www.facebook.com/vincent.piccirilli"
     },
     9: {
@@ -144,7 +144,7 @@ precinctData = {
             email: "vpiccirilli@watertown-ma.gov",
             phone: "(617) 924-0665"
         },
-        "image": "images/reps/vincent_piccirilli.jpeg",
+        "image": "images/reps/vincent_picirrilli_enhanced.jpeg",
         url: "https://www.facebook.com/vincent.piccirilli"
     },
     10: {
