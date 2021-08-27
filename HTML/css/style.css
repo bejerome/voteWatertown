@@ -205,6 +205,12 @@ button {
     background: transparent;
 }
 
+.close-btn {
+    cursor: pointer;
+    font-weight: bold;
+    visibility: hidden;
+}
+
 button::-moz-focus-inner {
     border: 0;
 }
@@ -9673,5 +9679,10 @@ body.mad-full-page .mad-full-page-wrap .mad-team.style-2>.mad-col:nth-child(-n+9
 
 .center {
     text-align: center;
+}
 
+.right-border-solid {
+    border-right-style: solid;
+    text-align: center;
+    margin: 0px;
 }

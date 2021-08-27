@@ -84,7 +84,14 @@
                     </ul>
                     <!--================ End of Sub Menu ================-->
                   </li> 
-                  <li class="menu-item" style="font-size: 20px; color: green;"><a href="https://www.sec.state.ma.us/OVR/Welcome.aspx" target="_blank" rel="noopener noreferrer">Register To vote</a></li>
+                  <li class="menu-item menu-item-has-children" style="font-size: 20px;"><a href="#!">Register To Vote</a>
+                    <ul class="sub-menu">
+                      <li class="menu-item"><a href="https://www.sec.state.ma.us/ele/elepdf/2021-Vote-by-Mail-Application.pdf" target="_blank" rel="noopener noreferrer">Vote by Mail Application </a></li>
+                      <li class="menu-item"><a href="https://www.sec.state.ma.us/ovr/" target="_blank" rel="noopener noreferrer">Register Online</a></li>
+        
+                    </ul>
+                  </li>
+                  
                 </ul>
               </nav>
               <!--================ End of Navigation ================-->
@@ -107,11 +114,11 @@
             <button type="submit" class="btn btn-style-2 btn-big"><i class="material-icons">search</i><span>Search</span></button>
           </div>
         </form> -->
-        <form class="mad-newsletter-form mad-contact-form search-item" style="overflow: hidden; 
+        <form  id="search-form" class="mad-newsletter-form mad-contact-form search-item" style="overflow: hidden; 
         padding-right: .5em; padding-left: .5em;">
-          <input type="email" name="email" placeholder="Your home address" id="pac-input" style="min-width:550px;">
-          <button type="submit" id="close-btn"><i class="material-icons">close</i></button>
-        </form> 
+          <input type="email" placeholder="Your home address" id="pac-input" style="min-width:550px;" name="q" autocomplete="off">
+          <button type="submit"  class="close-btn"  id="close-btn"><i class="material-icons">close</i></button>
+        </form>
 
      </div> 
     <!--================ End of Search panel ================-->
@@ -121,7 +128,7 @@
     <!--================ End of Header ================-->
 
      <!--================ Rep Info ================-->
-     <div class="container" id="your-rep"></div>
+     <div class="container" style="padding-bottom:3rem;" id="your-rep"></div>
      <!--================ End of Rep Info ================-->
      
     <div class="container">
@@ -186,8 +193,7 @@
                 <nav class="vr-list mad-links link-white-2">
                   <ul>
                     <li><a href="#">About Us</a></li>
-                    <li><a href="#">Team</a></li>
-                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="mailto:benjaminjjerome@gmail.com">Contact Me</a></li>
                   </ul>
                 </nav>
               </section>
@@ -218,7 +224,7 @@
   <script src="vendors/monkeysan.tabs.min.js"></script>
   <script src="vendors/monkeysan.jquery.nav.1.0.min.js"></script>
   <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKutuyCIvPvCVF-ZK6wKT5SanMwnKoAwg&libraries=places&amp;amp;v=3.20"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAqOvJIAxJ62JnjSmfFUhD4_N-MHJNAgd8&libraries=places&amp;amp;v=3.20"></script>
   <script src="vendors/fancybox/jquery.fancybox.min.js"></script>
   <script src="vendors/monkeysan.validator.min.js"></script>
   <script src="vendors/handlebars-v4.0.5.min.js"></script>
