@@ -15,7 +15,8 @@ CandidateData = {
                 url: "www.carolinebays.com",
                 url_prefix: "http",
                 title: "Incumbent",
-                facebook: "https://m.facebook.com/CarolineBaysforWatertown/"
+                facebook: "https://m.facebook.com/CarolineBaysforWatertown/",
+                link: "#!"
             },
             {
                 name: "John Gannon",
@@ -25,7 +26,8 @@ CandidateData = {
                 url: "www.gannonforwatertown.wordpress.com",
                 url_prefix: "http",
                 title: "Incumbent",
-                facebook: "https://www.facebook.com/john.gannon.1806"
+                facebook: "https://www.facebook.com/john.gannon.1806",
+                link: "#!"
             },
             {
                 name: "Anthony Palomba",
@@ -35,7 +37,8 @@ CandidateData = {
                 url: "www.councilorpalomba.com",
                 url_prefix: "https",
                 title: "Incumbent",
-                facebook: "https://www.facebook.com/councilorpalomba"
+                facebook: "https://www.facebook.com/councilorpalomba",
+                link: "#!"
             },
             {
                 name: "John Airasian",
@@ -45,7 +48,8 @@ CandidateData = {
                 url: "",
                 url_prefix: "https",
                 title: "Challenger",
-                facebook: "https://www.facebook.com/John-M-Airasian-For-Watertown-Councilor-At-Large-106532528357945"
+                facebook: "https://www.facebook.com/John-M-Airasian-For-Watertown-Councilor-At-Large-106532528357945",
+                link: "#!"
 
             },
             {
@@ -56,7 +60,8 @@ CandidateData = {
                 url: "",
                 url_prefix: "https",
                 title: "Challenger",
-                facebook: "https://www.facebook.com/CoachDan4Council"
+                facebook: "https://www.facebook.com/CoachDan4Council",
+                link: "#!"
 
             },
             {
@@ -67,7 +72,8 @@ CandidateData = {
                 url: "",
                 url_prefix: "https",
                 title: "Challenger",
-                facebook: "https://www.facebook.com/jimmy.mello.1"
+                facebook: "https://www.facebook.com/jimmy.mello.1",
+                link: "#!"
 
             },
             {
@@ -78,7 +84,8 @@ CandidateData = {
                 url: "",
                 url_prefix: "https",
                 title: "Challenger",
-                facebook: "#!"
+                facebook: "#!",
+                link: "#!"
 
             },
 
@@ -96,6 +103,7 @@ CandidateData = {
         url_prefix: "https",
         title: "Incumbent",
         facebook: "https://m.facebook.com/MarkSiderisMA/",
+        link: "#!"
 
 
     },],
@@ -111,7 +119,8 @@ CandidateData = {
         url: "www.nicoleforwatertown.com",
         url_prefix: "https",
         title: "Challenger",
-        facebook: "https://www.facebook.com/nicoleforwatertown"
+        facebook: "https://www.facebook.com/nicoleforwatertown",
+        link: "#!"
 
     }, {
         name: "Michael Hanlon",
@@ -121,7 +130,8 @@ CandidateData = {
         url: "www.mikehanlonforwatertown.com",
         url_prefix: "https",
         title: "Challenger",
-        facebook: "#!"
+        facebook: "#!",
+        link: "#!"
 
     }],
     districtb: [{
@@ -137,23 +147,26 @@ CandidateData = {
         url: "",
         url_prefix: "https",
         title: "Incumbent",
-        facebook: "https://www.facebook.com/lisa.feltnertc/"
+        facebook: "https://www.facebook.com/lisa.feltnertc/",
+        link: "#!"
 
     }, {
         name: "Tiffany York",
         email: "tiffanyy4districtb@gmail.com",
         phone: "",
         image: "images/candidates/tiff_york.jpeg",
-        url: "",
+        url: "www.tiffanyy4districtb.com",
         title: "Challenger",
-        facebook: "https://www.facebook.com/TiffanyY4DistrictB"
+        facebook: "https://www.facebook.com/TiffanyY4DistrictB",
+        link: "https://linktr.ee/TiffanyY4DistrictB"
 
     }],
     districtc: [{
         post: "District C Councilor",
         seats: 1,
         id: "districtc",
-        facebook: "#!"
+        facebook: "#!",
+        link: "#!"
     }, {
         name: "Vincent Piccirilli",
         email: "vpiccirilli@watertown-ma.gov",
@@ -162,7 +175,8 @@ CandidateData = {
         url: "",
         url_prefix: "https",
         title: "Incumbent",
-        facebook: "https://www.facebook.com/vincent.piccirilli"
+        facebook: "https://www.facebook.com/vincent.piccirilli",
+        link: "#!"
 
     }],
     districtd: [{
@@ -177,7 +191,8 @@ CandidateData = {
         url: "www.conniehenry.com",
         url_prefix: "https",
         title: "Challenger",
-        facebook: "https://www.facebook.com/groups/504881630712456"
+        facebook: "https://www.facebook.com/groups/504881630712456",
+        link: "#!"
 
     }, {
         name: "Emily Izzo",
@@ -187,7 +202,8 @@ CandidateData = {
         url: "",
         url_prefix: "https",
         title: "Challenger",
-        facebook: "https://www.facebook.com/EmilyIzzoforDistrictD"
+        facebook: "https://www.facebook.com/EmilyIzzoforDistrictD",
+        link: "#!"
 
     }],
     school: [{
@@ -203,7 +219,8 @@ CandidateData = {
         url: "",
         url_prefix: "https",
         title: "Incumbent",
-        facebook: "https://www.facebook.com/amyforschoolcommittee"
+        facebook: "https://www.facebook.com/amyforschoolcommittee",
+        link: "#!"
 
     }, {
         name: "Lily Rayman-Read",
@@ -214,7 +231,8 @@ CandidateData = {
         url: "",
         url_prefix: "https",
         title: "Incumbent",
-        facebook: "#!"
+        facebook: "https://www.facebook.com/LilyRaymanRead",
+        link: "#!"
 
     }, {
         name: "Colleen Mahoney Faherty",
@@ -224,7 +242,8 @@ CandidateData = {
         url: "",
         url_prefix: "https",
         title: "Challenger",
-        facebook: "https://www.facebook.com/LilyRaymanRead"
+        facebook: "#!",
+        link: "#!"
 
     },
     {
@@ -235,7 +254,8 @@ CandidateData = {
         url: "www.rachelekay.com",
         url_prefix: "https",
         title: "Challenger",
-        facebook: "#!"
+        facebook: "#!",
+        link: "#!"
 
     }, {
         name: "Jessica Middlebrook",
@@ -245,7 +265,8 @@ CandidateData = {
         url: "www.jessicamiddlebrook.com",
         url_prefix: "https",
         title: "Challenger",
-        facebook: "https://www.facebook.com/Jessica4WPS"
+        facebook: "https://www.facebook.com/Jessica4WPS",
+        link: "#!"
 
     },
     {
@@ -256,7 +277,8 @@ CandidateData = {
         url: "www.alwaysaraider.com",
         url_prefix: "https",
         title: "Challenger",
-        facebook: "https://www.facebook.com/nicholsonforwatertown/"
+        facebook: "https://www.facebook.com/nicholsonforwatertown/",
+        link: "#!"
 
     },
     ],
@@ -272,7 +294,8 @@ CandidateData = {
         url: "",
         url_prefix: "https",
         title: "Incumbent",
-        facebook: "#!"
+        facebook: "#!",
+        link: "#!"
 
     }, {
         name: "Sara Keary",
@@ -282,7 +305,8 @@ CandidateData = {
         url: "",
         url_prefix: "https",
         title: "Challenger",
-        facebook: "https://www.facebook.com/KearyforTrustee"
+        facebook: "https://www.facebook.com/KearyforTrustee",
+        link: "#!"
 
     }, {
         name: "Rosemary Su",
@@ -292,7 +316,8 @@ CandidateData = {
         url: "",
         url_prefix: "https",
         title: "Challenger",
-        facebook: "https://www.facebook.com/RMSuForWatertown"
+        facebook: "https://www.facebook.com/RMSuForWatertown",
+        link: "#!"
 
     }, {
         name: "Maja Young",
@@ -302,7 +327,8 @@ CandidateData = {
         url: "",
         url_prefix: "https",
         title: "Challenger",
-        facebook: "#!"
+        facebook: "#!",
+        link: "#!"
 
     },]
 };

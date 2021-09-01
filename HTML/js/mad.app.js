@@ -2764,7 +2764,7 @@ var Mad = (function ($) {
             autocomplete.bindTo("bounds", map);
             autocomplete.addListener("place_changed", () => {
                 const place = autocomplete.getPlace();
-                console.log(place.geometry.location.lat(), place.geometry.location.lng());
+              
                 if (!place.geometry || !place.geometry.location) {
                     // User entered the name of a Place that was not suggested and
                     // pressed the Enter key, or the Place Details request failed.
@@ -2780,11 +2780,7 @@ var Mad = (function ($) {
                 } else {
                     isWatertown = false;
                     alert(
-                        '<div role="alert" class="mad-alert-box mad-alert-box--success">' +
-                        '<div class="mad-alert-box-inner">Well done! You successfully read this important alert message.' +
-                        ' <button type="button" class="mad-alert-box-close">Close</button>' +
-                        '</div>' +
-                        '</div>'
+                        "You Enter An Address Outside Of Watertown"
                     );
                     return;
                 }
@@ -2824,14 +2820,14 @@ var Mad = (function ($) {
         // elections candidates
         // var runners = document.getElementById("elections");
         // runners.innerHTML =
-        create_new_candidates("Town Council President", "c-president", CandidateData["president"]);
-        create_new_candidates("Council At-Large", "at-large", CandidateData["candidatesatlg"]);
-        create_new_candidates("District A Councilor", "district-a", CandidateData["districta"]);
-        create_new_candidates("District B Councilor", "district-b", CandidateData["districtb"]);
-        create_new_candidates("District C Councilor", "district-c", CandidateData["districtc"]);
-        create_new_candidates("District D Councilor", "district-d", CandidateData["districtd"]);
-        create_new_candidates("School Committee ", "school-com", CandidateData["school"]);
-        create_new_candidates("Library Trustee ", "lib-trustees", CandidateData["library"]);
+        create_new_candidates("Town Council President", "c-president", CandidateData["president"],1);
+        create_new_candidates("Council At-Large", "at-large", CandidateData["candidatesatlg"],4);
+        create_new_candidates("District A Councilor", "district-a", CandidateData["districta"],1);
+        create_new_candidates("District B Councilor", "district-b", CandidateData["districtb"],1);
+        create_new_candidates("District C Councilor", "district-c", CandidateData["districtc"],1);
+        create_new_candidates("District D Councilor", "district-d", CandidateData["districtd"],1);
+        create_new_candidates("School Committee ", "school-com", CandidateData["school"],3);
+        create_new_candidates("Library Trustee ", "lib-trustees", CandidateData["library"],3);
 
 
         function draw_my_precincts(precincts_coordinates, fill_color, title, color_str = "#FF0000") {
@@ -4166,7 +4162,7 @@ function create_team_members(data) {
         '<figcaption class="mad-team-member-info">' +
         '<div class="mad-info-wrap">' +
         '<h4 class="mad-team-member-name"><a href="#">' + data['name'] + '</a></h4>' +
-        '<div class="mad-member-stat">' + data['title'] + '</div>' +
+        '<div class="mad-member-stat green-text">' + data['title'] + '</div>' +
         '<nav class="mad-info-block vr-list mad-links">' +
         '<ul>' +
         '<li><i class="mad-info-icon material-icons">phone</i>' + data['phone'] + '</li>' +
@@ -4236,10 +4232,11 @@ function scrollSection(id) {
     });
 };
 
-function show_district_info(number, precinct) {
+function show_district_info(number, precinct,place="") {
     var modal = document.getElementById("your-rep");
     modal.innerHTML =
-        '<h5 id="section0" class="mad-title center" style="padding-left:3rem; margin-top:10px;">District And Precint Info</h5>' +
+        '<h5 id="section0" class="mad-title center" style="padding-left:3rem; margin-top:10px;">Voter Info For</h5>' +
+        '<h5 id="section0" class="mad-title center green-text" style="padding-bottom:3rem; padding-left:3rem; margin-top:10px;">' + place + '</h5>' +
         '<div class="mad-content no-pd" id="precinct-info">' +
         '<div class="row">' +
         '<div class="col-md-4">' +
@@ -4387,7 +4384,7 @@ function getInfo(place) {
         alert("Address not in Watertown")
     } else {
 
-        show_district_info(precinct_number, my_precint_info)
+        show_district_info(precinct_number, my_precint_info,place.formatted_address)
 
 
     }
@@ -4410,11 +4407,22 @@ function create_trustee_member(title, id, data) {
     rep.innerHTML = html;
 }
 
-function create_new_candidates(title, id, data) {
+function create_new_candidates(title, id, data, seats) {
     var rep = document.getElementById(id);
     html =
         '<div class="content-element-4">' +
         '<h3 class="green-text mad-info-title" style="padding-left:20px;">' + title + '</h3>' +
+        '<div class="row" style="padding:0">'+
+        '<div class="col-md-2 right-border-solid">' +
+            '<div class="black-text" style="font-size:20px;">' + (data.length - 1) + '</div>'+
+            '<h3 style="font-size:18px;" class="gray-text">Candidates</h3>'+
+        '</div>'+
+        '<div class="col-md-2 right-border-solid">' +
+            '<div class="black-text" style="font-size:20px;">' + seats + '</div>'+
+            '<h3 style="font-size:18px; font-family:Hind;" class="gray-text">Open Seats</h3>'+
+        '</div>'+
+        '</div>'+
+        
         '<div class="mad-team style-2 item-col-4">';
     // ================ Team Members ================
     for (let index = 1; index <= data.length - 1; index++) {
@@ -4427,35 +4435,19 @@ function create_new_candidates(title, id, data) {
 }
 
 
-
-// function create_member_candidate(member) {
-
-//     var inner =
-//         '<div class="mad-canditates-section">' +
-//             '<div class="mad-team style-4">' +
-//             '<div class="mad-col">' +
-//             '<figure class="mad-team-member">' +
-//             '<a href="javascript:void(0)" class="mad-team-member-photo"><img src="' + member["image"] + '"' + 'alt=""></a>' +
-//             '<figcaption class="mad-team-member-info">' +
-//             '<div class="mad-info-wrap">' +
-//             '<h5 class="mad-team-member-name"><a href="#">' + member["name"] + '</a></h5>' +
-//             '<nav class="mad-info-block vr-list mad-links">' +
-//             '<ul>' +
-//             '<li>' + (member["phone"]) == "no data" ? "" : '<i class="mad-info-icon material-icons">phone</i>' + member["phone"] + '</li>' +
-//             '<li><i class="mad-info-icon material-icons">phone_iphone</i>+208.654.321</li>' +
-//             '<li><i class="mad-info-icon material-icons">mail_outline</i><a href="' + member["email"] + '"' + 'class="mad-link link-blue" style="background-position: 0% 23px;">Email</a></li>' +
-//             '</ul>' +
-//             '</nav>' +
-//             '</div>' +
-//             '</figcaption>' +
-//             '</figure>' +
-//             '</div>' +
-//             '</div>' +
-//             '</div>';
-//     return inner;
-
-// }
-
-
+(function() {
+	
+		textInput = document.getElementById('pac-input');
+		clearBtn = document.getElementById('close-btn');
+	textInput.onkeyup = function() {
+		// Show the clear button if text input value is not empty
+		clearBtn.style.visibility = (this.value.length) ? "visible" : "hidden";
+	};
+	// Hide the clear button on click, and reset the input value
+	clearBtn.onclick = function() {
+		this.style.visibility = "hidden";
+		textInput.value = "";
+	};
+})();
 
 

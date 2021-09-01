@@ -15,6 +15,7 @@
   <link rel="shortcut icon" href="images/favicon.ico">
   <!--================ Google web fonts ================-->
   <link href="https://fonts.googleapis.com/css?family=Hind:300,400,500,600,700%7CNoto+Serif:400,700%7Cfamily=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Merriweather|Montserrat|Sacramento" rel="stylesheet">
   
   <!--================ Vendor CSS ================-->
   <link rel="stylesheet" href="css/fontawesome-all.min.css">
@@ -41,7 +42,7 @@
     <div class="container center">
       <div class="container">
         <div class="col-dm-4" style= "padding-top: 20px; vertical-align: middle;">
-          <h2 class="green-text">Watertown Massachusetts</h2>
+          <h1 class="green-text" style="font-family: Sacramento; font-weight: bold; font-size: 50px;">Watertown Massachusetts</h1>
         </div>
         <div class="col-dm-4" style="vertical-align: middle;">
           <a href="#section5"><img src="images/vote_img.png" alt="" style=" width: 80px; height: 50px;"></a>
@@ -67,7 +68,7 @@
                   <li class="menu-item" style="font-size: 20px;"><a href="#section1">Council President</a></li>   
                   <li class="menu-item" style="font-size: 20px;"><a href="#section2">Council At Large</a></li>   
                   <li class="menu-item" style="font-size: 20px;"><a href="#section3">School Committee</a></li>   
-                  <li class="menu-item" style="font-size: 20px;"><a href="#lib-trustees">Library Trustees</a></li>   
+                  <li class="menu-item" style="font-size: 20px;"><a href="#library-trust">Library Trustees</a></li>   
                   <li class="menu-item menu-item-has-children" style="font-size: 20px;"><a href="#section5">Upcoming Elections</a>
                      <!--================ Sub Menu ================-->
                      <ul class="sub-menu">
@@ -84,7 +85,14 @@
                     </ul>
                     <!--================ End of Sub Menu ================-->
                   </li> 
-                  <li class="menu-item" style="font-size: 20px; color: green;"><a href="https://www.sec.state.ma.us/OVR/Welcome.aspx" target="_blank" rel="noopener noreferrer">Register To vote</a></li>
+                  <li class="menu-item menu-item-has-children" style="font-size: 20px;"><a href="#!">Register To Vote</a>
+                    <ul class="sub-menu">
+                      <li class="menu-item"><a href="https://www.sec.state.ma.us/ele/elepdf/2021-Vote-by-Mail-Application.pdf" target="_blank" rel="noopener noreferrer">Vote by Mail Application </a></li>
+                      <li class="menu-item"><a href="https://www.sec.state.ma.us/ovr/" target="_blank" rel="noopener noreferrer">Register Online</a></li>
+        
+                    </ul>
+                  </li>
+                  
                 </ul>
               </nav>
               <!--================ End of Navigation ================-->
@@ -107,11 +115,11 @@
             <button type="submit" class="btn btn-style-2 btn-big"><i class="material-icons">search</i><span>Search</span></button>
           </div>
         </form> -->
-        <form class="mad-newsletter-form mad-contact-form search-item" style="overflow: hidden; 
+        <form  id="search-form" class="mad-newsletter-form mad-contact-form search-item" style="overflow: hidden; 
         padding-right: .5em; padding-left: .5em;">
-          <input type="email" name="email" placeholder="Your home address" id="pac-input" style="min-width:550px;">
-          <button type="submit" id="close-btn"><i class="material-icons">close</i></button>
-        </form> 
+          <input type="email" placeholder="Your home address" id="pac-input" style="min-width:550px;" name="q" autocomplete="off">
+          <button type="submit"  class="close-btn"  id="close-btn"><i class="material-icons">close</i></button>
+        </form>
 
      </div> 
     <!--================ End of Search panel ================-->
@@ -121,7 +129,7 @@
     <!--================ End of Header ================-->
 
      <!--================ Rep Info ================-->
-     <div class="container" id="your-rep"></div>
+     <div class="container" style="padding-bottom:3rem;" id="your-rep"></div>
      <!--================ End of Rep Info ================-->
      
     <div class="container">
@@ -186,8 +194,7 @@
                 <nav class="vr-list mad-links link-white-2">
                   <ul>
                     <li><a href="#">About Us</a></li>
-                    <li><a href="#">Team</a></li>
-                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="mailto:benjaminjjerome@gmail.com">Contact Me</a></li>
                   </ul>
                 </nav>
               </section>
