@@ -2812,7 +2812,7 @@ var Mad = (function ($) {
 
         //create page sections
         create_town_management("Town Management", "section1");
-        createALargemembers("Representatives At Large", "section2", atLargeData);
+        createALargemembers("Representatives", "section2", atLargeData);
         createschoolmembers("School Committee Members", "section3", SchoolComData);
         create_trustee_member("Library Trustees", "library-trust", LibTrusteesData);
 
@@ -4197,16 +4197,31 @@ function create_candidates_members(data) {
         '<h4 class="mad-team-member-name"><a href="#">' + data['name'] + '</a></h4>' +
         '<div class="mad-member-stat green-text">' + data['title'] + '</div>' +
         '<nav class="mad-info-block vr-list mad-links">' +
-        '<ul>' +
+        '<ul>';
         // '<li><a href="' + data['email'] + '"' + 'style="background-position: 100% 31px;"></a></li>' +
-        '<li style="padding-top:10px;"><i class="mad-info-icon material-icons">public</i><a href="' + data["url_prefix"] + '://' + data['url'] + '"' + 'target="_blank" rel="noopener noreferrer"' + '>' + data['url'] + '</a></li>' +
-        '<li><i class="mad-info-icon material-icons">mail_outline</i><a href="mailto:' + data['email'] + '"' + 'style = "background-position: 100% 31px;" > ' + data['email'] + '</a ></li > ' +
-        '<li>' +
-        '<a href="' + data['facebook'] + '"' + 'target="_blank" rel="noopener noreferrer"' + 'style="background-position: 100% 30px;"><i class="fab fa-facebook-square rep-social-icons green-text"></a>' + '</i>' +
-        '<a href="#!" style="background-position: 100% 30px; padding-right: 10px;"><i class="fab fa-twitter green-text rep-social-icons"></a>' + '</i>' +
-        '<a href="#!" style="background-position: 100% 30px; padding-right: 10px;"><i class="fab fa-instagram green-text rep-social-icons"></a>' + '</i>' +
-        '<a href="#!" style="background-position: 100% 30px; padding-right: 10px;"><i class="fab fa-linkedin-in green-text rep-social-icons"></a>' + '</i>' +
-        '</li > ' +
+        if(data['url'] != "#!"){
+            inner_html +=  '<li style="padding-top:10px;"><i class="mad-info-icon material-icons">public</i><a href="' + data["url_prefix"] + '://' + data['url'] + '"' + 'target="_blank" rel="noopener noreferrer"' + '>' + data['url'] + '</a></li>' 
+        }
+        if(data['email'] != "#!"){
+            inner_html +=  '<li><i class="mad-info-icon material-icons">mail_outline</i><a href="mailto:' + data['email'] + '"' + 'style = "background-position: 100% 31px;" > ' + data['email'] + '</a ></li > ' 
+        }
+        
+        inner_html +='<li>';
+        if(data['facebook'] != "#!"){
+            inner_html +=  '<a href="' + data['facebook'] + '"' + 'target="_blank" rel="noopener noreferrer"' + 'style="background-position: 100% 30px;"><i class="fab fa-facebook-square rep-social-icons green-text"></a>' + '</i>'
+        }
+
+        if(data['tweeter'] != "#!"){
+            inner_html +=  '<a href="' + data['tweeter'] + '"' + 'target="_blank" rel="noopener noreferrer"' +' style="background-position: 100% 30px; padding-right: 10px;"><i class="fab fa-twitter green-text rep-social-icons"></a>' + '</i>' 
+        }
+        if(data['instagrame'] != "#!"){
+            inner_html +=  '<a href="' + data['instagrame'] + '"' + 'target="_blank" rel="noopener noreferrer"' +' style="background-position: 100% 30px; padding-right: 10px;"><i class="fab fa-instagram green-text rep-social-icons"></a>' + '</i>' 
+        }
+        if(data['linkdn'] != "#!"){
+            inner_html +=   '<a href="' + data['linkdn'] + '"' + 'target="_blank" rel="noopener noreferrer"' +' style="background-position: 100% 30px; padding-right: 10px;"><i class="fab fa-linkedin-in green-text rep-social-icons"></a>' + '</i>' 
+        }
+        
+        inner_html += '</li > ' +
         '</ul>' +
         '</nav>' +
         '</div>' +
