@@ -105,7 +105,7 @@ townManagement = [{
     name: "Michael J. Driscoll",
     email: "townmgr@watertown-ma.gov",
     phone: "(617) 972-6465",
-    image: "images/reps/driscoll_enhanced.jpeg",
+    image: "images/reps/rep_avatar.png",
     url: "#!",
     title: "Town Manager",
     facebook: "#!",

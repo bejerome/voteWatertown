@@ -43,7 +43,7 @@ SchoolComData = [
         title: "School Committee",
         email: "Schoolcommittee@watertown.k12.ma.us",
         phone: "617-680-9762 (cell)",
-        image: "images/reps/lily_read_enhanced.jpeg",
+        image: "images/reps/lily_read_797X725.jpeg",
         desc: "Lily Rayman-Read began serving on the Watertown School Committee in 2018, and is currently serving as the Chair of the Buildings and Grounds subcommittee. A teacher with 10 years of experience in the classroom, she currently teaches 10th Grade US History at the Cambridge Rindge and Latin School. Prior to her tenure at CRLS, she taught 12th grade English at the Community School for Social Justice in the South Bronx of New York. She received her undergraduate degree from Brown University with a double major in Sociology and History, and her Masters of Education from Harvard University. Her husband serves in the Watertown Fire Department, and her two children both attend Watertown Public Schools"
     },
     {
