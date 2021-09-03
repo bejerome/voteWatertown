@@ -366,30 +366,36 @@ var Mad = (function ($) {
             Countdown
         ------------------------------------------------ */
 
-        var $countdown = $('.mad-countdown');
+        const myCountdown = new countdown({
+            target: '.countdown',
+            dayWord: ' days',
+            hourWord: ' hours',
+            minWord: ' mins',
+            secWord: ' seconds'
+          });
 
-        if ($countdown.length) {
-            $countdown.each(function () {
-                var $this = $(this),
-                    endDate = $this.data(),
-                    until = new Date(
-                        endDate.year,
-                        endDate.month || 0,
-                        endDate.day || 1,
-                        endDate.hours || 0,
-                        endDate.minutes || 0,
-                        endDate.seconds || 0
-                    );
+        // if ($countdown.length) {
+        //     $countdown.each(function () {
+        //         var $this = $(this),
+        //             endDate = $this.data(),
+        //             until = new Date(
+        //                 endDate.year,
+        //                 endDate.month || 0,
+        //                 endDate.day || 1,
+        //                 endDate.hours || 0,
+        //                 endDate.minutes || 0,
+        //                 endDate.seconds || 0
+        //             );
 
-                $this.countdown({
-                    until: until,
-                    padZeroes: true,
-                    format: 'dHMS',
-                    labels: ['Years', 'Month', 'Weeks', 'Days', 'Hours', 'Minutes', 'Seconds'],
-                    labels1: ['Years', 'Month', 'Weeks', 'Days', 'Hours', 'Minutes', 'Seconds']
-                });
-            });
-        }
+        //         $this.countdown({
+        //             until: until,
+        //             padZeroes: true,
+        //             format: 'dHMS',
+        //             labels: ['Years', 'Month', 'Weeks', 'Days', 'Hours', 'Minutes', 'Seconds'],
+        //             labels1: ['Years', 'Month', 'Weeks', 'Days', 'Hours', 'Minutes', 'Seconds']
+        //         });
+        //     });
+        // }
 
         /* ------------------------------------------------
             End countdown
@@ -410,7 +416,7 @@ var Mad = (function ($) {
                 }
             });
 
-            if (instafeeds) {
+        if (instafeeds) {
                 InstafeedWrapper.init(instafeeds, {
                     resolution: 'standard_resolution',
                     template: '<div class="mad-grid-item"><div class="mad-square-image" data-bg-image-src="{{image}}"><a class="mad-ln--independent" rel="instagram" href="{{link}}" target="_blank" title="{{caption}}"></a></div></div>',
@@ -2894,7 +2900,7 @@ var Mad = (function ($) {
 
     }
 
-
+    runCountDown();
 
     if ($('#googleMap2').length) {
 
@@ -4465,4 +4471,35 @@ function create_new_candidates(title, id, data, seats) {
 	};
 })();
 
+function runCountDown(){
+    // var $countdown = $('.mad-countdown');
+    // Set the date we're counting down to
+var countDownDate = new Date("Nov 2, 2021 17:00:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+// Get today's date and time
+var now = new Date().getTime();
+
+// Find the distance between now and the count down date
+var distance = countDownDate - now;
+
+// Time calculations for days, hours, minutes and seconds
+var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+// Display the result in the element with id="demo"
+document.getElementById("demo").innerHTML = days + "D " + hours + "H "
++ minutes + "M " + seconds + "S ";
+
+// If the count down is finished, write some text
+if (distance < 0) {
+clearInterval(x);
+document.getElementById("demo").innerHTML = "EXPIRED";
+}
+}, 1000);
+}
 
