@@ -4436,11 +4436,11 @@ function create_new_candidates(title, id, data, seats) {
         '<div class="row" style="padding:0">'+
         '<div class="col-md-2 right-border-solid">' +
             '<div class="black-text" style="font-size:20px;">' + (data.length - 1) + '</div>'+
-            '<h3 style="font-size:18px;" class="gray-text">Candidates</h3>'+
+            '<h3 style="font-size:16px; font-style:italic;" class="gray-text">Candidates</h3>'+
         '</div>'+
         '<div class="col-md-2 right-border-solid">' +
             '<div class="black-text" style="font-size:20px;">' + seats + '</div>'+
-            '<h3 style="font-size:18px; font-family:Hind;" class="gray-text">Open Seats</h3>'+
+            '<h3 style="font-size:16px; font-style: italic;" class="gray-text">Open Seats</h3>'+
         '</div>'+
         '</div>'+
         
