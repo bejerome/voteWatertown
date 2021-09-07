@@ -130,7 +130,7 @@ CandidateData = {
         name: "Nicole Gardner",
         email: "nicoleforwatertown@gmail.com",
         phone: "",
-        image: "images/candidates/nicole_gardner_400X400.jpeg",
+        image: "images/candidates/michel_gardner_new.jpeg",
         url: "www.nicoleforwatertown.com",
         url_prefix: "https",
         title: "Challenger",
