@@ -366,13 +366,13 @@ var Mad = (function ($) {
             Countdown
         ------------------------------------------------ */
 
-        const myCountdown = new countdown({
-            target: '.countdown',
-            dayWord: ' days',
-            hourWord: ' hours',
-            minWord: ' mins',
-            secWord: ' seconds'
-          });
+        // const myCountdown = new countdown({
+        //     target: '.countdown',
+        //     dayWord: ' days',
+        //     hourWord: ' hours',
+        //     minWord: ' mins',
+        //     secWord: ' seconds'
+        //   });
 
         // if ($countdown.length) {
         //     $countdown.each(function () {
@@ -4163,7 +4163,7 @@ function create_team_members(data) {
     var inner_html =
         '<div class="mad-col" style="padding:30px;">' +
         //================ Team Member ================
-        '<figure class="mad-team-member">' +
+        '<figure class="mad-team-member container">' +
         '<a href="javascript:void(0)" class="mad-team-member-photo"><img src="' + data['image'] + '"' + 'alt="" style="height:300px; width:auto;"></a>' +
         '<figcaption class="mad-team-member-info">' +
         '<div class="mad-info-wrap">' +
@@ -4196,8 +4196,8 @@ function create_candidates_members(data) {
     var inner_html =
         '<div class="mad-col" style="padding:30px;">' +
         //================ Team Member ================
-        '<figure class="mad-team-member">' +
-        '<a href="javascript:void(0)" class="mad-team-member-photo"><img src="' + data['image'] + '"' + 'alt="" style="height: 300px; width:auto;"></a>' +
+        '<figure class="mad-team-member container">' +
+        '<a href="javascript:void(0)" class="mad-team-member-photo"><img src="' + data['image'] + '"' + 'alt="" style="height:300px; width:auto;"></a>' +
         '<figcaption class="mad-team-member-info">' +
         '<div class="mad-info-wrap">' +
         '<h4 class="mad-team-member-name"><a href="#">' + data['name'] + '</a></h4>' +

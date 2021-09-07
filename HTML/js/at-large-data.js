@@ -41,7 +41,7 @@ atLargeData = [
         name: "Anthony Palomba",
         email: "apalomba@watertown-ma.gov",
         phone: "(781) 664-3525",
-        image: "images/reps/palomba_enhanced.jpeg",
+        image: "images/reps/palomba_new_400X587.jpeg",
         url: "www.councilorpalomba.com",
         title: "At Large",
         facebook: "https://www.facebook.com/councilorpalomba",

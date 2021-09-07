@@ -11,6 +11,9 @@ LibTrusteesData =
             image: "images/reps/rep_avatar.png",
             url: "#!",
             facebook: "#!",
+            tweeter: "#!",
+            instagrame: "#!",
+            linkdn: "#!"
         },
         {
             name: "Sheppard Ferguson",
@@ -20,6 +23,9 @@ LibTrusteesData =
             image: "images/reps/rep_avatar.png",
             url: "#!",
             facebook: "#!",
+            tweeter: "#!",
+            instagrame: "#!",
+            linkdn: "#!"
         },
         {
             name: "Michael Hanlon",
@@ -29,6 +35,9 @@ LibTrusteesData =
             image: "images/candidates/Michael-hanlon_771X826.jpeg",
             url: "#!",
             facebook: "#!",
+            tweeter: "#!",
+            instagrame: "#!",
+            linkdn: "#!"
         },
         {
             name: "Teddy Kokoros",
@@ -38,6 +47,9 @@ LibTrusteesData =
             image: "images/reps/rep_avatar.png",
             url: "#!",
             facebook: "#!",
+            tweeter: "#!",
+            instagrame: "#!",
+            linkdn: "#!"
         },
         {
             name: "Daniel Pritchard",
@@ -47,15 +59,21 @@ LibTrusteesData =
             image: "images/reps/rep_avatar.png",
             url: "#!",
             facebook: "#!",
+            tweeter: "#!",
+            instagrame: "#!",
+            linkdn: "#!"
         },
         {
             name: "Emily Izzo",
             title: "Library Trustee",
             email: "eizzo@watertown-ma.gov",
             phone: "617-894-6042",
-            image: "images/candidates/emily_izzo.jpeg",
+            image: "images/candidates/emily-izzo-1.jpeg",
             url: "#!",
             facebook: "#!",
+            tweeter: "#!",
+            instagrame: "#!",
+            linkdn: "#!"
         },
 
     ]
