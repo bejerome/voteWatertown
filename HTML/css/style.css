@@ -4794,7 +4794,7 @@ a.mad-read-more {
 .mad-team.style-2 .mad-team-member {
     padding-bottom: 6.25rem;
     overflow: hidden;
-    border-radius: 0.5rem;
+    /* border-radius: 0.5rem; */
 }
 
 .mad-team-member .mad-team-member-photo img {
@@ -4805,7 +4805,7 @@ a.mad-read-more {
     margin-right: 0;
     min-width: 100%;
     min-height: 100%;
-
+    
 
 
 }
@@ -4828,7 +4828,7 @@ a.mad-read-more {
     visibility: visible;
     display: block;
     transform: translateY(53%);
-    border-radius: 0;
+    border-radius: 0.5rem;
 }
 
 .mad-team.style-2 .mad-team-member:hover .mad-team-member-info {

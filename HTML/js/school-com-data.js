@@ -33,7 +33,7 @@ SchoolComData = [
         title: "Secretary",
         email: "amy.donohue@watertown.k12.maus",
         phone: "617-908-8319 (cell)",
-        image: "images/reps/amy_enhanced_200X400.jpeg",
+        image: "images/reps/amy_enhanced_400X544.jpeg",
         desc: "Amy Donohue was elected to the School Committee in 2017. Amy and her husband John have four very busy children (ages 16,14,12 and 7). Professionally, Amy has been a certified occupational therapist assistant for over 20 years in public school systems, including 12 years in the Watertown Public Schools. Amy was a member of the Watertown Education Foundation for over 12 years, serving as President for 7 years. She has been an active member of the PTO at the Lowell school for many years. Amy is enthusiastic to continue to be part of all aspects of our schools and to make a positive impact for our Watertown families.",
         facebook: "#!",
             tweeter: "#!",
