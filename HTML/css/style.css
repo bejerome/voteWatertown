@@ -4798,16 +4798,13 @@ a.mad-read-more {
 }
 
 .mad-team-member .mad-team-member-photo img {
-    width: 100%;
+    width: inherit;
     height: inherit;
-    object-fit: contain;
+    object-fit: cover;
     margin-left: 0;
     margin-right: 0;
     min-width: 100%;
     min-height: 100%;
-    
-
-
 }
 
 .mad-team.style-2 .mad-team-member .vr-list>ul>li:not(:last-child) {
