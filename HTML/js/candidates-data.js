@@ -76,7 +76,7 @@ CandidateData = {
             },
             {
                 name: "James (Jimmy) Mello",
-                email: "#!",
+                email: ".",
                 phone: "",
                 image: "images/candidates/jimmy_mello.jpeg",
                 url: "#!",
@@ -90,7 +90,7 @@ CandidateData = {
             },
             {
                 name: "Megan O’Halloran",
-                email: "#!",
+                email: ".",
                 phone: "",
                 image: "images/reps/rep_avatar.png",
                 url: "#!",
@@ -272,7 +272,7 @@ CandidateData = {
 
     }, {
         name: "Colleen M Faherty",
-        email: "#!",
+        email: ".",
         phone: "",
         image: "images/reps/rep_avatar.png",
         url: "#!",
@@ -367,11 +367,11 @@ CandidateData = {
         facebook: "https://www.facebook.com/RMSuForWatertown",
         tweeter: "#!",
         instagrame: "#!",
-        linkdn: "#!"
+        linkdn: "https://www.linkedin.com/in/rsu01/"
 
     }, {
         name: "Maja Young",
-        email: "#!",
+        email: ".",
         phone: "",
         image: "images/reps/rep_avatar.png",
         url: "#!",

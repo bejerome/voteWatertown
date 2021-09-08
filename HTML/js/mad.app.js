@@ -4253,21 +4253,21 @@ function scrollSection(id) {
     });
 };
 
-function show_district_info(number, precinct,place="") {
+function show_district_info(number, precinct, place="") {
     var modal = document.getElementById("your-rep");
     modal.innerHTML =
         '<h5 id="section0" class="mad-title center" style="padding-left:3rem; margin-top:10px;">Voter Info For</h5>' +
         '<h5 id="section0" class="mad-title center green-text" style="padding-bottom:3rem; padding-left:3rem; margin-top:10px;">' + place + '</h5>' +
         '<div class="mad-content no-pd" id="precinct-info">' +
-        '<div class="row">' +
-        '<div class="col-md-4">' +
+        '<div class="row container" style="background-color: #f3f3f3; padding: 2rem">' +
+        '<div class=" center content-element-3">' +
         '<div class="mad-team style-4">' +
         '<div class="mad-col">' +
         //   Team Member
         '<figure class="mad-team-member">' +
         '<figcaption class="mad-team-member-info">' +
         '<div class="mad-info-wrap">' +
-        '<div class="container col-md-6" style=margin:15px;>' +
+        '<div class="container col-md-4" style=margin:15px;>' +
         '<h4 class="mad-team-member-name"><a href="#">District</a></h4>' +
         '<div class="disctrict-info-text">' + precinct["district"] + '</div>' +
         '</div>' +
@@ -4282,7 +4282,7 @@ function show_district_info(number, precinct,place="") {
         '</div>' +
         '</div>' +
         '</div>' +
-        '<div class="col-md-4">' +
+        '<div class="mad-col-5">' +
         '<div class="mad-team style-4">' +
         '<div class="mad-col">' +
         //   Team Member
@@ -4305,11 +4305,11 @@ function show_district_info(number, precinct,place="") {
         '</div>' +
         '</div>' +
         '</div>' +
-        '<div class="col-md-4">' +
+        '<div class="mad-col-2">' +
         '<div class="mad-team style-4">' +
         '<div class="mad-col">' +
         //   Team Member
-        '<figure class="mad-team-member">' +
+        '<figure class="mad-team-member mad-col-4">' +
         '<div href="javascript:void(0)" class="mad-team-member-photo"><iframe src="' + precinct["votingPlace"]["map"] + 'style="border:0; width=220; height=250; allowfullscreen=""></iframe></div>' +
         '<figcaption class="mad-team-member-info">' +
         '<div class="mad-info-wrap">' +
@@ -4327,11 +4327,7 @@ function show_district_info(number, precinct,place="") {
         '</div>' +
         '</div>' +
         '</div>';
-
-
 }
-
-
 
 
 function create_marker(latlng, title, icon_str) {
