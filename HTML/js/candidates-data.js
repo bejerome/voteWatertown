@@ -357,10 +357,10 @@ CandidateData = {
         linkdn: "#!"
 
     }, {
-        name: "Rosemary Su",
-        email: "#!",
+        name: "Rose Mary Su",
+        email: "rose_mary_su@yahoo.com",
         phone: "",
-        image: "images/reps/rep_avatar.png",
+        image: "images/candidates/Rose-Mary-Su-Web-bio-1600x1000.jpg",
         url: "#!",
         url_prefix: "https",
         title: "Challenger",
