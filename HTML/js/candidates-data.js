@@ -96,7 +96,7 @@ CandidateData = {
                 url: "#!",
                 url_prefix: "https",
                 title: "Challenger",
-                facebook: "#!",
+                facebook: "#! ",
                 tweeter: "#!",
                 instagrame: "#!",
                 linkdn: "#!"

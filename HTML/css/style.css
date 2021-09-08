@@ -4794,12 +4794,12 @@ a.mad-read-more {
 .mad-team.style-2 .mad-team-member {
     padding-bottom: 6.25rem;
     overflow: hidden;
-    /* border-radius: 0.5rem; */
+    border-radius: 0.5rem;
 }
 
 .mad-team-member .mad-team-member-photo img {
     width: inherit;
-    height: inherit;
+    /* height: inherit; */
     object-fit: cover;
     margin-left: 0;
     margin-right: 0;
