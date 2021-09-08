@@ -4259,7 +4259,7 @@ function show_district_info(number, precinct, place="") {
         '<h5 id="section0" class="mad-title center" style="padding-left:3rem; margin-top:10px;">Voter Info For</h5>' +
         '<h5 id="section0" class="mad-title center green-text" style="padding-bottom:3rem; padding-left:3rem; margin-top:10px;">' + place + '</h5>' +
         '<div class="mad-content no-pd" id="precinct-info">' +
-        '<div class="row container" style="background-color: #f3f3f3; padding: 2rem">' +
+        '<div class="row container" style="background-color: #fafafb; padding: 2rem">' +
         '<div class=" center content-element-3">' +
         '<div class="mad-team style-4">' +
         '<div class="mad-col">' +
