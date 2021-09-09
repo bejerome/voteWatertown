@@ -371,13 +371,13 @@ CandidateData = {
 
     }, {
         name: "Maja Young",
-        email: ".",
+        email: "MajaYoungHealing@gmail.com",
         phone: "",
-        image: "images/reps/rep_avatar.png",
+        image: "images/candidates/maja_young.png",
         url: "#!",
         url_prefix: "https",
         title: "Challenger",
-        facebook: "#!",
+        facebook: "#",
         tweeter: "#!",
         instagrame: "#!",
         linkdn: "#!"
