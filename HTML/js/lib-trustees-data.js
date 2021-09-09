@@ -44,7 +44,7 @@ LibTrusteesData =
             title: "Secretary",
             email: "tkokoros@watertown-ma.gov",
             phone: "617-510-8458",
-            image: "images/reps/rep_avatar.png",
+            image: "images/candidates/teddy_kokoros.jpeg",
             url: "#!",
             facebook: "#!",
             tweeter: "#!",
