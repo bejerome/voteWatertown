@@ -56,7 +56,7 @@ LibTrusteesData =
             title: "Library Trustee",
             email: "dpritchard@watertown-ma.gov",
             phone: "617-653-6645",
-            image: "images/reps/rep_avatar.png",
+            image: "images/reps/dan_pritchard.jpeg",
             url: "#!",
             facebook: "#!",
             tweeter: "#!",
