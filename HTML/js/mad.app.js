@@ -2818,7 +2818,7 @@ var Mad = (function ($) {
 
         //create page sections
         create_town_management("Town Management", "section1");
-        createALargemembers("Representatives", "section2", atLargeData);
+        createALargemembers("Councilors", "section2", atLargeData);
         createschoolmembers("School Committee Members", "section3", SchoolComData);
         create_trustee_member("Library Trustees", "library-trust", LibTrusteesData);
 
@@ -4291,7 +4291,7 @@ function show_district_info(number, precinct, place="") {
         '<figcaption class="mad-team-member-info">' +
         '<div class="mad-info-wrap">' +
         '<h6 class="mad-team-member-name"><a href="#">' + precinct["rep"]["name"] + '</a></h6>' +
-        '<div class="mad-member-stat">Representative</div>' +
+        '<div class="mad-member-stat">Councilor</div>' +
         '<nav class="mad-info-block vr-list mad-links">' +
         '<ul>' +
         '<li><i class="mad-info-icon material-icons">phone</i>' + precinct["rep"]["phone"] + '</li>' +
