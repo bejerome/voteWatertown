@@ -374,10 +374,10 @@ CandidateData = {
         email: "MajaYoungHealing@gmail.com",
         phone: "",
         image: "images/candidates/maja_young.png",
-        url: "#!",
+        url: "www.majayoung.org",
         url_prefix: "https",
         title: "Challenger",
-        facebook: "#",
+        facebook: "https://www.facebook.com/Maja4watertown",
         tweeter: "#!",
         instagrame: "#!",
         linkdn: "#!"
