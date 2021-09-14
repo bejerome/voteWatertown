@@ -366,30 +366,36 @@ var Mad = (function ($) {
             Countdown
         ------------------------------------------------ */
 
-        var $countdown = $('.mad-countdown');
+        // const myCountdown = new countdown({
+        //     target: '.countdown',
+        //     dayWord: ' days',
+        //     hourWord: ' hours',
+        //     minWord: ' mins',
+        //     secWord: ' seconds'
+        //   });
 
-        if ($countdown.length) {
-            $countdown.each(function () {
-                var $this = $(this),
-                    endDate = $this.data(),
-                    until = new Date(
-                        endDate.year,
-                        endDate.month || 0,
-                        endDate.day || 1,
-                        endDate.hours || 0,
-                        endDate.minutes || 0,
-                        endDate.seconds || 0
-                    );
+        // if ($countdown.length) {
+        //     $countdown.each(function () {
+        //         var $this = $(this),
+        //             endDate = $this.data(),
+        //             until = new Date(
+        //                 endDate.year,
+        //                 endDate.month || 0,
+        //                 endDate.day || 1,
+        //                 endDate.hours || 0,
+        //                 endDate.minutes || 0,
+        //                 endDate.seconds || 0
+        //             );
 
-                $this.countdown({
-                    until: until,
-                    padZeroes: true,
-                    format: 'dHMS',
-                    labels: ['Years', 'Month', 'Weeks', 'Days', 'Hours', 'Minutes', 'Seconds'],
-                    labels1: ['Years', 'Month', 'Weeks', 'Days', 'Hours', 'Minutes', 'Seconds']
-                });
-            });
-        }
+        //         $this.countdown({
+        //             until: until,
+        //             padZeroes: true,
+        //             format: 'dHMS',
+        //             labels: ['Years', 'Month', 'Weeks', 'Days', 'Hours', 'Minutes', 'Seconds'],
+        //             labels1: ['Years', 'Month', 'Weeks', 'Days', 'Hours', 'Minutes', 'Seconds']
+        //         });
+        //     });
+        // }
 
         /* ------------------------------------------------
             End countdown
@@ -410,7 +416,7 @@ var Mad = (function ($) {
                 }
             });
 
-            if (instafeeds) {
+        if (instafeeds) {
                 InstafeedWrapper.init(instafeeds, {
                     resolution: 'standard_resolution',
                     template: '<div class="mad-grid-item"><div class="mad-square-image" data-bg-image-src="{{image}}"><a class="mad-ln--independent" rel="instagram" href="{{link}}" target="_blank" title="{{caption}}"></a></div></div>',
@@ -2812,7 +2818,7 @@ var Mad = (function ($) {
 
         //create page sections
         create_town_management("Town Management", "section1");
-        createALargemembers("Representatives At Large", "section2", atLargeData);
+        createALargemembers("Councilors", "section2", atLargeData);
         createschoolmembers("School Committee Members", "section3", SchoolComData);
         create_trustee_member("Library Trustees", "library-trust", LibTrusteesData);
 
@@ -2894,7 +2900,7 @@ var Mad = (function ($) {
 
     }
 
-
+    
 
     if ($('#googleMap2').length) {
 
@@ -4158,7 +4164,7 @@ function create_team_members(data) {
         '<div class="mad-col" style="padding:30px;">' +
         //================ Team Member ================
         '<figure class="mad-team-member">' +
-        '<a href="javascript:void(0)" class="mad-team-member-photo"><img src="' + data['image'] + '"' + 'alt="" style="height:20rem;"></a>' +
+        '<a href="javascript:void(0)" class="mad-team-member-photo"><img src="' + data['image'] + '"' + 'alt="" style="height:250px;"></a>' +
         '<figcaption class="mad-team-member-info">' +
         '<div class="mad-info-wrap">' +
         '<h4 class="mad-team-member-name"><a href="#">' + data['name'] + '</a></h4>' +
@@ -4191,22 +4197,37 @@ function create_candidates_members(data) {
         '<div class="mad-col" style="padding:30px;">' +
         //================ Team Member ================
         '<figure class="mad-team-member">' +
-        '<a href="javascript:void(0)" class="mad-team-member-photo"><img src="' + data['image'] + '"' + 'alt="" style="height:20rem;"></a>' +
+        '<a href="javascript:void(0)" class="mad-team-member-photo"><img src="' + data['image'] + '"' + 'alt="" style="height:250px;"></a>' +
         '<figcaption class="mad-team-member-info">' +
         '<div class="mad-info-wrap">' +
         '<h4 class="mad-team-member-name"><a href="#">' + data['name'] + '</a></h4>' +
         '<div class="mad-member-stat green-text">' + data['title'] + '</div>' +
         '<nav class="mad-info-block vr-list mad-links">' +
-        '<ul>' +
+        '<ul>';
         // '<li><a href="' + data['email'] + '"' + 'style="background-position: 100% 31px;"></a></li>' +
-        '<li style="padding-top:10px;"><i class="mad-info-icon material-icons">public</i><a href="' + data["url_prefix"] + '://' + data['url'] + '"' + 'target="_blank" rel="noopener noreferrer"' + '>' + data['url'] + '</a></li>' +
-        '<li><i class="mad-info-icon material-icons">mail_outline</i><a href="mailto:' + data['email'] + '"' + 'style = "background-position: 100% 31px;" > ' + data['email'] + '</a ></li > ' +
-        '<li>' +
-        '<a href="' + data['facebook'] + '"' + 'target="_blank" rel="noopener noreferrer"' + 'style="background-position: 100% 30px;"><i class="fab fa-facebook-square rep-social-icons green-text"></a>' + '</i>' +
-        '<a href="#!" style="background-position: 100% 30px; padding-right: 10px;"><i class="fab fa-twitter green-text rep-social-icons"></a>' + '</i>' +
-        '<a href="#!" style="background-position: 100% 30px; padding-right: 10px;"><i class="fab fa-instagram green-text rep-social-icons"></a>' + '</i>' +
-        '<a href="#!" style="background-position: 100% 30px; padding-right: 10px;"><i class="fab fa-linkedin-in green-text rep-social-icons"></a>' + '</i>' +
-        '</li > ' +
+        if(data['url'] != "#!"){
+            inner_html +=  '<li style="padding-top:10px;"><i class="mad-info-icon material-icons">public</i><a href="' + data["url_prefix"] + '://' + data['url'] + '"' + 'target="_blank" rel="noopener noreferrer"' + '>' + data['url'] + '</a></li>' 
+        }
+        if(data['email'] != "#!"){
+            inner_html +=  '<li><i class="mad-info-icon material-icons">mail_outline</i><a href="mailto:' + data['email'] + '"' + 'style = "background-position: 100% 31px;" > ' + data['email'] + '</a ></li > ' 
+        }
+        
+        inner_html +='<li>';
+        if(data['facebook'] != "#!"){
+            inner_html +=  '<a href="' + data['facebook'] + '"' + 'target="_blank" rel="noopener noreferrer"' + 'style="background-position: 100% 30px;"><i class="fab fa-facebook-square rep-social-icons green-text"></a>' + '</i>'
+        }
+
+        if(data['tweeter'] != "#!"){
+            inner_html +=  '<a href="' + data['tweeter'] + '"' + 'target="_blank" rel="noopener noreferrer"' +' style="background-position: 100% 30px; padding-right: 10px;"><i class="fab fa-twitter green-text rep-social-icons"></a>' + '</i>' 
+        }
+        if(data['instagrame'] != "#!"){
+            inner_html +=  '<a href="' + data['instagrame'] + '"' + 'target="_blank" rel="noopener noreferrer"' +' style="background-position: 100% 30px; padding-right: 10px;"><i class="fab fa-instagram green-text rep-social-icons"></a>' + '</i>' 
+        }
+        if(data['linkdn'] != "#!"){
+            inner_html +=   '<a href="' + data['linkdn'] + '"' + 'target="_blank" rel="noopener noreferrer"' +' style="background-position: 100% 30px; padding-right: 10px;"><i class="fab fa-linkedin-in green-text rep-social-icons"></a>' + '</i>' 
+        }
+        
+        inner_html += '</li > ' +
         '</ul>' +
         '</nav>' +
         '</div>' +
@@ -4232,21 +4253,21 @@ function scrollSection(id) {
     });
 };
 
-function show_district_info(number, precinct,place="") {
+function show_district_info(number, precinct, place="") {
     var modal = document.getElementById("your-rep");
     modal.innerHTML =
         '<h5 id="section0" class="mad-title center" style="padding-left:3rem; margin-top:10px;">Voter Info For</h5>' +
         '<h5 id="section0" class="mad-title center green-text" style="padding-bottom:3rem; padding-left:3rem; margin-top:10px;">' + place + '</h5>' +
         '<div class="mad-content no-pd" id="precinct-info">' +
-        '<div class="row">' +
-        '<div class="col-md-4">' +
+        '<div class="row container" style="background-color: #fafafb; padding: 2rem">' +
+        '<div class=" center content-element-3">' +
         '<div class="mad-team style-4">' +
         '<div class="mad-col">' +
         //   Team Member
         '<figure class="mad-team-member">' +
         '<figcaption class="mad-team-member-info">' +
         '<div class="mad-info-wrap">' +
-        '<div class="container col-md-6" style=margin:15px;>' +
+        '<div class="container col-md-4" style=margin:15px;>' +
         '<h4 class="mad-team-member-name"><a href="#">District</a></h4>' +
         '<div class="disctrict-info-text">' + precinct["district"] + '</div>' +
         '</div>' +
@@ -4261,7 +4282,7 @@ function show_district_info(number, precinct,place="") {
         '</div>' +
         '</div>' +
         '</div>' +
-        '<div class="col-md-4">' +
+        '<div class="mad-col-5">' +
         '<div class="mad-team style-4">' +
         '<div class="mad-col">' +
         //   Team Member
@@ -4270,7 +4291,7 @@ function show_district_info(number, precinct,place="") {
         '<figcaption class="mad-team-member-info">' +
         '<div class="mad-info-wrap">' +
         '<h6 class="mad-team-member-name"><a href="#">' + precinct["rep"]["name"] + '</a></h6>' +
-        '<div class="mad-member-stat">Representative</div>' +
+        '<div class="mad-member-stat">Councilor</div>' +
         '<nav class="mad-info-block vr-list mad-links">' +
         '<ul>' +
         '<li><i class="mad-info-icon material-icons">phone</i>' + precinct["rep"]["phone"] + '</li>' +
@@ -4284,11 +4305,11 @@ function show_district_info(number, precinct,place="") {
         '</div>' +
         '</div>' +
         '</div>' +
-        '<div class="col-md-4">' +
+        '<div class="mad-col-2">' +
         '<div class="mad-team style-4">' +
         '<div class="mad-col">' +
         //   Team Member
-        '<figure class="mad-team-member">' +
+        '<figure class="mad-team-member mad-col-4">' +
         '<div href="javascript:void(0)" class="mad-team-member-photo"><iframe src="' + precinct["votingPlace"]["map"] + 'style="border:0; width=220; height=250; allowfullscreen=""></iframe></div>' +
         '<figcaption class="mad-team-member-info">' +
         '<div class="mad-info-wrap">' +
@@ -4306,11 +4327,7 @@ function show_district_info(number, precinct,place="") {
         '</div>' +
         '</div>' +
         '</div>';
-
-
 }
-
-
 
 
 function create_marker(latlng, title, icon_str) {
@@ -4415,11 +4432,11 @@ function create_new_candidates(title, id, data, seats) {
         '<div class="row" style="padding:0">'+
         '<div class="col-md-2 right-border-solid">' +
             '<div class="black-text" style="font-size:20px;">' + (data.length - 1) + '</div>'+
-            '<h3 style="font-size:18px;" class="gray-text">Candidates</h3>'+
+            '<h3 style="font-size:16px; font-style:italic;" class="gray-text">Candidates</h3>'+
         '</div>'+
         '<div class="col-md-2 right-border-solid">' +
             '<div class="black-text" style="font-size:20px;">' + seats + '</div>'+
-            '<h3 style="font-size:18px; font-family:Hind;" class="gray-text">Open Seats</h3>'+
+            '<h3 style="font-size:16px; font-style: italic;" class="gray-text">Open Seats</h3>'+
         '</div>'+
         '</div>'+
         
@@ -4449,5 +4466,4 @@ function create_new_candidates(title, id, data, seats) {
 		textInput.value = "";
 	};
 })();
-
 
