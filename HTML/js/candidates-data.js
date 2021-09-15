@@ -292,7 +292,7 @@ CandidateData = {
         url: "www.rachelekay.com",
         url_prefix: "https",
         title: "Challenger",
-        facebook: "#!",
+        facebook: "https://www.facebook.com/RachelKay4Watertown",
         tweeter: "#!",
         instagrame: "#!",
         linkdn: "#!"
